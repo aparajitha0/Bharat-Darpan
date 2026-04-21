@@ -173,48 +173,8 @@ export default function Home() {
             className="text-2xl font-bold text-foreground mb-8 text-center"
             style={{ fontFamily: "'Cinzel', serif" }}
           >
-            Explore by Region
+            INDIA
           </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[
-              { region: "North India", description: "The mighty Himalayas, ancient kingdoms, Mughal grandeur, and the sacred Ganges.", color: "from-amber-500 to-orange-600", states: ["Punjab", "Haryana", "Delhi", "Uttar Pradesh", "Uttarakhand", "Himachal Pradesh"] },
-              { region: "South India", description: "Dravidian temples, classical arts, tropical coastlines, and ancient knowledge.", color: "from-emerald-500 to-teal-600", states: ["Karnataka", "Kerala", "Tamil Nadu", "Andhra Pradesh", "Telangana"] },
-              { region: "East India", description: "The cradle of enlightenment, sweets, durga puja, and coastal traditions.", color: "from-blue-500 to-cyan-600", states: ["West Bengal", "Odisha", "Bihar", "Jharkhand"] },
-              { region: "West India", description: "Desert palaces, vibrant textiles, Bollywood, and coastal Goan charm.", color: "from-yellow-500 to-amber-600", states: ["Rajasthan", "Gujarat", "Maharashtra", "Goa"] },
-              { region: "Central India", description: "Tiger reserves, tribal art, cave temples, and untouched wilderness.", color: "from-lime-500 to-green-600", states: ["Madhya Pradesh", "Chhattisgarh"] },
-              { region: "Northeast India", description: "The Seven Sisters — misty hills, living root bridges, and tribal wisdom.", color: "from-purple-500 to-violet-600", states: ["Assam", "Meghalaya", "Manipur", "Mizoram", "Nagaland", "Tripura", "Sikkim", "Arunachal Pradesh"] },
-            ].map(({ region, description, color, states }) => (
-              <div
-                key={region}
-                className="rounded-xl overflow-hidden border border-border bg-card hover:shadow-md transition-shadow"
-              >
-                <div className={`bg-gradient-to-br ${color} p-5`}>
-                  <h3 className="text-lg font-bold text-white" style={{ fontFamily: "'Cinzel', serif" }}>
-                    {region}
-                  </h3>
-                </div>
-                <div className="p-4">
-                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{description}</p>
-                  <div className="flex flex-wrap gap-1">
-                    {states.map((s) => {
-                      const stateId = statesList.find(st => st.name === s)?.id;
-                      return (
-                        <button
-                          key={s}
-                          data-testid={`region-state-${s}`}
-                          onClick={() => stateId && setLocation(`/state/${stateId}`)}
-                          className="text-xs px-2 py-1 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors text-muted-foreground font-medium"
-                        >
-                          {s}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </section>
       </main>
 
