@@ -2,6 +2,19 @@ import { useState } from "react";
 import { useLocation } from "wouter";
 import { ArrowLeft, MapPin, ChevronRight, CheckCircle, X, ZoomIn } from "lucide-react";
 import tnMap from "@assets/TN_map_1776628923935.jpg";
+import pongal1 from "@assets/image_1776788355951.png";
+import pongal2 from "@assets/image_1776788364481.png";
+import pongal3 from "@assets/image_1776788370635.png";
+import pongal4 from "@assets/image_1776788376290.png";
+import pongal5 from "@assets/image_1776788390385.png";
+import jalli1 from "@assets/image_1776788400543.png";
+import jalli2 from "@assets/image_1776788406884.png";
+import chith1 from "@assets/image_1776788416217.png";
+import chith2 from "@assets/image_1776788422339.png";
+import puth1 from "@assets/image_1776788430140.png";
+import puth2 from "@assets/image_1776788437438.png";
+import adi1 from "@assets/image_1776788476146.png";
+import adi2 from "@assets/image_1776788482041.png";
 
 /* ─── Lightbox ──────────────────────────────────────────────────────────── */
 function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
@@ -60,10 +73,13 @@ function Section({ title, icon, children }: { title: string; icon: string; child
 
 /* ─── Festival card ──────────────────────────────────────────────────────── */
 function FestivalCard({
-  number, name, tagline, description, source, hasImage, imageLabel,
+  number, name, tagline, description, source, hasImage, imageLabel, images,
+  onImageClick,
 }: {
   number: number; name: string; tagline?: string; description: string;
   source?: string; hasImage?: boolean; imageLabel?: string;
+  images?: string[];
+  onImageClick: (src: string, alt: string) => void;
 }) {
   return (
     <div className="border border-border rounded-2xl overflow-hidden bg-card">
@@ -79,12 +95,33 @@ function FestivalCard({
           {tagline && <p className="text-muted-foreground text-xs italic mt-0.5">{tagline}</p>}
         </div>
       </div>
-      <div className="px-5 py-4 space-y-3">
+      <div className="px-5 py-4 space-y-4">
         <p className="text-sm text-foreground leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>{description}</p>
-        {hasImage && (
+        {images && images.length > 0 && (
+          <div className={`grid gap-3 ${images.length >= 3 ? "grid-cols-2 sm:grid-cols-3" : "grid-cols-1 sm:grid-cols-2"}`}>
+            {images.map((src, idx) => (
+              <button
+                key={idx}
+                onClick={() => onImageClick(src, `${name} — image ${idx + 1}`)}
+                className="group relative rounded-xl overflow-hidden border border-border bg-muted/30 cursor-zoom-in aspect-[4/3]"
+              >
+                <img
+                  src={src}
+                  alt={`${name} ${idx + 1}`}
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                  <ZoomIn className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+        {hasImage && !images && (
           <DocxImage label={imageLabel ?? name} source={source} color="#D45A3A" />
         )}
-        {source && !hasImage && <p className="text-xs text-muted-foreground">{source}</p>}
+        {source && !hasImage && !images && <p className="text-xs text-muted-foreground">{source}</p>}
+        {source && images && <p className="text-xs text-muted-foreground">{source}</p>}
       </div>
     </div>
   );
@@ -152,12 +189,13 @@ function HistoricalPlaceCard({
 /* ─── Main page ──────────────────────────────────────────────────────────── */
 export default function TamilNaduPage() {
   const [, setLocation] = useLocation();
-  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const openLightbox = (src: string, alt: string) => setLightbox({ src, alt });
 
   return (
     <div className="min-h-screen bg-background">
-      {lightboxOpen && (
-        <Lightbox src={tnMap} alt="Map of Tamil Nadu" onClose={() => setLightboxOpen(false)} />
+      {lightbox && (
+        <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />
       )}
 
       {/* Hero */}
@@ -231,7 +269,7 @@ export default function TamilNaduPage() {
             <div
               className="relative group cursor-zoom-in rounded-2xl overflow-hidden border-2 border-border shadow-md hover:shadow-xl transition-shadow"
               style={{ maxWidth: 520 }}
-              onClick={() => setLightboxOpen(true)}
+              onClick={() => openLightbox(tnMap, "Map of Tamil Nadu")}
             >
               <img
                 src={tnMap}
@@ -278,7 +316,7 @@ export default function TamilNaduPage() {
         <Section title="Festivals / Culture / Traditions" icon="🎉">
           <div className="space-y-8">
             {festivals.map((f, i) => (
-              <FestivalCard key={i} number={i + 1} {...f} />
+              <FestivalCard key={i} number={i + 1} {...f} onImageClick={openLightbox} />
             ))}
           </div>
         </Section>
@@ -365,8 +403,7 @@ const festivals = [
     tagline: "The Harvest Festival of Tamil Nadu",
     description:
       "Pongal is the harvest festival celebrated by the farmers in January to worship the sun, the earth and the cattle as thanks giving for a bounteous harvest. It is followed by the Jallikattu. Tamil Nadu celebrates a four-day harvesting festival annually during the month of January, popularly known as 'Pongal'. The celebration is held to praise the Sun God for nourishing the crops throughout the year. The four-day celebration involves: Bhogi, Surya Pongal, Mattu Pongal and Kaanum Pongal. On the day of Surya Pongal (the second day), the boiling of fresh rice with milk, in a vessel, symbolises the prosperity of the harvest. When the rice and milk overflow from the pot, it is considered a good omen.",
-    hasImage: true,
-    imageLabel: "Pongal Festival — Tamil harvest celebration",
+    images: [pongal1, pongal2, pongal3, pongal4, pongal5],
     source: "",
   },
   {
@@ -374,8 +411,7 @@ const festivals = [
     tagline: "In some parts of southern Tamil Nadu. Alanganallur in Tamil Nadu is internationally famous for Jallikattu.",
     description:
       "In ancient times, 'Yeru thazhuvuthal' or embracing the bull, was connected in displaying the men's pride and victory for winning over a girl for marriage. The sport has prevailed in Tamil culture for over 2000 years now. Manju Virattu is conducted every year in various regions of the state including Madurai, Sivagangai and Pudukottai. The event is celebrated on the second day of Pongal (Thai Pongal), which falls between the 14th and 16th of January every year.",
-    hasImage: true,
-    imageLabel: "Jallikattu — traditional bull-taming sport",
+    images: [jalli1, jalli2],
     source: "",
   },
   {
@@ -383,8 +419,7 @@ const festivals = [
     tagline: "Brings a spectacular re-enactment of the marriage of the Pandiyan princess Meenakshi to Lord Sundareswarar.",
     description:
       "A famous Vishnu Temple dedicated to Lord Alagar is located 21 kilometres north of Madurai. The temple is set on a hill with breathtaking views. Alagarkoil is the name of the shrine, and Solaimalai is the name of the hill. The temple also has some lovely carvings, making it a worthwhile visit. The Hill is home to Palamudirsolai, one of Lord Subramaniya's six abodes. Chithirai Festival is celebrated grandly at the Meenakshi Amman Temple in Madurai during April–May, commemorating the cosmic wedding of Goddess Meenakshi with Lord Sundareswarar (Shiva).",
-    hasImage: true,
-    imageLabel: "Chithirai Festival — Meenakshi–Sundareswarar celestial wedding procession",
+    images: [chith1, chith2],
     source: "",
   },
   {
@@ -392,8 +427,7 @@ const festivals = [
     tagline: "Meaning 'Tamil New Year' — the first day of year on the Tamil calendar.",
     description:
       "Traditionally celebrated as a festival by Tamils, the festival date is set with the solar cycle of the solar Hindu calendar, as the first day of the month of Chittirai. It falls on or about 14 April every year. Households clean up the house, prepare a tray with fruits, flowers and auspicious items, light up the family puja altar and visit their local temples. People wear new clothes, exchange greetings, distribute sweets and give gifts, especially money, to children and the needy.",
-    hasImage: true,
-    imageLabel: "Tamizh Puttandu — Tamil New Year celebrations",
+    images: [puth1, puth2],
     source: "(src: boldskytamil.com)",
   },
   {
@@ -401,8 +435,7 @@ const festivals = [
     tagline: "The festival of Padhinettam Perukku, also known as 'Aadi Perukku', held on the 18th day of the Tamil month of Aadi.",
     description:
       "'Perukku' means 'raising' in Tamil. This festival is a reflection of the River Kaveri's rise due to the monsoon rains. The Tamil calendar month of Aadi is marked by festivities and fervour honouring Water and other natural resources. Prayers and pujas are performed throughout this month to express gratitude to the mighty Goddesses for abundant natural resources. Women and girls decorate the steps with flowers and incense, and prepare offerings to propitiate the river goddess.",
-    hasImage: true,
-    imageLabel: "Adipperukku — festival honouring River Kaveri",
+    images: [adi1, adi2],
     source: "",
   },
   {
