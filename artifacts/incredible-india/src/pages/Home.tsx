@@ -1,7 +1,6 @@
 import { useLocation } from "wouter";
 import IndiaMap from "@/components/IndiaMap";
 import { statesList } from "@/data/states";
-import { MapPin, BookOpen, Globe, Landmark } from "lucide-react";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -68,28 +67,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
-      {/* Features row */}
-      <div className="bg-card border-b border-border">
-        <div className="max-w-6xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { icon: MapPin, label: "Click a state on the map", sub: "to explore its heritage" },
-            { icon: BookOpen, label: "Rich cultural stories", sub: "from every region" },
-            { icon: Globe, label: "All 28 States", sub: "and 8 Union Territories" },
-            { icon: Landmark, label: "Ancient to modern", sub: "living traditions" },
-          ].map(({ icon: Icon, label, sub }) => (
-            <div key={label} className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Icon className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-foreground">{label}</div>
-                <div className="text-xs text-muted-foreground">{sub}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* Main content */}
       <main className="max-w-6xl mx-auto px-6 py-12">
