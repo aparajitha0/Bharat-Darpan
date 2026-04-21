@@ -27,7 +27,7 @@ export default function Home() {
             className="text-5xl md:text-7xl font-bold mb-4 tracking-wide"
             style={{ fontFamily: "'Cinzel', serif" }}
           >
-            Incredible India
+            Bharat Darpan
           </h1>
 
           <div className="w-24 h-1 bg-white/60 mx-auto mb-6 rounded-full" />
@@ -248,7 +248,7 @@ export default function Home() {
             className="text-xl font-bold text-foreground mb-2"
             style={{ fontFamily: "'Cinzel', serif" }}
           >
-            Incredible India
+            Bharat Darpan
           </h3>
           <p className="text-muted-foreground text-sm max-w-lg mx-auto">
             A cultural preservation initiative celebrating the diversity, heritage, and living traditions of India's 28 states and 8 union territories.

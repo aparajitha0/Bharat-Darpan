@@ -251,7 +251,7 @@ export default function StatePage() {
             onClick={() => setLocation("/")}
             className="text-primary font-semibold hover:underline text-sm"
           >
-            ← Incredible India
+            ← Bharat Darpan
           </button>
           <p className="text-xs text-muted-foreground mt-2">Preserving India's rich cultural legacy for generations to come</p>
         </div>

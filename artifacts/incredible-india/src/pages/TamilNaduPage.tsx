@@ -446,7 +446,7 @@ export default function TamilNaduPage() {
       <footer className="mt-16 bg-foreground/5 border-t border-border">
         <div className="max-w-6xl mx-auto px-6 py-8 text-center">
           <button onClick={() => setLocation("/")} className="text-primary font-semibold hover:underline text-sm">
-            ← Incredible India
+            ← Bharat Darpan
           </button>
           <p className="text-xs text-muted-foreground mt-2">Preserving India's rich cultural legacy for generations to come</p>
         </div>
