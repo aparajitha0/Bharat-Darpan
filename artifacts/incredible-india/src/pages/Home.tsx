@@ -8,8 +8,8 @@ const GOLD_DEEP = "#B8860B";
 const RED_BG = "#5A0E0E";
 const RED_DEEP = "#3D0808";
 const RED_CARD = "#7A1414";
-const HERO_RED = "#8B0000";
-const HERO_RED_SOFT = "#A91B1B";
+const HERO_RED = "#3D0808";
+const HERO_RED_SOFT = "#5A0E0E";
 
 export default function Home() {
   const [, setLocation] = useLocation();
