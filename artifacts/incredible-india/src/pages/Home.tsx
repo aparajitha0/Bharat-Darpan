@@ -8,6 +8,8 @@ const GOLD_DEEP = "#B8860B";
 const RED_BG = "#5A0E0E";
 const RED_DEEP = "#3D0808";
 const RED_CARD = "#7A1414";
+const HERO_RED = "#8B0000";
+const HERO_RED_SOFT = "#A91B1B";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -15,7 +17,10 @@ export default function Home() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: RED_BG, color: GOLD }}>
       {/* Header */}
-      <header className="relative overflow-hidden bg-[hsl(20,30%,15%)]" style={{ color: GOLD }}>
+      <header
+        className="relative overflow-hidden bg-[hsl(20,30%,15%)] min-h-screen flex flex-col"
+        style={{ color: HERO_RED }}
+      >
         {/* Blurred tricolour background */}
         <div
           className="absolute inset-0 scale-110"
@@ -38,33 +43,33 @@ export default function Home() {
           <div className="w-3 h-3 rounded-full bg-[#000080] z-10" />
         </div>
 
-        {/* Dark overlay for text contrast */}
-        <div className="absolute inset-0 bg-black/45" />
+        {/* Soft white veil for red text contrast */}
+        <div className="absolute inset-0 bg-white/25" />
 
         {/* Decorative mandala circles */}
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full border-2 border-[#F5C518]/20 -translate-y-1/2 translate-x-1/2" />
         <div className="absolute top-0 right-0 w-60 h-60 rounded-full border-2 border-[#F5C518]/20 -translate-y-1/3 translate-x-1/3" />
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full border-2 border-[#F5C518]/20 translate-y-1/2 -translate-x-1/2" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 text-center flex-1 flex flex-col justify-center w-full">
           {/* Decorative line */}
           <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-px w-24" style={{ backgroundColor: GOLD, opacity: 0.6 }} />
+            <div className="h-px w-24" style={{ backgroundColor: HERO_RED, opacity: 0.7 }} />
             <span
-              className="text-sm tracking-[0.3em] uppercase font-medium"
-              style={{ color: GOLD_SOFT }}
+              className="text-sm tracking-[0.3em] uppercase font-bold"
+              style={{ color: HERO_RED }}
             >
               Ek Bharat Shreshtha Bharat
             </span>
-            <div className="h-px w-24" style={{ backgroundColor: GOLD, opacity: 0.6 }} />
+            <div className="h-px w-24" style={{ backgroundColor: HERO_RED, opacity: 0.7 }} />
           </div>
 
           <h1
             className="text-5xl md:text-7xl font-bold mb-4 tracking-wide"
             style={{
               fontFamily: "'Cinzel', serif",
-              color: GOLD,
-              textShadow: "0 2px 12px rgba(0,0,0,0.6), 0 0 24px rgba(245,197,24,0.25)",
+              color: HERO_RED,
+              textShadow: "0 2px 12px rgba(255,255,255,0.7), 0 0 24px rgba(255,255,255,0.4)",
             }}
           >
             Bharat Darpan
@@ -72,19 +77,19 @@ export default function Home() {
 
           <div
             className="w-24 h-1 mx-auto mb-6 rounded-full"
-            style={{ backgroundColor: GOLD }}
+            style={{ backgroundColor: HERO_RED }}
           />
 
           <p
-            className="text-xl md:text-2xl mb-4 italic"
-            style={{ fontFamily: "'Lora', serif", color: GOLD_SOFT }}
+            className="text-xl md:text-2xl mb-4 italic font-semibold"
+            style={{ fontFamily: "'Lora', serif", color: HERO_RED }}
           >
             A journey through the living tapestry of our civilization
           </p>
 
           <p
-            className="max-w-2xl mx-auto text-base leading-relaxed"
-            style={{ color: GOLD_SOFT, opacity: 0.9 }}
+            className="max-w-2xl mx-auto text-base leading-relaxed font-medium"
+            style={{ color: HERO_RED_SOFT }}
           >
             Explore the rich cultural heritage, ancient traditions, vibrant festivals,
             and timeless wisdom of every state and union territory of India.
@@ -102,22 +107,30 @@ export default function Home() {
                 <div className="text-center">
                   <div
                     className="text-3xl font-bold"
-                    style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
+                    style={{ fontFamily: "'Cinzel', serif", color: HERO_RED }}
                   >
                     {s.num}
                   </div>
-                  <div className="text-sm mt-1" style={{ color: GOLD_SOFT, opacity: 0.85 }}>
+                  <div className="text-sm mt-1 font-semibold" style={{ color: HERO_RED }}>
                     {s.label}
                   </div>
                 </div>
                 {i < arr.length - 1 && (
                   <div
                     className="w-px h-12 self-center hidden sm:block"
-                    style={{ backgroundColor: GOLD, opacity: 0.3 }}
+                    style={{ backgroundColor: HERO_RED, opacity: 0.4 }}
                   />
                 )}
               </div>
             ))}
+          </div>
+
+          {/* Scroll hint */}
+          <div className="mt-12 flex flex-col items-center gap-2" style={{ color: HERO_RED }}>
+            <span className="text-xs uppercase tracking-[0.3em] font-semibold opacity-80">
+              Scroll to explore
+            </span>
+            <span className="text-2xl animate-bounce">↓</span>
           </div>
         </div>
 
