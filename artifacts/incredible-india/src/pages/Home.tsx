@@ -2,13 +2,20 @@ import { useLocation } from "wouter";
 import IndiaMap from "@/components/IndiaMap";
 import { statesList } from "@/data/states";
 
+const GOLD = "#F5C518";
+const GOLD_SOFT = "#E8B923";
+const GOLD_DEEP = "#B8860B";
+const RED_BG = "#5A0E0E";
+const RED_DEEP = "#3D0808";
+const RED_CARD = "#7A1414";
+
 export default function Home() {
   const [, setLocation] = useLocation();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ backgroundColor: RED_BG, color: GOLD }}>
       {/* Header */}
-      <header className="relative overflow-hidden text-white bg-[hsl(20,30%,15%)]">
+      <header className="relative overflow-hidden bg-[hsl(20,30%,15%)]" style={{ color: GOLD }}>
         {/* Blurred tricolour background */}
         <div
           className="absolute inset-0 scale-110"
@@ -32,65 +39,95 @@ export default function Home() {
         </div>
 
         {/* Dark overlay for text contrast */}
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-black/45" />
 
         {/* Decorative mandala circles */}
-        <div className="absolute top-0 right-0 w-80 h-80 rounded-full border-2 border-white/10 -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute top-0 right-0 w-60 h-60 rounded-full border-2 border-white/10 -translate-y-1/3 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full border-2 border-white/10 translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-80 h-80 rounded-full border-2 border-[#F5C518]/20 -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-60 h-60 rounded-full border-2 border-[#F5C518]/20 -translate-y-1/3 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full border-2 border-[#F5C518]/20 translate-y-1/2 -translate-x-1/2" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 text-center">
           {/* Decorative line */}
           <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-px w-24 bg-white/40" />
-            <span className="text-white/70 text-sm tracking-[0.3em] uppercase font-medium">Ek Bharat Shreshtha Bharat</span>
-            <div className="h-px w-24 bg-white/40" />
+            <div className="h-px w-24" style={{ backgroundColor: GOLD, opacity: 0.6 }} />
+            <span
+              className="text-sm tracking-[0.3em] uppercase font-medium"
+              style={{ color: GOLD_SOFT }}
+            >
+              Ek Bharat Shreshtha Bharat
+            </span>
+            <div className="h-px w-24" style={{ backgroundColor: GOLD, opacity: 0.6 }} />
           </div>
 
           <h1
             className="text-5xl md:text-7xl font-bold mb-4 tracking-wide"
-            style={{ fontFamily: "'Cinzel', serif" }}
+            style={{
+              fontFamily: "'Cinzel', serif",
+              color: GOLD,
+              textShadow: "0 2px 12px rgba(0,0,0,0.6), 0 0 24px rgba(245,197,24,0.25)",
+            }}
           >
             Bharat Darpan
           </h1>
 
-          <div className="w-24 h-1 bg-white/60 mx-auto mb-6 rounded-full" />
+          <div
+            className="w-24 h-1 mx-auto mb-6 rounded-full"
+            style={{ backgroundColor: GOLD }}
+          />
 
           <p
-            className="text-xl md:text-2xl text-white/85 mb-4 italic"
-            style={{ fontFamily: "'Lora', serif" }}
+            className="text-xl md:text-2xl mb-4 italic"
+            style={{ fontFamily: "'Lora', serif", color: GOLD_SOFT }}
           >
             A journey through the living tapestry of our civilization
           </p>
 
-          <p className="text-white/70 max-w-2xl mx-auto text-base leading-relaxed">
-            Explore the rich cultural heritage, ancient traditions, vibrant festivals, 
+          <p
+            className="max-w-2xl mx-auto text-base leading-relaxed"
+            style={{ color: GOLD_SOFT, opacity: 0.9 }}
+          >
+            Explore the rich cultural heritage, ancient traditions, vibrant festivals,
             and timeless wisdom of every state and union territory of India.
           </p>
 
           {/* Stats row */}
           <div className="mt-10 flex flex-wrap justify-center gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white" style={{ fontFamily: "'Cinzel', serif" }}>28</div>
-              <div className="text-white/70 text-sm mt-1">States</div>
-            </div>
-            <div className="w-px h-12 bg-white/20 self-center hidden sm:block" />
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white" style={{ fontFamily: "'Cinzel', serif" }}>8</div>
-              <div className="text-white/70 text-sm mt-1">Union Territories</div>
-            </div>
-            <div className="w-px h-12 bg-white/20 self-center hidden sm:block" />
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white" style={{ fontFamily: "'Cinzel', serif" }}>1,600+</div>
-              <div className="text-white/70 text-sm mt-1">Languages & Dialects</div>
-            </div>
-            <div className="w-px h-12 bg-white/20 self-center hidden sm:block" />
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white" style={{ fontFamily: "'Cinzel', serif" }}>5,000+</div>
-              <div className="text-white/70 text-sm mt-1">Years of History</div>
-            </div>
+            {[
+              { num: "28", label: "States" },
+              { num: "8", label: "Union Territories" },
+              { num: "1,600+", label: "Languages & Dialects" },
+              { num: "5,000+", label: "Years of History" },
+            ].map((s, i, arr) => (
+              <div key={s.label} className="flex items-center gap-8">
+                <div className="text-center">
+                  <div
+                    className="text-3xl font-bold"
+                    style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
+                  >
+                    {s.num}
+                  </div>
+                  <div className="text-sm mt-1" style={{ color: GOLD_SOFT, opacity: 0.85 }}>
+                    {s.label}
+                  </div>
+                </div>
+                {i < arr.length - 1 && (
+                  <div
+                    className="w-px h-12 self-center hidden sm:block"
+                    style={{ backgroundColor: GOLD, opacity: 0.3 }}
+                  />
+                )}
+              </div>
+            ))}
           </div>
         </div>
+
+        {/* Gold border at bottom */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-1 z-20"
+          style={{
+            background: `linear-gradient(to right, transparent, ${GOLD}, ${GOLD_DEEP}, ${GOLD}, transparent)`,
+          }}
+        />
       </header>
 
       {/* Main content */}
@@ -100,21 +137,31 @@ export default function Home() {
           <div className="lg:col-span-3">
             <div className="text-center mb-6">
               <h2
-                className="text-2xl font-bold text-foreground mb-2"
-                style={{ fontFamily: "'Cinzel', serif" }}
+                className="text-2xl font-bold mb-2"
+                style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
               >
                 Political Map of India
               </h2>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-sm" style={{ color: GOLD_SOFT, opacity: 0.85 }}>
                 Click on any state or union territory to discover its culture
               </p>
             </div>
 
-            <div className="bg-card rounded-2xl border border-border p-4 shadow-md">
+            <div
+              className="rounded-2xl p-4 shadow-md"
+              style={{
+                backgroundColor: "#FFF8E7",
+                border: `2px solid ${GOLD}`,
+                boxShadow: `0 0 24px rgba(245,197,24,0.25)`,
+              }}
+            >
               <IndiaMap />
             </div>
 
-            <p className="text-center text-xs text-muted-foreground mt-3">
+            <p
+              className="text-center text-xs mt-3"
+              style={{ color: GOLD_SOFT, opacity: 0.8 }}
+            >
               Hover over a state to see its name. Click to explore.
             </p>
           </div>
@@ -122,12 +169,12 @@ export default function Home() {
           {/* States list */}
           <div className="lg:col-span-2">
             <h2
-              className="text-2xl font-bold text-foreground mb-2"
-              style={{ fontFamily: "'Cinzel', serif" }}
+              className="text-2xl font-bold mb-2"
+              style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
             >
               Explore by State
             </h2>
-            <p className="text-muted-foreground text-sm mb-5">
+            <p className="text-sm mb-5" style={{ color: GOLD_SOFT, opacity: 0.85 }}>
               Browse the complete list of states and union territories
             </p>
 
@@ -137,21 +184,42 @@ export default function Home() {
                   key={state.id}
                   data-testid={`state-card-${state.id}`}
                   onClick={() => setLocation(`/state/${state.id}`)}
-                  className="w-full text-left px-4 py-3 rounded-xl border border-border bg-card hover:bg-accent/5 hover:border-primary/30 transition-all group flex items-center gap-3"
+                  className="w-full text-left px-4 py-3 rounded-xl transition-all group flex items-center gap-3"
+                  style={{
+                    backgroundColor: RED_CARD,
+                    border: `1px solid ${GOLD_DEEP}`,
+                    color: GOLD,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = RED_DEEP;
+                    e.currentTarget.style.borderColor = GOLD;
+                    e.currentTarget.style.boxShadow = `0 0 12px rgba(245,197,24,0.3)`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = RED_CARD;
+                    e.currentTarget.style.borderColor = GOLD_DEEP;
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
                 >
                   <div
                     className="w-3 h-3 rounded-full flex-shrink-0"
                     style={{ backgroundColor: state.mapColor }}
                   />
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors truncate">
+                    <div
+                      className="font-semibold text-sm truncate"
+                      style={{ color: GOLD }}
+                    >
                       {state.name}
                     </div>
-                    <div className="text-xs text-muted-foreground truncate">
+                    <div
+                      className="text-xs truncate"
+                      style={{ color: GOLD_SOFT, opacity: 0.75 }}
+                    >
                       {state.capital} · {state.region}
                     </div>
                   </div>
-                  <div className="text-muted-foreground group-hover:text-primary transition-colors text-xs">
+                  <div className="text-xs" style={{ color: GOLD }}>
                     →
                   </div>
                 </button>
@@ -163,40 +231,48 @@ export default function Home() {
         {/* About section */}
         <section className="mt-20 text-center">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-px w-16 bg-border" />
-            <div className="w-2 h-2 rounded-full bg-primary" />
-            <div className="h-px w-16 bg-border" />
+            <div className="h-px w-16" style={{ backgroundColor: GOLD, opacity: 0.5 }} />
+            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: GOLD }} />
+            <div className="h-px w-16" style={{ backgroundColor: GOLD, opacity: 0.5 }} />
           </div>
 
           <h2
-            className="text-3xl font-bold text-foreground mb-4"
-            style={{ fontFamily: "'Cinzel', serif" }}
+            className="text-3xl font-bold mb-4"
+            style={{
+              fontFamily: "'Cinzel', serif",
+              color: GOLD,
+              textShadow: "0 0 16px rgba(245,197,24,0.3)",
+            }}
           >
             Preserving India's Living Heritage
           </h2>
 
           <p
-            className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base italic"
-            style={{ fontFamily: "'Lora', serif" }}
+            className="max-w-3xl mx-auto leading-relaxed text-base italic"
+            style={{ fontFamily: "'Lora', serif", color: GOLD_SOFT, opacity: 0.9 }}
           >
-            "India is not a country. It is an experience — a civilization that breathes through 
-            its art, music, dance, cuisine, festivals, and the wisdom passed down through millennia. 
-            This platform exists to ensure that every thread of this magnificent tapestry is seen, 
+            "India is not a country. It is an experience — a civilization that breathes through
+            its art, music, dance, cuisine, festivals, and the wisdom passed down through millennia.
+            This platform exists to ensure that every thread of this magnificent tapestry is seen,
             known, and celebrated."
           </p>
 
           <div className="flex items-center justify-center gap-4 mt-6">
-            <div className="h-px w-16 bg-border" />
-            <div className="w-2 h-2 rounded-full bg-accent" />
-            <div className="h-px w-16 bg-border" />
+            <div className="h-px w-16" style={{ backgroundColor: GOLD, opacity: 0.5 }} />
+            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: GOLD_DEEP }} />
+            <div className="h-px w-16" style={{ backgroundColor: GOLD, opacity: 0.5 }} />
           </div>
         </section>
 
         {/* Regional sections */}
         <section className="mt-16">
           <h2
-            className="text-2xl font-bold text-foreground mb-8 text-center"
-            style={{ fontFamily: "'Cinzel', serif" }}
+            className="text-4xl md:text-5xl font-bold mb-8 text-center tracking-[0.4em]"
+            style={{
+              fontFamily: "'Cinzel', serif",
+              color: GOLD,
+              textShadow: "0 0 24px rgba(245,197,24,0.4)",
+            }}
           >
             INDIA
           </h2>
@@ -204,18 +280,27 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-20 bg-foreground/5 border-t border-border">
+      <footer
+        className="mt-20"
+        style={{
+          backgroundColor: RED_DEEP,
+          borderTop: `2px solid ${GOLD}`,
+        }}
+      >
         <div className="max-w-6xl mx-auto px-6 py-10 text-center">
           <h3
-            className="text-xl font-bold text-foreground mb-2"
-            style={{ fontFamily: "'Cinzel', serif" }}
+            className="text-xl font-bold mb-2"
+            style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
           >
             Bharat Darpan
           </h3>
-          <p className="text-muted-foreground text-sm max-w-lg mx-auto">
+          <p
+            className="text-sm max-w-lg mx-auto"
+            style={{ color: GOLD_SOFT, opacity: 0.85 }}
+          >
             A cultural preservation initiative celebrating the diversity, heritage, and living traditions of India's 28 states and 8 union territories.
           </p>
-          <div className="mt-6 text-xs text-muted-foreground/60">
+          <div className="mt-6 text-xs" style={{ color: GOLD_SOFT, opacity: 0.6 }}>
             <span>Satyamev Jayate — Truth Alone Triumphs</span>
           </div>
         </div>
