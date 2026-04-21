@@ -15,6 +15,26 @@ import puth1 from "@assets/image_1776788430140.png";
 import puth2 from "@assets/image_1776788437438.png";
 import adi1 from "@assets/image_1776788476146.png";
 import adi2 from "@assets/image_1776788482041.png";
+import dance1 from "@assets/image_1776788764847.png";
+import dance2 from "@assets/image_1776788772553.png";
+import navar1 from "@assets/image_1776788788721.png";
+import navar2 from "@assets/image_1776788797545.png";
+import karth1 from "@assets/image_1776788805779.png";
+import karth2 from "@assets/image_1776788811412.png";
+import karth3 from "@assets/image_1776788817244.png";
+import karad1 from "@assets/image_1776788825797.png";
+import karad2 from "@assets/image_1776788831894.png";
+import sixAbodes from "@assets/image_1776788840602.png";
+import thiruparankundram from "@assets/image_1776788847901.png";
+import thiruchendur from "@assets/image_1776788856768.png";
+import palani1 from "@assets/image_1776788865143.png";
+import palani2 from "@assets/image_1776788870905.png";
+import swamimalai from "@assets/image_1776788878018.png";
+import thiruttani from "@assets/image_1776788887081.png";
+import pazhamudir from "@assets/image_1776788895857.png";
+import bhumiLingam from "@assets/image_1776788902350.png";
+import jambuLingam from "@assets/image_1776788909064.png";
+import jyothiLingam from "@assets/image_1776788916164.png";
 
 /* ─── Lightbox ──────────────────────────────────────────────────────────── */
 function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
@@ -71,6 +91,37 @@ function Section({ title, icon, children }: { title: string; icon: string; child
   );
 }
 
+/* ─── Image grid (shared) ────────────────────────────────────────────────── */
+function ImageGrid({
+  images, alt, onImageClick,
+}: { images: string[]; alt: string; onImageClick: (src: string, alt: string) => void }) {
+  const cols = images.length === 1
+    ? "grid-cols-1"
+    : images.length >= 3
+      ? "grid-cols-2 sm:grid-cols-3"
+      : "grid-cols-1 sm:grid-cols-2";
+  return (
+    <div className={`grid gap-3 ${cols}`}>
+      {images.map((src, idx) => (
+        <button
+          key={idx}
+          onClick={() => onImageClick(src, `${alt}${images.length > 1 ? ` — image ${idx + 1}` : ""}`)}
+          className="group relative rounded-xl overflow-hidden border border-border bg-muted/30 cursor-zoom-in aspect-[4/3]"
+        >
+          <img
+            src={src}
+            alt={`${alt} ${idx + 1}`}
+            className="w-full h-full object-cover transition-transform group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+            <ZoomIn className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
+        </button>
+      ))}
+    </div>
+  );
+}
+
 /* ─── Festival card ──────────────────────────────────────────────────────── */
 function FestivalCard({
   number, name, tagline, description, source, hasImage, imageLabel, images,
@@ -98,24 +149,7 @@ function FestivalCard({
       <div className="px-5 py-4 space-y-4">
         <p className="text-sm text-foreground leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>{description}</p>
         {images && images.length > 0 && (
-          <div className={`grid gap-3 ${images.length >= 3 ? "grid-cols-2 sm:grid-cols-3" : "grid-cols-1 sm:grid-cols-2"}`}>
-            {images.map((src, idx) => (
-              <button
-                key={idx}
-                onClick={() => onImageClick(src, `${name} — image ${idx + 1}`)}
-                className="group relative rounded-xl overflow-hidden border border-border bg-muted/30 cursor-zoom-in aspect-[4/3]"
-              >
-                <img
-                  src={src}
-                  alt={`${name} ${idx + 1}`}
-                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                  <ZoomIn className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </button>
-            ))}
-          </div>
+          <ImageGrid images={images} alt={name} onImageClick={onImageClick} />
         )}
         {hasImage && !images && (
           <DocxImage label={imageLabel ?? name} source={source} color="#D45A3A" />
@@ -131,12 +165,17 @@ function FestivalCard({
 function HistoricalPlaceCard({
   number, name, description, source, hasImage, imageLabel,
   subPlaces,
+  images,
+  onImageClick,
 }: {
   number: number; name: string; description: string; source?: string;
   hasImage?: boolean; imageLabel?: string;
+  images?: string[];
+  onImageClick: (src: string, alt: string) => void;
   subPlaces?: {
     name: string; location?: string; description: string;
     source?: string; hasImage?: boolean; imageLabel?: string;
+    images?: string[];
   }[];
 }) {
   return (
@@ -150,15 +189,18 @@ function HistoricalPlaceCard({
         </div>
         <h3 className="font-bold text-foreground text-base pt-1" style={{ fontFamily: "'Cinzel', serif" }}>{name}</h3>
       </div>
-      <div className="px-5 py-4">
+      <div className="px-5 py-4 space-y-4">
         <p className="text-sm text-foreground leading-relaxed whitespace-pre-line" style={{ fontFamily: "'Lora', serif" }}>{description}</p>
-        {hasImage && (
+        {images && images.length > 0 && (
+          <ImageGrid images={images} alt={name} onImageClick={onImageClick} />
+        )}
+        {hasImage && !images && (
           <DocxImage label={imageLabel ?? name} source={source} color="#3A8A5A" />
         )}
-        {source && !hasImage && <p className="text-xs text-muted-foreground mt-2">{source}</p>}
+        {source && (!hasImage || images) && <p className="text-xs text-muted-foreground">{source}</p>}
 
         {subPlaces && subPlaces.length > 0 && (
-          <div className="mt-5 space-y-5">
+          <div className="space-y-5">
             {subPlaces.map((sub, idx) => (
               <div key={idx} className="border border-border/60 rounded-xl p-4 bg-muted/30">
                 <div className="flex items-start gap-2 mb-2">
@@ -169,12 +211,17 @@ function HistoricalPlaceCard({
                   </div>
                 </div>
                 <p className="text-sm text-foreground/80 leading-relaxed pl-6" style={{ fontFamily: "'Lora', serif" }}>{sub.description}</p>
-                {sub.hasImage && (
+                {sub.images && sub.images.length > 0 && (
+                  <div className="pl-6 mt-3">
+                    <ImageGrid images={sub.images} alt={sub.name} onImageClick={onImageClick} />
+                  </div>
+                )}
+                {sub.hasImage && !sub.images && (
                   <div className="pl-6">
                     <DocxImage label={sub.imageLabel ?? sub.name} source={sub.source} color="#3A7AAA" />
                   </div>
                 )}
-                {sub.source && !sub.hasImage && (
+                {sub.source && (!sub.hasImage || sub.images) && (
                   <p className="text-xs text-muted-foreground mt-2 pl-6">{sub.source}</p>
                 )}
               </div>
@@ -325,7 +372,7 @@ export default function TamilNaduPage() {
         <Section title="Historical Places / Monuments" icon="🏯">
           <div className="space-y-10">
             {historicalPlaces.map((p, i) => (
-              <HistoricalPlaceCard key={i} number={i + 1} {...p} />
+              <HistoricalPlaceCard key={i} number={i + 1} {...p} onImageClick={openLightbox} />
             ))}
           </div>
         </Section>
@@ -443,8 +490,7 @@ const festivals = [
     tagline: "Set before an open-air stage created 13 centuries ago.",
     description:
       "The incredible monolithic rock sculptures of the Pallavas, next to the sea in the ancient city of Mamallapuram, form the spectacular backdrop to this festival. Bharatha Natyam, Kuchipudi, Kathakali, and Odissi are some dance forms presented by the very best exponents of the art besides folk dances. The Mamallapuram Dance Festival is organised by the Department of Tourism, Tamil Nadu, and is a 30-day festival held annually between December and January.",
-    hasImage: true,
-    imageLabel: "Mamallapuram Dance Festival — classical dance with Pallava rock backdrop",
+    images: [dance1, dance2],
     source: "(src: utsav.gov.in, Wikipedia)",
   },
   {
@@ -460,8 +506,7 @@ const festivals = [
     tagline: "Literally means the festival of 'nine nights'.",
     description:
       "Taking unique and different forms in different states of India, all to propitiate the goddess Sakthi, for power, wealth and knowledge. Celebrated in Tamil Nadu, Karnataka, and Andhra Pradesh, the festival includes placing dolls of a multitude of gods, goddesses, men, animals, and children on a steps-like set-up. In Tamil it is known as 'Bommai Golu'. The Navratri Golu depicts scenes from ancient times, epics, village life and other aspects of Hindu mythology.",
-    hasImage: true,
-    imageLabel: "Navarathiri Kolu — display of traditional dolls on staircase steps",
+    images: [navar1, navar2],
     source: "(Wikipedia)",
   },
   {
@@ -469,8 +514,7 @@ const festivals = [
     tagline: "An enchanting festival that illuminates the heart of Tamil Nadu.",
     description:
       "With little clay lamps twinkling wherever you look like a million stars, the three-day festival, celebrated with great enthusiasm, is an integral part of Tamil culture. Devoted to Lord Karthikeya (also known as Lord Muruga), the lights of Karthigai Deepam are said to ward off darkness and evil spirits, spreading prosperity and joy. As per ancient Hindu scriptures, the two great deities Lord Vishnu and Brahma had a disagreement about who was greater. To resolve the argument, Lord Shiva appeared in the form of an enormous fire column — an Agni Lingam — that had no beginning and no end. The beacon at Thiruvannamalai, lit on top of the Annamalai hill on this auspicious day, is visible for miles around.",
-    hasImage: true,
-    imageLabel: "Karthigai Deepam — rows of clay lamps illuminating Tamil Nadu",
+    images: [karth1, karth2, karth3],
     source: "(src: kalkionline.com, incredibleindia.com, tirthyatra.com)",
   },
   {
@@ -478,8 +522,7 @@ const festivals = [
     tagline: "Marking the transition from the Tamil month of Maasi to Panguni.",
     description:
       "It is a significant festival where married women and young girls fast and pray to Goddess Kamakshi/Gowri for their husbands' longevity and prosperity, inspired by the story of Savitri and Satyavan. The festival celebrates the dedication of Savitri, who brought her husband back from Yama, embodying love and commitment. According to the legend, Savitri was a devoted princess who used her wit and devotion to reclaim her husband's life from the god of death. Women prepare the traditional 'Karadai' — a dish made of rice and black-eyed peas — and offer it to the goddess.",
-    hasImage: true,
-    imageLabel: "Karadaiya Nombu — women observing the vow with Karadai offering",
+    images: [karad1, karad2],
     source: "(src: kannan's kitchen, veenas vegnation)",
   },
   {
@@ -497,15 +540,14 @@ const historicalPlaces = [
     name: "Six Abodes of Murugan (Arupadai Veedu)",
     description:
       "The Six Abodes of Murugan, known as 'Arupadai Veedu', are sacred temples in Tamil Nadu, India, celebrating different stages of Lord Murugan's life, victories, and legends.",
-    hasImage: false,
+    images: [sixAbodes],
     subPlaces: [
       {
         name: "Subramaniyaswamy Temple – Thiruparankundram",
         location: "Madurai district",
         description:
           "Located on a hillock, it is the first of the Aarupadaiveedu. Murugan's marriage with Deivanai took place here.",
-        hasImage: true,
-        imageLabel: "Subramaniyaswamy Temple – Thiruparankundram",
+        images: [thiruparankundram],
         source: "(src: Tumblr)",
       },
       {
@@ -513,8 +555,7 @@ const historicalPlaces = [
         location: "Thoothukudi district",
         description:
           "Located along the coast of Bay of Bengal, the temple commemorates the place where Murugan won a victory over the demon Surapadman.",
-        hasImage: true,
-        imageLabel: "Arulmigu Senthilnathar Temple – Tiruchendur",
+        images: [thiruchendur],
         source: "(src: cottage9)",
       },
       {
@@ -522,8 +563,7 @@ const historicalPlaces = [
         location: "Dindigul district",
         description:
           "Located at the foothills of a hillock, the deity known as 'Kulanthai Velayuthaswami' is depicted as a young form of Murugan, and said to have been worshipped by the goddess Lakshmi. In the temple on the hilltop where 'Dhandayuthapani' is the main deity, Murugan is depicted as a hermit carrying a staff ('danda'). This is the place where Murugan is said to have arrived after his feud with his family over a divine fruit.",
-        hasImage: true,
-        imageLabel: "Dandayudhapani Temple – Palani hilltop temple",
+        images: [palani1, palani2],
         source: "(src: Cottage9, southern travels)",
       },
       {
@@ -531,8 +571,7 @@ const historicalPlaces = [
         location: "Thanjavur district",
         description:
           "Located atop a small hillock, the temple commemorates the incident where Murugan is regarded to have explained the essence of the Pranava mantra 'Om' to his father Shiva. Once, Brahma disrespected Murugan when he was visiting Mount Kailash. Murugan boldly asked Brahma the meaning of 'OM'. Failing to answer, Brahma admitted his ignorance. Murugan then imprisoned Brahma and took over his role of creation. Shiva intervened and asked Murugan to release Brahma, to which Murugan agreed only after teaching Brahma the meaning of OM. Since Murugan taught Shiva, his father, the essence of the Pranava Mantra, he is called Swaminatha — meaning 'the teacher of Shiva'.",
-        hasImage: true,
-        imageLabel: "Swaminatha Swamy Temple – Swamimalai",
+        images: [swamimalai],
         source: "(src: casual walker)",
       },
       {
@@ -540,8 +579,7 @@ const historicalPlaces = [
         location: "Thiruvallur district",
         description:
           "Located atop a hill, Murugan is said to have reclaimed his inner peace after winning a war over the Surapadman and married Valli here. After the intensity of the war in Tiruchendur, Murugan needed a place to subdue his anger and seek inner peace, making Tiruttani a place of tranquility. 'Thanigai' in Tamil means 'to pacify' or 'to calm down', which is why the hill and town are named Tiruttani.",
-        hasImage: true,
-        imageLabel: "Subramanya Swamy Temple – Tiruttani",
+        images: [thiruttani],
         source: "(src: Wikipedia)",
       },
       {
@@ -549,8 +587,7 @@ const historicalPlaces = [
         location: "Madurai district",
         description:
           "Located on a hillock near a stream called 'Nupura Gangai', Murugan is seen here with both his consorts, Deivanai and Valli. The temple is associated with the legendary Tamil poetess Avvaiyar, who found Murugan disguised as a boy eating fruits. She requested some, and he asked if she wanted hot or cold fruits. She said cold, and he blew on them — revealing them to be hot roasted ones. Embarrassed, Avvaiyar remarked that she had blown on the fruits to cool them. This episode gave us the timeless saying: 'Learned people know they know nothing.'",
-        hasImage: true,
-        imageLabel: "Solaimalai Murugan Temple – Pazhamudircholai",
+        images: [pazhamudir],
         source: "(src: TemplePurohit)",
       },
     ],
@@ -566,8 +603,7 @@ const historicalPlaces = [
         location: "Kanchipuram",
         description:
           "Shiva is worshipped as Ekambareswarar or Ekambaranathar, represented by the Prithvi (earth) lingam. The temple complex covers 25 acres and is one of the largest in India. It houses four gateway towers known as gopurams. The tallest is the southern tower, with 11 stories and a height of 58.5 metres (192 ft), making it one of the tallest temple towers in India. The temple has a mango tree believed to be 3,500 years old, under which Parvati worshipped Shiva as the earth lingam.",
-        hasImage: true,
-        imageLabel: "Ekambareshwar Temple – Kanchipuram (Earth element)",
+        images: [bhumiLingam],
         source: "",
       },
       {
@@ -575,8 +611,7 @@ const historicalPlaces = [
         location: "Thiruvanaikaval, near Trichy",
         description:
           "The sanctum of Jambukeswara has the copper-plated lingam and an underground water stream, and despite draining the water out, it is always filled with water. Once, Parvati mocked Shiva's penance for the betterment of the world. Shiva wanted to condemn her act and banished her to the earth from Mount Kailash to do penance. Parvati, in the form of Akhilandeshwari, as per the instruction of Shiva, worshipped Shiva in the form of an Appu lingam (water lingam). As a result, Shiva forgave her and rewarded her by sharing his half body, thus becoming Ardhanarishvara.",
-        hasImage: true,
-        imageLabel: "Jambukeshwarar Temple – Thiruvanaikaval (Water element)",
+        images: [jambuLingam],
         source: "",
       },
       {
@@ -584,8 +619,7 @@ const historicalPlaces = [
         location: "Thiruvannamalai",
         description:
           "Shiva is worshipped as Annamalaiyar or Arunachaleshwar, represented by a silver-plated lingam referred to as Agni lingam. The sanctum inside is always lit by fire lamps. The 9th-century Shaiva saint poet Manikkavacakar composed the Tiruvempaavai here. The temple complex covers 10 hectares and is one of the largest in India. The tallest gopuram rises to 66 metres (217 ft), making it the 3rd tallest temple tower in India. The Karthigai Deepam beacon lit atop Annamalai hill is visible for miles around.",
-        hasImage: true,
-        imageLabel: "Annamalaiyar Temple – Thiruvannamalai (Fire element)",
+        images: [jyothiLingam],
         source: "",
       },
       {
