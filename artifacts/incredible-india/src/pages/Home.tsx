@@ -8,12 +8,33 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="relative overflow-hidden bg-gradient-to-br from-[hsl(25,90%,40%)] via-[hsl(20,80%,35%)] to-[hsl(155,45%,30%)] text-white">
+      <header
+        className="relative overflow-hidden text-white"
+        style={{
+          backgroundImage:
+            "linear-gradient(to bottom, #FF9933 0%, #FF9933 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #138808 66.66%, #138808 100%)",
+        }}
+      >
+        {/* Ashoka Chakra in the white band */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border-[3px] border-[#000080] flex items-center justify-center pointer-events-none">
+          {Array.from({ length: 24 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute left-1/2 top-1/2 w-[2px] h-12 bg-[#000080] origin-top"
+              style={{ transform: `translate(-50%, 0) rotate(${i * 15}deg)` }}
+            />
+          ))}
+          <div className="w-3 h-3 rounded-full bg-[#000080] z-10" />
+        </div>
+
+        {/* Dark overlay for text contrast */}
+        <div className="absolute inset-0 bg-black/40" />
+
         {/* Decorative mandala circles */}
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full border-2 border-white/10 -translate-y-1/2 translate-x-1/2" />
         <div className="absolute top-0 right-0 w-60 h-60 rounded-full border-2 border-white/10 -translate-y-1/3 translate-x-1/3" />
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full border-2 border-white/10 translate-y-1/2 -translate-x-1/2" />
-        
+
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 text-center">
           {/* Decorative line */}
           <div className="flex items-center justify-center gap-4 mb-6">
