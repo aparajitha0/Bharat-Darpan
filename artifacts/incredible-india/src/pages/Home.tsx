@@ -57,7 +57,7 @@ export default function Home() {
             <div className="h-px w-24" style={{ backgroundColor: HERO_RED, opacity: 0.7 }} />
             <span
               className="text-sm tracking-[0.3em] uppercase font-bold"
-              style={{ color: HERO_RED }}
+              style={{ color: HERO_RED, WebkitTextStroke: `0.2px ${GOLD}` }}
             >
               Ek Bharat Shreshtha Bharat
             </span>
@@ -69,7 +69,7 @@ export default function Home() {
             style={{
               fontFamily: "'Cinzel', serif",
               color: HERO_RED,
-              textShadow: "0 2px 12px rgba(255,255,255,0.7), 0 0 24px rgba(255,255,255,0.4)",
+              WebkitTextStroke: `1px ${GOLD}`,
             }}
           >
             Bharat Darpan
@@ -81,15 +81,22 @@ export default function Home() {
           />
 
           <p
-            className="text-xl md:text-2xl mb-4 italic font-semibold"
-            style={{ fontFamily: "'Lora', serif", color: HERO_RED }}
+            className="text-xl md:text-2xl mb-4 italic font-bold"
+            style={{
+              fontFamily: "'Lora', serif",
+              color: HERO_RED,
+              WebkitTextStroke: `0.4px ${GOLD}`,
+            }}
           >
             A journey through the living tapestry of our civilization
           </p>
 
           <p
-            className="max-w-2xl mx-auto text-base leading-relaxed font-medium"
-            style={{ color: HERO_RED_SOFT }}
+            className="max-w-2xl mx-auto text-base leading-relaxed font-bold"
+            style={{
+              color: HERO_RED,
+              WebkitTextStroke: `0.3px ${GOLD}`,
+            }}
           >
             Explore the rich cultural heritage, ancient traditions, vibrant festivals,
             and timeless wisdom of every state and union territory of India.
@@ -107,11 +114,18 @@ export default function Home() {
                 <div className="text-center">
                   <div
                     className="text-3xl font-bold"
-                    style={{ fontFamily: "'Cinzel', serif", color: HERO_RED }}
+                    style={{
+                      fontFamily: "'Cinzel', serif",
+                      color: HERO_RED,
+                      WebkitTextStroke: `0.5px ${GOLD}`,
+                    }}
                   >
                     {s.num}
                   </div>
-                  <div className="text-sm mt-1 font-semibold" style={{ color: HERO_RED }}>
+                  <div
+                    className="text-sm mt-1 font-bold"
+                    style={{ color: HERO_RED, WebkitTextStroke: `0.2px ${GOLD}` }}
+                  >
                     {s.label}
                   </div>
                 </div>
