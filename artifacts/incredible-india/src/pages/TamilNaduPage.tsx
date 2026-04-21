@@ -35,6 +35,19 @@ import pazhamudir from "@assets/image_1776788895857.png";
 import bhumiLingam from "@assets/image_1776788902350.png";
 import jambuLingam from "@assets/image_1776788909064.png";
 import jyothiLingam from "@assets/image_1776788916164.png";
+import akashaLingam from "@assets/image_1776789530181.png";
+import meenakshi1 from "@assets/image_1776789548589.png";
+import meenakshi2 from "@assets/image_1776789554420.png";
+import meenakshi3 from "@assets/image_1776789558971.png";
+import meenakshi4 from "@assets/image_1776789565292.png";
+import rames1 from "@assets/image_1776789575242.png";
+import rames2 from "@assets/image_1776789580153.png";
+import rames3 from "@assets/image_1776789590790.png";
+import dhanush1 from "@assets/image_1776789610085.png";
+import dhanush2 from "@assets/image_1776789615338.png";
+import pamban1 from "@assets/image_1776789624415.png";
+import pamban2 from "@assets/image_1776789631296.png";
+import pamban3 from "@assets/image_1776789638782.png";
 
 /* ─── Lightbox ──────────────────────────────────────────────────────────── */
 function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
@@ -627,8 +640,7 @@ const historicalPlaces = [
         location: "Chidambaram",
         description:
           "Chidambaram, the name of the city and the temple, literally means 'atmosphere of wisdom' or 'clothed in consciousness'. The temple wall carvings display all the 108 karanas from the Natya Shastra by Bharata Muni — these postures form a foundation of Bharatanatyam. The present temple was built in the 10th century when Chidambaram was the capital of the Chola dynasty, making it one of the oldest surviving active temple complexes in South India. Shiva is idolised in three forms: as a crystal lingam, as a formless space covered by curtains (the Chidambaram Rahasyam), and as the Nataraja performing the Ananda Tandava ('Dance of Delight') in the golden hall known as Pon Ambalam.",
-        hasImage: true,
-        imageLabel: "Thillai Natarajar Temple – Chidambaram (Ether/Space element)",
+        images: [akashaLingam],
         source: "",
       },
       {
@@ -645,32 +657,28 @@ const historicalPlaces = [
     name: "1000-Pillar Temple — Madurai Meenakshi Temple",
     description:
       "Meenakshi Temple, also known as Meenakshi Sundareswarar Temple, is a historic Hindu temple located on the southern bank of the Vaigai River in Madurai, Tamil Nadu. It is dedicated to Meenakshi, a form of Parvati, and her consort Sundareswarar (Shiva). Built around 1569 by Ariyanatha Mudaliyar, the minister of the Nayak dynasty, the hall is known for its structural beauty and detailed carvings. It is called the 1000-pillar temple because it houses a massive 16th-century hall known as the Aayiram Kaal Mandapam, which contains a vast, intricately carved forest of pillars — actually 985 granite pillars arranged in rows. While the Sangam literature mentions the temple city of Madurai, the existence of a temple is first referenced in Tamil texts from the 6th century CE. The temple conducts six pujas every day, comprising four rituals: abhisheka (sacred bath), alankaram (decoration), naivedanam (food offerings) and deepa aradanai (lamp ceremony) for both Meenakshi and Sundareswarar.",
-    hasImage: true,
-    imageLabel: "Madurai Meenakshi Sundareswarar Temple — 1000-pillar hall",
+    images: [meenakshi1, meenakshi2, meenakshi3, meenakshi4],
     source: "(src: Wikipedia, National Geographic)",
   },
   {
     name: "Rameshwaram Temple",
     description:
       "Ramanathaswamy Temple is a Hindu temple dedicated to Lord Shiva, located on Rameswaram island in Tamil Nadu. It is one of the twelve Jyotirlinga temples. According to tradition, the lingam was established and worshipped by Rama before he crossed the bridge called Rama Setu to the island kingdom of Lanka. It is one of the Char Dham pilgrimage sites. There are sixty-four Tīrthas (holy water bodies) in and around the island, and bathing in them is a major aspect of the pilgrimage. The temple is famous for its massive corridor with 1,212 intricately carved, symmetrical sandstone pillars standing approximately 30 feet tall — forming the world's longest temple corridor. Some reports suggest the overall temple complex may have up to 4,000 pillars in total.",
-    hasImage: true,
-    imageLabel: "Ramanathaswamy Temple – Rameshwaram — world's longest temple corridor",
+    images: [rames1, rames2, rames3],
     source: "(src: Famous Tamil Nadu Temples, Wikimedia Commons, Intermiles)",
   },
   {
     name: "Dhanushkodi",
     description:
       "Dhanushkodi is an abandoned town at the south-eastern tip of Pamban Island of Tamil Nadu. The town was destroyed during the 1964 Rameswaram cyclone and remains uninhabited. An estimated 1,800 people died in the cyclonic storm on 22 December 1964, including 115 passengers on board the Pamban-Dhanushkodi passenger train. The Government of Madras declared Dhanushkodi a ghost town, unfit for living. The name Dhanushkodi means 'end of the bow'. It is significant for its deep mythological roots to the Ramayana, having served as the site where Lord Rama is believed to have marked the starting point of the Ram Setu bridge to Lanka — a 50 km long chain of limestone shoals connecting India's Rameswaram Island to Sri Lanka's Mannar Island.",
-    hasImage: true,
-    imageLabel: "Dhanushkodi — abandoned ghost town at the tip of Pamban Island",
+    images: [dhanush1, dhanush2],
     source: "(src: Kiomoi Travels, Tusk Travels)",
   },
   {
     name: "Pamban Bridge",
     description:
       "Pamban Bridge was a railway bridge that connected the town of Rameswaram on Pamban Island with Mandapam in mainland India. Opened on 24 February 1914, it was India's first sea bridge. The Pamban bridge was the only surface transport link connecting Rameswaram to mainland India until 1988, when a road bridge was constructed parallel to the railway bridge. In 2020, construction of a new bridge closer to the existing one began. The New Pamban Bridge was completed in 2024 and opened for traffic in April 2025.",
-    hasImage: true,
-    imageLabel: "Pamban Bridge — India's first sea bridge, Rameswaram",
+    images: [pamban1, pamban2, pamban3],
     source: "",
   },
   {
