@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "Incredible India"
+title = "Bharat Darpan"
 version = "1.0.0"
 id = "artifacts/incredible-india"
 router = "path"
