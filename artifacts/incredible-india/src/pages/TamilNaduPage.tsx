@@ -87,6 +87,16 @@ import gBharatanatyam from "@assets/image_1777100994118.png";
 import gDosaIdli from "@assets/image_1777101000988.png";
 import gVenPongal from "@assets/image_1777101005896.png";
 import gVadaSambar from "@assets/image_1777101012951.png";
+import gRasam from "@assets/image_1777101457846.png";
+import gPanniyaram from "@assets/image_1777101463186.png";
+import gNeyiAppam from "@assets/image_1777101468204.png";
+import gPoiKaal from "@assets/image_1777101472285.png";
+import gKaragattam from "@assets/image_1777101478099.png";
+import gThanjavur1 from "@assets/image_1777101487729.png";
+import gThanjavur2 from "@assets/image_1777101493885.png";
+import gSilambattam from "@assets/image_1777101502689.png";
+import gThalaiyaati from "@assets/image_1777101507013.png";
+import gFeast from "@assets/image_1777101512605.png";
 
 /* ─── Lightbox ──────────────────────────────────────────────────────────── */
 function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
@@ -838,15 +848,14 @@ const artGallery = [
   { title: "Dosa & Idli", emoji: "🥞", color: "#F4E8C8", desc: "Iconic South Indian breakfast", image: gDosaIdli },
   { title: "Ven Pongal", emoji: "🍲", color: "#F4D89C", desc: "Savoury rice & lentil dish — breakfast staple", image: gVenPongal },
   { title: "Vada Sambar", emoji: "🥣", color: "#D4884A", desc: "Crispy lentil fritters with spiced lentil soup", image: gVadaSambar },
-  { title: "Rasam", emoji: "🥣", color: "#C84830", desc: "Thin, tangy tamarind soup — digestive staple" },
-  { title: "Panniyaram", emoji: "🍡", color: "#D4A864", desc: "Crispy or soft rice batter balls" },
-  { title: "Neyi Appam", emoji: "🍩", color: "#D4884A", desc: "Deep-fried ghee sweet rice cakes" },
-  { title: "Poi Kaal Kudurai", emoji: "🐎", color: "#D4C8B4", desc: "Means 'False-leg horse' — a village folk dance" },
-  { title: "Karagaattam", emoji: "🏺", color: "#A8D4B4", desc: "'Pot dance' — folk dance balancing pot on head while dancing" },
-  { title: "Thanjavur Paintings", emoji: "🖼️", color: "#F4D870", desc: "Made with thin gold foils/sheets — classical art form" },
-  { title: "Silambattam", emoji: "🥋", color: "#D4A8A8", desc: "Ancient Tamil weapon-based martial art merging fighting and dance-like fluidity" },
-  { title: "Thanjavur Thalaiyaati Bommai", emoji: "🪆", color: "#F4C870", desc: "Traditional head-nodding clay doll — iconic Tamil craft" },
-  { title: "Typical Tamil Wedding Feast", emoji: "🍽️", color: "#E8A84A", desc: "Typical Tamil wedding feast served on banana leaf" },
+  { title: "Rasam", emoji: "🥣", color: "#C84830", desc: "Thin, tangy tamarind soup — digestive staple", image: gRasam },
+  { title: "Panniyaram", emoji: "🍡", color: "#D4A864", desc: "Crispy or soft rice batter balls", image: gPanniyaram },
+  { title: "Neyi Appam", emoji: "🍩", color: "#D4884A", desc: "Deep-fried ghee sweet rice cakes", image: gNeyiAppam },
+  { title: "Poi Kaal Kudurai", emoji: "🐎", color: "#D4C8B4", desc: "Means 'False-leg horse' — a village folk dance", image: gPoiKaal },
+  { title: "Karagaattam", emoji: "🏺", color: "#A8D4B4", desc: "'Pot dance' — folk dance balancing pot on head while dancing", image: gKaragattam },
+  { title: "Thanjavur Paintings", emoji: "🖼️", color: "#F4D870", desc: "Made with thin gold foils/sheets — classical art form", image: gThanjavur1 },
+  { title: "Thanjavur Paintings — Radha Krishna", emoji: "🖼️", color: "#E8C870", desc: "Classical Thanjavur work depicting Radha & Krishna with gold foil & gem inlay", image: gThanjavur2 },
+  { title: "Silambattam", emoji: "🥋", color: "#D4A8A8", desc: "Ancient Tamil weapon-based martial art merging fighting and dance-like fluidity", image: gSilambattam },
+  { title: "Thanjavur Thalaiyaati Bommai", emoji: "🪆", color: "#E8B488", desc: "Iconic Thanjavur dancing dolls with bobbing heads — GI-tagged craft", image: gThalaiyaati },
+  { title: "Tamil Nadu Sappadu (Feast)", emoji: "🍛", color: "#A8C878", desc: "Traditional banana-leaf meal — rice, sambar, rasam, poriyal, kootu, payasam", image: gFeast },
 ];
-
-import React from "react";
