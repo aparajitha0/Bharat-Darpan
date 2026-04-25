@@ -153,9 +153,9 @@ export default function Home() {
 
       {/* Main content */}
       <main className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:items-stretch">
           {/* Map section */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 flex flex-col">
             <div className="text-center mb-6">
               <h2
                 className="text-2xl font-bold mb-2"
@@ -169,7 +169,7 @@ export default function Home() {
             </div>
 
             <div
-              className="rounded-2xl p-4 shadow-md"
+              className="rounded-2xl p-4 shadow-md flex-1 flex items-center justify-center"
               style={{
                 backgroundColor: "#FFF8E7",
                 border: `2px solid ${GOLD}`,
@@ -188,18 +188,27 @@ export default function Home() {
           </div>
 
           {/* States list */}
-          <div className="lg:col-span-2">
-            <h2
-              className="text-2xl font-bold mb-2"
-              style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
-            >
-              Explore by State
-            </h2>
-            <p className="text-sm mb-5" style={{ color: GOLD_SOFT, opacity: 0.85 }}>
-              Browse the complete list of states and union territories
-            </p>
+          <div className="lg:col-span-2 flex flex-col">
+            <div className="text-center mb-6">
+              <h2
+                className="text-2xl font-bold mb-2"
+                style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
+              >
+                Explore by State
+              </h2>
+              <p className="text-sm" style={{ color: GOLD_SOFT, opacity: 0.85 }}>
+                Browse the complete list of states and union territories
+              </p>
+            </div>
 
-            <div className="space-y-2 max-h-[600px] overflow-y-auto pr-1 scrollbar-thin">
+            <div
+              className="rounded-2xl p-4 shadow-md flex-1 min-h-0 overflow-y-auto space-y-2 scrollbar-thin"
+              style={{
+                backgroundColor: "#FFF8E7",
+                border: `2px solid ${GOLD}`,
+                boxShadow: `0 0 24px rgba(245,197,24,0.25)`,
+              }}
+            >
               {statesList.map((state) => (
                 <button
                   key={state.id}
@@ -246,6 +255,13 @@ export default function Home() {
                 </button>
               ))}
             </div>
+
+            <p
+              className="text-center text-xs mt-3"
+              style={{ color: GOLD_SOFT, opacity: 0.8 }}
+            >
+              Scroll to browse all 28 states & 8 union territories.
+            </p>
           </div>
         </div>
 
