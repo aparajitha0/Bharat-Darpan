@@ -67,6 +67,26 @@ import nilgiri1 from "@assets/download_1777100544581.png";
 import nilgiri2 from "@assets/download_1777100547931.png";
 import malai1 from "@assets/download_1777100551195.png";
 import malai2 from "@assets/download_1777100558868.png";
+import sri1 from "@assets/image_1777100897996.png";
+import sri2 from "@assets/image_1777100906255.png";
+import sri3 from "@assets/image_1777100911861.png";
+import gAmbur from "@assets/image_1777100917162.png";
+import gTirunelveliHalva from "@assets/image_1777100921467.png";
+import gDindigul from "@assets/image_1777100927953.png";
+import gMalli from "@assets/image_1777100932602.png";
+import gButterBun from "@assets/image_1777100937948.png";
+import gJigarthanda from "@assets/image_1777100946447.png";
+import gUthukuli from "@assets/image_1777100950953.png";
+import gMuthu from "@assets/image_1777100955650.png";
+import gSalemMango from "@assets/image_1777100960783.png";
+import gErodeTurmeric from "@assets/image_1777100965689.png";
+import gTiruppur from "@assets/image_1777100975810.png";
+import gKanchiSilk from "@assets/image_1777100982364.png";
+import gSungdi from "@assets/image_1777100987731.png";
+import gBharatanatyam from "@assets/image_1777100994118.png";
+import gDosaIdli from "@assets/image_1777101000988.png";
+import gVenPongal from "@assets/image_1777101005896.png";
+import gVadaSambar from "@assets/image_1777101012951.png";
 
 /* ─── Lightbox ──────────────────────────────────────────────────────────── */
 function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
@@ -426,25 +446,46 @@ export default function TamilNaduPage() {
           <p className="text-muted-foreground text-sm mb-4">Scroll horizontally to explore Tamil Nadu's iconic foods, crafts, dance, and traditions.</p>
           <div className="overflow-x-auto pb-4">
             <div className="flex gap-4" style={{ minWidth: "max-content" }}>
-              {artGallery.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 w-44 rounded-xl border border-border bg-card overflow-hidden hover:shadow-md transition-shadow"
-                >
-                  <div
-                    className="h-36 flex flex-col items-center justify-center text-4xl"
-                    style={{ backgroundColor: item.color + "33", borderBottom: `2px solid ${item.color}44` }}
+              {artGallery.map((item, i) => {
+                const hasImg = "image" in item && !!item.image;
+                const Wrapper: React.ElementType = hasImg ? "button" : "div";
+                return (
+                  <Wrapper
+                    key={i}
+                    onClick={hasImg ? () => openLightbox(item.image as string, item.title) : undefined}
+                    className={`flex-shrink-0 w-44 rounded-xl border border-border bg-card overflow-hidden hover:shadow-md transition-shadow text-left ${hasImg ? "cursor-zoom-in group" : ""}`}
                   >
-                    <span>{item.emoji}</span>
-                  </div>
-                  <div className="p-3">
-                    <p className="font-semibold text-xs text-foreground leading-tight">{item.title}</p>
-                    {item.desc && (
-                      <p className="text-xs text-muted-foreground mt-1 leading-tight">{item.desc}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
+                    <div
+                      className="h-36 flex items-center justify-center overflow-hidden relative"
+                      style={{
+                        backgroundColor: item.color + "33",
+                        borderBottom: `2px solid ${item.color}44`,
+                      }}
+                    >
+                      {hasImg ? (
+                        <>
+                          <img
+                            src={item.image as string}
+                            alt={item.title}
+                            className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                            <ZoomIn className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                        </>
+                      ) : (
+                        <span className="text-4xl">{item.emoji}</span>
+                      )}
+                    </div>
+                    <div className="p-3">
+                      <p className="font-semibold text-xs text-foreground leading-tight">{item.title}</p>
+                      {item.desc && (
+                        <p className="text-xs text-muted-foreground mt-1 leading-tight">{item.desc}</p>
+                      )}
+                    </div>
+                  </Wrapper>
+                );
+              })}
             </div>
           </div>
         </Section>
@@ -753,8 +794,7 @@ const historicalPlaces = [
     name: "Srirangam Ranganathaswamy Temple",
     description:
       "The Ranganathaswamy Temple is a Hindu temple dedicated to Ranganathar (a form of Vishnu) located in Srirangam, Tiruchirapalli. The Srirangam temple stands as the largest religious complex in the world in active worship with a continuous historical presence as a Hindu temple. The temple complex has been nominated as a UNESCO World Heritage Site and is in UNESCO's tentative list. In 2017, the temple won the UNESCO Asia Pacific Award of Merit for cultural heritage conservation — the first temple in Tamil Nadu to receive this UNESCO award. The annual 21-day festival during the Tamil month of Margazhi (December–January) attracts 1 million visitors. The temple town has over 800 inscriptions in six major Indian languages: Tamil, Sanskrit, Kannada, Telugu, Marathi and Odia. The Lord rests on the five-headed snake Adisesha, representing serene, conscious sleep (Yoga Nidra), lying on an east-west axis with the deity facing south towards Lanka.",
-    hasImage: true,
-    imageLabel: "Srirangam Ranganathaswamy Temple — world's largest active Hindu temple complex",
+    images: [sri1, sri2, sri3],
     source: "(src: Wikipedia, cottage9)",
   },
 ];
@@ -781,23 +821,23 @@ const facts = [
 ];
 
 const artGallery = [
-  { title: "Ambur Biriyani", emoji: "🍛", color: "#D4883A", desc: "Famous biriyani from Ambur, Vellore" },
-  { title: "Tirunelveli Halva", emoji: "🍮", color: "#F4A84A", desc: "Iconic wheat halva from Tirunelveli" },
-  { title: "Dindigul Talapakatti Biriyani", emoji: "🍚", color: "#E8733A", desc: "Famous seeraga samba biriyani" },
-  { title: "Madurai Malli", emoji: "🌸", color: "#F4D8E8", desc: "Famous jasmine flowers of Madurai" },
-  { title: "Madurai Butter Bun", emoji: "🥐", color: "#F4E884", desc: "Iconic local bun with butter" },
-  { title: "Madurai Jigurthanda", emoji: "🍨", color: "#E8C8E8", desc: "Cold dessert drink with milk, almond gum, ice cream" },
-  { title: "Uthukuli Venne (Butter)", emoji: "🧈", color: "#F8F0C4", desc: "Pure white butter from Uthukuli, Erode" },
-  { title: "Thoothukoodi Muthu (Pearl)", emoji: "🔮", color: "#E8F4F8", desc: "Famous pearls from Thoothukudi coast" },
-  { title: "Salem Mango (Malgova)", emoji: "🥭", color: "#F8C840", desc: "Giant Malgova mangoes from Salem" },
-  { title: "Erode Turmeric", emoji: "🌿", color: "#F4B830", desc: "Erode — the largest turmeric market in the world" },
-  { title: "Tiruppur Garments", emoji: "👕", color: "#B4D8E8", desc: "Knitwear capital of India" },
-  { title: "Kanchipuram Silk Sarees", emoji: "🥻", color: "#D4A4E8", desc: "Famous gold-bordered silk sarees" },
-  { title: "Madurai Sungdi Sarees", emoji: "🧣", color: "#E8A8C8", desc: "Traditional cotton sarees of Madurai" },
-  { title: "Bharatanatyam", emoji: "💃", color: "#E88844", desc: "Classical Indian dance form from Tamil Nadu" },
-  { title: "Dosa & Idli", emoji: "🥞", color: "#F4E8C8", desc: "Iconic South Indian breakfast" },
-  { title: "Ven Pongal", emoji: "🍲", color: "#F4D89C", desc: "Savoury rice & lentil dish — breakfast staple" },
-  { title: "Vada Sambar", emoji: "🥣", color: "#D4884A", desc: "Crispy lentil fritters with spiced lentil soup" },
+  { title: "Ambur Biriyani", emoji: "🍛", color: "#D4883A", desc: "Famous biriyani from Ambur, Vellore", image: gAmbur },
+  { title: "Tirunelveli Halva", emoji: "🍮", color: "#F4A84A", desc: "Iconic wheat halva from Tirunelveli", image: gTirunelveliHalva },
+  { title: "Dindigul Talapakatti Biriyani", emoji: "🍚", color: "#E8733A", desc: "Famous seeraga samba biriyani", image: gDindigul },
+  { title: "Madurai Malli", emoji: "🌸", color: "#F4D8E8", desc: "Famous jasmine flowers of Madurai", image: gMalli },
+  { title: "Madurai Butter Bun", emoji: "🥐", color: "#F4E884", desc: "Iconic local bun with butter", image: gButterBun },
+  { title: "Madurai Jigurthanda", emoji: "🍨", color: "#E8C8E8", desc: "Cold dessert drink with milk, almond gum, ice cream", image: gJigarthanda },
+  { title: "Uthukuli Venne (Butter)", emoji: "🧈", color: "#F8F0C4", desc: "Pure white butter from Uthukuli, Erode", image: gUthukuli },
+  { title: "Thoothukoodi Muthu (Pearl)", emoji: "🔮", color: "#E8F4F8", desc: "Famous pearls from Thoothukudi coast", image: gMuthu },
+  { title: "Salem Mango (Malgova)", emoji: "🥭", color: "#F8C840", desc: "Giant Malgova mangoes from Salem", image: gSalemMango },
+  { title: "Erode Turmeric", emoji: "🌿", color: "#F4B830", desc: "Erode — the largest turmeric market in the world", image: gErodeTurmeric },
+  { title: "Tiruppur Garments", emoji: "👕", color: "#B4D8E8", desc: "Knitwear capital of India", image: gTiruppur },
+  { title: "Kanchipuram Silk Sarees", emoji: "🥻", color: "#D4A4E8", desc: "Famous gold-bordered silk sarees", image: gKanchiSilk },
+  { title: "Madurai Sungdi Sarees", emoji: "🧣", color: "#E8A8C8", desc: "Traditional cotton sarees of Madurai", image: gSungdi },
+  { title: "Bharatanatyam", emoji: "💃", color: "#E88844", desc: "Classical Indian dance form from Tamil Nadu", image: gBharatanatyam },
+  { title: "Dosa & Idli", emoji: "🥞", color: "#F4E8C8", desc: "Iconic South Indian breakfast", image: gDosaIdli },
+  { title: "Ven Pongal", emoji: "🍲", color: "#F4D89C", desc: "Savoury rice & lentil dish — breakfast staple", image: gVenPongal },
+  { title: "Vada Sambar", emoji: "🥣", color: "#D4884A", desc: "Crispy lentil fritters with spiced lentil soup", image: gVadaSambar },
   { title: "Rasam", emoji: "🥣", color: "#C84830", desc: "Thin, tangy tamarind soup — digestive staple" },
   { title: "Panniyaram", emoji: "🍡", color: "#D4A864", desc: "Crispy or soft rice batter balls" },
   { title: "Neyi Appam", emoji: "🍩", color: "#D4884A", desc: "Deep-fried ghee sweet rice cakes" },
