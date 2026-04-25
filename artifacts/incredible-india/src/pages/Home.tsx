@@ -57,7 +57,6 @@ export default function Home() {
             <div className="h-px w-24" style={{ backgroundColor: HERO_RED, opacity: 0.7 }} />
             <span
               className="text-sm tracking-[0.3em] uppercase font-bold"
-              style={{ color: HERO_RED, WebkitTextStroke: `0.2px ${GOLD}` }}
             >
               Ek Bharat Shreshtha Bharat
             </span>
@@ -69,7 +68,6 @@ export default function Home() {
             style={{
               fontFamily: "'Cinzel', serif",
               color: HERO_RED,
-              WebkitTextStroke: `1px ${GOLD}`,
             }}
           >
             Bharat Darpan
@@ -85,7 +83,6 @@ export default function Home() {
             style={{
               fontFamily: "'Lora', serif",
               color: HERO_RED,
-              WebkitTextStroke: `0.4px ${GOLD}`,
             }}
           >
             A journey through the living tapestry of our civilization
@@ -95,7 +92,6 @@ export default function Home() {
             className="max-w-2xl mx-auto text-base leading-relaxed font-bold"
             style={{
               color: HERO_RED,
-              WebkitTextStroke: `0.3px ${GOLD}`,
             }}
           >
             Explore the rich cultural heritage, ancient traditions, vibrant festivals,
@@ -117,14 +113,12 @@ export default function Home() {
                     style={{
                       fontFamily: "'Cinzel', serif",
                       color: HERO_RED,
-                      WebkitTextStroke: `0.5px ${GOLD}`,
                     }}
                   >
                     {s.num}
                   </div>
                   <div
                     className="text-sm mt-1 font-bold"
-                    style={{ color: HERO_RED, WebkitTextStroke: `0.2px ${GOLD}` }}
                   >
                     {s.label}
                   </div>
