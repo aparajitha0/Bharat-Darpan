@@ -54,6 +54,8 @@ import chola3 from "@assets/download_1777100516025.png";
 import velan1 from "@assets/download_1777100518481.png";
 import velan2 from "@assets/download_1777100520664.png";
 import velan3 from "@assets/download_1777100523842.png";
+import velanFest1 from "@assets/image_1777102241686.png";
+import velanFest2 from "@assets/image_1777102257711.png";
 import thiruv1 from "@assets/download_1777100525385.png";
 import thiruv2 from "@assets/download_1777100526870.png";
 import vive1 from "@assets/download_1777100529380.png";
@@ -581,7 +583,7 @@ const festivals = [
     tagline: "Attracts thousands, clad in orange robes, to the sacred spot where the ship landed.",
     description:
       "Equally famous are the Virgin Mary's miraculous healing powers, earning for the church the name 'Lourdes of the East'. The annual feast of Our Lady of Health at Velankanni is celebrated for nine days from August 29 to September 8. Pilgrims travel from across India and abroad to seek the blessings of Our Lady at this famous basilica on the Coromandel Coast.",
-    hasImage: false,
+    images: [velanFest1, velanFest2],
     source: "",
   },
   {
