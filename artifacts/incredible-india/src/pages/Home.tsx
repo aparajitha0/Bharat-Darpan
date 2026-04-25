@@ -315,6 +315,41 @@ export default function Home() {
           >
             INDIA
           </h2>
+
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-20" style={{ backgroundColor: GOLD, opacity: 0.5 }} />
+            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: GOLD }} />
+            <div className="h-px w-20" style={{ backgroundColor: GOLD, opacity: 0.5 }} />
+          </div>
+
+          <div
+            className="max-w-4xl mx-auto space-y-6 text-base md:text-lg leading-relaxed"
+            style={{ fontFamily: "'Lora', serif", color: GOLD_SOFT }}
+          >
+            <p>
+              <span
+                className="float-left text-6xl md:text-7xl font-bold mr-3 leading-none"
+                style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
+              >
+                B
+              </span>
+              harat. Hindustan. India. Three names, one civilisation — the oldest continuous culture on Earth. The name 'Bharat', enshrined in the Constitution, is traced to the ancient king Bharata of the Rigveda, after whom this land came to be called Bhāratavarṣa — 'the country of Bharata'. Across 3.28 million square kilometres, India unfolds as a subcontinent of astonishing variety: from the snow-capped Himalayas to the coral atolls of Lakshadweep, from the Thar desert to the rain-drenched hills of Meghalaya. Twenty-two official languages, over 1,600 mother tongues and every major world religion find their home here, giving India its unrivalled cultural diversity.
+            </p>
+
+            <p>
+              For nearly two centuries, the subcontinent was ruled by the British Crown. The Raj (1858–1947) drew railways and universities but also drained wealth, redrew boundaries and left behind scars that still shape modern India. Against this empire rose an extraordinary generation — Gandhi, Tagore, Ambedkar, Bose, Nehru — whose non-violent freedom movement, culminating on 15 August 1947, remains one of the 20th century's defining moral victories.
+            </p>
+
+            <p>
+              Today, India stands as the world's most populous democracy and a rising technological and scientific power. It is the birthplace of zero, yoga, Ayurveda, chess and decimal mathematics; home to Bollywood, the IT revolution and a thriving space programme that landed Chandrayaan at the lunar south pole. India contributes to global medicine, software, spirituality, cinema and cuisine — all while guarding a living heritage over five thousand years old. Explore the map below to begin a journey through its twenty-eight states and eight union territories.
+            </p>
+          </div>
+
+          <div className="flex items-center justify-center gap-4 mt-10">
+            <div className="h-px w-20" style={{ backgroundColor: GOLD, opacity: 0.5 }} />
+            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: GOLD_DEEP }} />
+            <div className="h-px w-20" style={{ backgroundColor: GOLD, opacity: 0.5 }} />
+          </div>
         </section>
       </main>
 
