@@ -48,6 +48,25 @@ import dhanush2 from "@assets/image_1776789615338.png";
 import pamban1 from "@assets/image_1776789624415.png";
 import pamban2 from "@assets/image_1776789631296.png";
 import pamban3 from "@assets/image_1776789638782.png";
+import chola1 from "@assets/download_1777100508255.png";
+import chola2 from "@assets/download_1777100514323.png";
+import chola3 from "@assets/download_1777100516025.png";
+import velan1 from "@assets/download_1777100518481.png";
+import velan2 from "@assets/download_1777100520664.png";
+import velan3 from "@assets/download_1777100523842.png";
+import thiruv1 from "@assets/download_1777100525385.png";
+import thiruv2 from "@assets/download_1777100526870.png";
+import vive1 from "@assets/download_1777100529380.png";
+import vive2 from "@assets/download_1777100531237.png";
+import vive3 from "@assets/download_1777100532535.png";
+import mahab1 from "@assets/download_1777100537305.png";
+import mahab2 from "@assets/download_1777100539158.png";
+import mahab3 from "@assets/download_1777100541720.png";
+import mahab4 from "@assets/download_1777100543112.png";
+import nilgiri1 from "@assets/download_1777100544581.png";
+import nilgiri2 from "@assets/download_1777100547931.png";
+import malai1 from "@assets/download_1777100551195.png";
+import malai2 from "@assets/download_1777100558868.png";
 
 /* ─── Lightbox ──────────────────────────────────────────────────────────── */
 function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
@@ -685,56 +704,49 @@ const historicalPlaces = [
     name: "The Great Chola Temples (UNESCO World Heritage Site)",
     description:
       "The Great Living Chola Temples were built by kings of the Chola Empire, which stretched over all of south India and the neighbouring islands. The site includes three great 11th- and 12th-century temples: the Brihadisvara Temple at Thanjavur, the Brihadisvara Temple at Gangaikondacholisvaram, and the Airavatesvara Temple at Darasuram. The Thanjavur Brihadeeswara temple, also variously known as Thanjai Periya Kovil, the Thanjavur Big Temple or Rajarajeshwaram, is one of the largest Hindu temples and an exemplar of Tamil architecture. Construction began around 1003–1004 CE and was consecrated by Rajaraja in 1010 CE. The temples testify to the brilliant achievements of the Chola in architecture, sculpture, painting and bronze casting.\n\nCriteria for UNESCO recognition:\n• (i) Outstanding creative achievement in the architectural conception of the pure Dravida temple form.\n• (ii) The Brihadisvara at Thanjavur became the first great example of Chola temples.\n• (iii) An exceptional testimony to the architecture of the Chola Empire and Tamil civilisation.\n• (iv) Outstanding examples of the architecture and Chola ideology.",
-    hasImage: true,
-    imageLabel: "Brihadeeswara Temple – Thanjavur (UNESCO World Heritage Site)",
+    images: [chola1, chola2, chola3],
     source: "(src: Moneycontrol, Incredible India)",
   },
   {
     name: "Velankanni Church",
     description:
       "The Basilica of Our Lady of Good Health, also known as the Sanctuary of Our Lady of Velankanni, is a Christian shrine at the town of Velankanni, Tamil Nadu. The devotion has existed since the mid-16th century, attributed to three separate events: the apparition of the Madonna and Child to a slumbering shepherd boy, the miraculous healing of a handicapped buttermilk vendor, and the rescue of Portuguese sailors from a deadly sea storm. The basilica is built in the Gothic style of architecture. The Shrine Basilica contains three chapels, Our Lady's Tank, Church Museum, and Velankanni Beach. Pilgrims sometimes shave their heads as an offering and perform ear-piercing ceremonies — both being Hindu traditions adopted at this sacred site. It is known as the 'Lourdes of the East' for its reputed miraculous healing powers.",
-    hasImage: true,
-    imageLabel: "Basilica of Our Lady of Good Health – Velankanni",
+    images: [velan1, velan2, velan3],
     source: "(src: Wikipedia)",
   },
   {
     name: "Thiruvalluvar Statue, Kanyakumari",
     description:
       "The Thiruvalluvar Statue is a 40.6-metre-tall (133 ft) stone sculpture of Tamil poet and philosopher Thiruvalluvar, the author of the Thirukkural, atop a small island near Kanniyakumari at the southernmost point of the Indian peninsula — where the Bay of Bengal, the Arabian Sea and the Indian Ocean meet. During its silver jubilee celebrations on January 1, 2025, the Government of Tamil Nadu declared the statue as the 'Statue of Wisdom'. The combined height of 133 feet denotes the 133 chapters of the Thirukkural. The pedestal of 38 feet represents the 38 chapters of Virtue. The right hand of the statue with three fingers pointing skywards signifies the three cantos of the Kural text: Aram (Virtue), Porul (Wealth), and Inbam (Love). A glass bridge now connects the statue to the Vivekananda Rock Memorial, inaugurated on 30 December 2024.",
-    hasImage: true,
-    imageLabel: "Thiruvalluvar Statue – Kanyakumari (133 ft)",
+    images: [thiruv1, thiruv2],
     source: "(src: Wikipedia)",
   },
   {
     name: "Vivekananda Rock Memorial",
     description:
       "Vivekananda Rock Memorial is a monument and popular tourist attraction at Kanyakumari, India's southernmost tip. The memorial stands on one of two rocks located about 500 meters off the mainland of Vavathurai, Tamil Nadu. It was built in 1970 in honour of Swami Vivekananda, who is said to have attained enlightenment on the rock. According to legends, it was on this rock that Goddess Kanyakumari (Parvathi) performed tapas in devotion of Lord Shiva. A meditation hall known as Dhyana Mandapam is attached to the memorial. The design of the mandapa incorporates different styles of temple architecture from all over India. The rocks are surrounded by the Laccadive Sea where the three oceans — Bay of Bengal, the Indian Ocean and the Arabian Sea — meet.",
-    hasImage: true,
-    imageLabel: "Vivekananda Rock Memorial – Kanyakumari, where three oceans meet",
+    images: [vive1, vive2, vive3],
     source: "(src: Wikipedia)",
   },
   {
     name: "Group of Monuments at Mahabalipuram (UNESCO World Heritage Site)",
     description:
       "This group of sanctuaries, founded by the Pallava kings, was carved out of rock along the Coromandel coast in the 7th and 8th centuries. Known especially for its rathas (temples in the form of chariots), mandapas (cave sanctuaries), giant open-air reliefs such as the famous 'Descent of the Ganges', and the Temple of Rivage with thousands of sculptures to the glory of Shiva. The site, about 60 km south of Chennai, has 40 ancient monuments and Hindu temples, including one of the largest open-air rock reliefs in the world: the Descent of the Ganges or Arjuna's Penance. The ratha temples are carved from naturally occurring blocks of diorite and granite in sand. The best-known are the five monolithic structures known as the Pandava Rathas or Five Rathas.",
-    hasImage: true,
-    imageLabel: "Group of Monuments at Mahabalipuram — Pandava Rathas (UNESCO)",
+    images: [mahab1, mahab2, mahab3, mahab4],
     source: "(src: Mahabalipuram, Alamy, Wikipedia, NDTV)",
   },
   {
     name: "Mountain Railways of India — Nilgiri Mountain Railway (UNESCO World Heritage Site)",
     description:
       "The Nilgiri Mountain Railway (NMR) in Tamil Nadu is a UNESCO World Heritage Site (added in 2005) and a premier mountain railway in India. Built by the British in 1908, this 46-km, metre-gauge line connects Mettupalayam to the hill station of Udhagamandalam (Ooty) via Coonoor. It is renowned for being the only rack-and-pinion railway in India, navigating steep slopes with a gradient of 1 in 12.5, and features 16 tunnels and over 250 bridges. Construction was first proposed in 1854, but due to the mountainous terrain it only started in 1891 and was completed in 1908. This railway scales an elevation from 326 m to 2,203 m. The uphill journey takes around 290 minutes (4.8 hours), and the downhill journey takes 215 minutes. It has the steepest track in Asia with a maximum gradient of 8.33%.\n\nStations: Mettupalayam → Kallar → Adderly → Hillgrove → Runneyemede → Coonoor → Wellington → Aravankadu → Ketti → Lovedale → Fern Hill → Udhagamandalam (Ooty).",
-    hasImage: true,
-    imageLabel: "Nilgiri Mountain Railway — UNESCO rack-and-pinion train to Ooty",
+    images: [nilgiri1, nilgiri2],
     source: "",
   },
   {
     name: "Trichy Malaikottai (Rockfort)",
     description:
       "Malaikottai, better known as Rockfort, is a living record of Tamil Nadu's past glory and historical heritage. Founded at the heart of Tiruchirappalli (Trichy), this very old fortification is built on a colossal rock mass over 3.8 billion years old — one of the oldest geological formations in the world. Standing high above the city, Malaikottai tells stories of history, religion, and culture. Its past was inextricably linked with the emergence and decline of South Indian dynasties — the Pallavas initially hewed temples out of the ancient rock, and later in the Nayak period the fort was fortified and expanded. The fort played an important role in the Carnatic Wars of the 18th century, fought hard by British and French forces. One of the most impressive things about the fort is its blend of natural rock formations with man-made constructions. The fort, situated on a 273-foot rock, offers magnificent views of Trichy. The Ucchi Pillayar Temple (Lord Ganesha) is the main attraction atop the fortification.",
-    hasImage: true,
-    imageLabel: "Trichy Malaikottai (Rockfort) — 3.8-billion-year-old rock fortress",
+    images: [malai1, malai2],
     source: "(src: TripAdvisor)",
   },
   {
