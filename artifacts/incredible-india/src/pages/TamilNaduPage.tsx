@@ -834,7 +834,7 @@ const facts = [
   "Major Industries in the State are cotton, heavy commercial vehicles, auto components, railway coaches, power pumps, leather tanning industries, cement, sugar, paper, automobiles and safety matches.",
   "Main mineral wealth of the state is granite, lignite and limestone.",
   "The state is an important exporter of tanned skin and leather goods, yarn, tea, coffee, spices, engineering goods, tobacco, handicrafts and black granite. Tamil Nadu contributes to 60 per cent of the tannery industry in India.",
-  "Over 70% of all firecrackers used during Diwali come from the town of Sivaski in Tamil Nadu.",
+  "Over 70% of all firecrackers used during Diwali come from the town of Sivakasi in Tamil Nadu.",
 ];
 
 const artGallery = [
