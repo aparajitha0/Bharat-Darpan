@@ -44,12 +44,6 @@ export default function AboutPage() {
         }}
       >
         <div className="max-w-3xl mx-auto">
-          <p
-            className="text-xs uppercase tracking-[0.3em] mb-4"
-            style={{ color: GOLD_SOFT, opacity: 0.7 }}
-          >
-            About
-          </p>
           <h2
             className="text-4xl sm:text-5xl font-bold mb-4"
             style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
