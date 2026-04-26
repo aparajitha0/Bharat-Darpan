@@ -16,7 +16,7 @@ export default function AboutPage() {
         className="border-b"
         style={{ backgroundColor: RED_DEEP, borderColor: "rgba(245,197,24,0.2)" }}
       >
-        <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-6 py-5 flex items-center">
           <button
             onClick={() => setLocation("/")}
             className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-80 transition-opacity"
@@ -25,12 +25,6 @@ export default function AboutPage() {
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </button>
-          <h1
-            className="text-lg sm:text-xl font-bold"
-            style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
-          >
-            Bharat Darpan
-          </h1>
         </div>
       </header>
 
