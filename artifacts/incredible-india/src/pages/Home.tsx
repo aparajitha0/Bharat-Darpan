@@ -362,12 +362,13 @@ export default function Home() {
         }}
       >
         <div className="max-w-6xl mx-auto px-6 py-10 text-center">
-          <h3
-            className="text-xl font-bold mb-2"
+          <button
+            onClick={() => setLocation("/about")}
+            className="text-xl font-bold mb-2 underline-offset-4 hover:underline transition-opacity"
             style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
           >
-            Bharat Darpan
-          </h3>
+            About Bharat Darpan
+          </button>
           <p
             className="text-sm max-w-lg mx-auto"
             style={{ color: GOLD_SOFT, opacity: 0.85 }}
@@ -376,15 +377,6 @@ export default function Home() {
           </p>
           <div className="mt-6 text-xs" style={{ color: GOLD_SOFT, opacity: 0.6 }}>
             <span>Satyamev Jayate — Truth Alone Triumphs</span>
-          </div>
-          <div className="mt-4">
-            <button
-              onClick={() => setLocation("/about")}
-              className="text-sm font-semibold underline-offset-4 hover:underline transition-opacity"
-              style={{ color: GOLD, fontFamily: "'Cinzel', serif" }}
-            >
-              About Bharat Darpan
-            </button>
           </div>
         </div>
       </footer>
