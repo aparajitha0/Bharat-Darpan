@@ -69,10 +69,10 @@ export default function AboutPage() {
           }}
         >
           <p
-            className="text-base leading-relaxed text-center"
-            style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.85 }}
+            className="text-base sm:text-lg leading-relaxed text-justify"
+            style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.9 }}
           >
-            Content coming soon — this section will be updated shortly.
+            India is one of the world's oldest civilizations, home to a breathtaking tapestry of cultures, languages, traditions, and art forms that have evolved over thousands of years. From the snow-capped peaks of the Himalayas to the sun-kissed shores of Kanyakumari, every region of India pulses with its own unique identity — expressed through its festivals, cuisine, music, dance, architecture, and rituals. With over 1.4 billion people speaking more than 700 languages and practicing a multitude of religions in harmony, India stands as a living testament to the beauty of diversity. Our project seeks to bring this magnificent heritage to the digital world, creating an interactive platform that not only preserves these timeless traditions but makes them accessible, engaging, and inspiring for generations to come.
           </p>
         </div>
 
