@@ -317,3 +317,45 @@
     inset: -1px;
   }
 }
+
+/* Bharat Darpan title sparkle animation */
+@keyframes bd-title-shimmer {
+  0%, 100% {
+    text-shadow:
+      0 0 0px rgba(245, 197, 24, 0),
+      0 0 0px rgba(245, 197, 24, 0);
+  }
+  50% {
+    text-shadow:
+      0 0 14px rgba(245, 197, 24, 0.95),
+      0 0 28px rgba(245, 197, 24, 0.6),
+      0 0 42px rgba(245, 197, 24, 0.35);
+  }
+}
+
+@keyframes bd-sparkle-twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.2) rotate(0deg);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1.1) rotate(90deg);
+  }
+  65% {
+    opacity: 0.7;
+    transform: scale(0.9) rotate(160deg);
+  }
+}
+
+.bd-sparkle {
+  animation: bd-title-shimmer 1.6s ease-in-out infinite;
+}
+
+.bd-sparkle-star {
+  position: absolute;
+  display: inline-block;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(245, 197, 24, 0.9));
+  animation: bd-sparkle-twinkle 1.4s ease-in-out infinite;
+}
