@@ -378,6 +378,76 @@ export default function Home() {
           <div className="mt-6 text-xs" style={{ color: GOLD_SOFT, opacity: 0.6 }}>
             <span>Satyamev Jayate — Truth Alone Triumphs</span>
           </div>
+
+          {/* Team logo */}
+          <div className="mt-8 flex justify-center">
+            <svg
+              viewBox="0 0 520 160"
+              className="h-20 sm:h-24 w-auto"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="SYNKAG — Design · Build · Sync"
+            >
+              {/* Hexagon mark */}
+              <g
+                transform="translate(80,80)"
+                fill="none"
+                stroke={GOLD}
+                strokeWidth="2"
+                strokeLinecap="round"
+              >
+                {/* Outer dashed hexagon connecting the dots */}
+                <polygon
+                  points="0,-65 56,-32 56,32 0,65 -56,32 -56,-32"
+                  strokeDasharray="4 5"
+                />
+                {/* Corner dots */}
+                <circle cx="0" cy="-65" r="7" fill={GOLD} stroke="none" />
+                <circle cx="56" cy="-32" r="7" fill={GOLD} stroke="none" />
+                <circle cx="56" cy="32" r="7" fill={GOLD} stroke="none" />
+                <circle cx="0" cy="65" r="7" fill={GOLD} stroke="none" />
+                <circle cx="-56" cy="32" r="7" fill={GOLD} stroke="none" />
+                <circle cx="-56" cy="-32" r="7" fill={GOLD} stroke="none" />
+                {/* Inner solid hexagon */}
+                <polygon
+                  points="0,-26 22,-13 22,13 0,26 -22,13 -22,-13"
+                  stroke={GOLD}
+                  strokeWidth="3"
+                />
+                {/* Center dot */}
+                <circle cx="0" cy="0" r="5" fill={GOLD} stroke="none" />
+              </g>
+
+              {/* SYNKAG wordmark */}
+              <text
+                x="180"
+                y="92"
+                fill={GOLD}
+                style={{
+                  fontFamily: "'Cinzel', serif",
+                  fontWeight: 700,
+                  fontSize: "60px",
+                  letterSpacing: "2px",
+                }}
+              >
+                SYNKAG
+              </text>
+
+              {/* Tagline */}
+              <text
+                x="182"
+                y="120"
+                fill={GOLD_SOFT}
+                opacity="0.85"
+                style={{
+                  fontFamily: "'Lora', serif",
+                  fontSize: "16px",
+                  letterSpacing: "6px",
+                }}
+              >
+                DESIGN · BUILD · SYNC
+              </text>
+            </svg>
+          </div>
         </div>
       </footer>
     </div>
