@@ -169,6 +169,80 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Meet the Team */}
+        <section className="mt-16">
+          <p
+            className="text-xs uppercase tracking-[0.3em] mb-2"
+            style={{ color: GOLD_SOFT, opacity: 0.7 }}
+          >
+            The People Behind It
+          </p>
+          <h3
+            className="text-3xl sm:text-4xl font-bold mb-2"
+            style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
+          >
+            Meet the Team
+          </h3>
+          <p
+            className="text-sm sm:text-base mb-8"
+            style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.85 }}
+          >
+            A group of students passionate about celebrating India's diversity.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {teamMembers.map((m) => (
+              <div
+                key={m.name}
+                className="rounded-2xl border p-6 flex flex-col items-center text-center transition-shadow hover:shadow-lg"
+                style={{
+                  backgroundColor: "rgba(61,8,8,0.5)",
+                  borderColor: "rgba(245,197,24,0.2)",
+                }}
+              >
+                {/* Avatar circle (placeholder for image) */}
+                <div
+                  className="w-20 h-20 rounded-full flex items-center justify-center mb-4 overflow-hidden"
+                  style={{
+                    backgroundColor: m.bg,
+                    border: `2px solid ${GOLD}`,
+                  }}
+                >
+                  <span
+                    className="text-xl font-bold"
+                    style={{ color: m.text, fontFamily: "'Cinzel', serif" }}
+                  >
+                    {m.initials}
+                  </span>
+                </div>
+                <h4
+                  className="text-base font-bold mb-1"
+                  style={{ color: GOLD, fontFamily: "'Cinzel', serif" }}
+                >
+                  {m.name}
+                </h4>
+                <p
+                  className="text-sm mb-3"
+                  style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.85 }}
+                >
+                  {m.role}
+                </p>
+                <span
+                  className="inline-block text-xs px-3 py-1 rounded-full"
+                  style={{
+                    backgroundColor: "rgba(245,197,24,0.12)",
+                    color: GOLD_SOFT,
+                    border: "1px solid rgba(245,197,24,0.3)",
+                    fontFamily: "'Lora', serif",
+                  }}
+                >
+                  {m.contribution}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Back button */}
         <div className="text-center mt-12">
           <button
@@ -200,3 +274,54 @@ export default function AboutPage() {
     </div>
   );
 }
+
+const teamMembers = [
+  {
+    name: "Neha Bhat",
+    role: "Team Lead",
+    contribution: "Website Designing",
+    initials: "NB",
+    bg: "#FCE4A6",
+    text: "#5A0E0E",
+  },
+  {
+    name: "P Aparajitha",
+    role: "Content Writer",
+    contribution: "Visual Designing",
+    initials: "PA",
+    bg: "#C9E8D2",
+    text: "#1F4D2E",
+  },
+  {
+    name: "Kruthi SN",
+    role: "Researcher",
+    contribution: "Map & Graphics",
+    initials: "KS",
+    bg: "#F8C4C4",
+    text: "#7A1A1A",
+  },
+  {
+    name: "Yasha Patil",
+    role: "Researcher",
+    contribution: "Festivals & Art",
+    initials: "YP",
+    bg: "#D4C4F0",
+    text: "#3D2870",
+  },
+  {
+    name: "Sinchana Hegde",
+    role: "Researcher",
+    contribution: "History & Culture",
+    initials: "SH",
+    bg: "#FBD9A6",
+    text: "#7A4A0E",
+  },
+  {
+    name: "Gayathri Pullaiahgari",
+    role: "Researcher",
+    contribution: "Art Gallery & Facts",
+    initials: "GP",
+    bg: "#BCDFEF",
+    text: "#0E4A6A",
+  },
+];
