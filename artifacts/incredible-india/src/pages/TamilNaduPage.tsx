@@ -613,14 +613,6 @@ const festivals = [
     images: [karad1, karad2],
     source: "(src: kannan's kitchen, veenas vegnation)",
   },
-  {
-    name: "Surasamharam / Kalazhagar Athula",
-    tagline: "",
-    description:
-      "Surasamharam / Kalazhagar athula",
-    hasImage: false,
-    source: "",
-  },
 ];
 
 const historicalPlaces = [
