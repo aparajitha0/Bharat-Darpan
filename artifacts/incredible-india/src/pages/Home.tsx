@@ -377,6 +377,15 @@ export default function Home() {
           <div className="mt-6 text-xs" style={{ color: GOLD_SOFT, opacity: 0.6 }}>
             <span>Satyamev Jayate — Truth Alone Triumphs</span>
           </div>
+          <div className="mt-4">
+            <button
+              onClick={() => setLocation("/about")}
+              className="text-sm font-semibold underline-offset-4 hover:underline transition-opacity"
+              style={{ color: GOLD, fontFamily: "'Cinzel', serif" }}
+            >
+              About Bharat Darpan
+            </button>
+          </div>
         </div>
       </footer>
     </div>
