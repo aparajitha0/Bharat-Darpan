@@ -175,7 +175,7 @@ export default function AboutPage() {
             className="text-3xl sm:text-4xl font-bold mb-2"
             style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
           >
-            Meet the Team
+            Meet the Team (SYNKAG)
           </h3>
           <p
             className="text-sm sm:text-base mb-8"
