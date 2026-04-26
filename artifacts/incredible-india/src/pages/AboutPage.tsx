@@ -190,11 +190,12 @@ export default function AboutPage() {
             A group of students passionate about celebrating India's diversity.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="overflow-x-auto pb-4 -mx-6 px-6">
+            <div className="flex gap-5" style={{ minWidth: "max-content" }}>
             {teamMembers.map((m) => (
               <div
                 key={m.name}
-                className="rounded-2xl border p-6 flex flex-col items-center text-center transition-shadow hover:shadow-lg"
+                className="flex-shrink-0 w-56 rounded-2xl border p-6 flex flex-col items-center text-center transition-shadow hover:shadow-lg"
                 style={{
                   backgroundColor: "rgba(61,8,8,0.5)",
                   borderColor: "rgba(245,197,24,0.2)",
@@ -240,6 +241,7 @@ export default function AboutPage() {
                 </span>
               </div>
             ))}
+            </div>
           </div>
         </section>
 
