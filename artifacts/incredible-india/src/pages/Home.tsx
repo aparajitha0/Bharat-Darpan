@@ -1,22 +1,6 @@
-import { useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 import IndiaMap from "@/components/IndiaMap";
 import { statesList } from "@/data/states";
-
-const SPARKLE_POSITIONS = [
-  { top: "-10%", left: "5%", delay: "0s", size: 18 },
-  { top: "-22%", left: "22%", delay: "0.4s", size: 12 },
-  { top: "-15%", left: "42%", delay: "0.9s", size: 14 },
-  { top: "-25%", left: "62%", delay: "0.2s", size: 16 },
-  { top: "-12%", left: "82%", delay: "0.7s", size: 12 },
-  { top: "-20%", left: "95%", delay: "1.1s", size: 18 },
-  { top: "70%", left: "-2%", delay: "0.3s", size: 14 },
-  { top: "85%", left: "18%", delay: "0.8s", size: 12 },
-  { top: "92%", left: "38%", delay: "0.1s", size: 16 },
-  { top: "78%", left: "58%", delay: "1.2s", size: 12 },
-  { top: "90%", left: "78%", delay: "0.5s", size: 14 },
-  { top: "72%", left: "98%", delay: "1.0s", size: 18 },
-];
 
 const GOLD = "#F5C518";
 const GOLD_SOFT = "#E8B923";
@@ -29,43 +13,6 @@ const HERO_RED_SOFT = "#5A0E0E";
 
 export default function Home() {
   const [, setLocation] = useLocation();
-  const titleRef = useRef<HTMLHeadingElement | null>(null);
-  const [sparkle, setSparkle] = useState(false);
-  const sparkleTimer = useRef<number | null>(null);
-
-  const triggerSparkle = () => {
-    setSparkle(false);
-    // restart the animation by toggling on next frame
-    requestAnimationFrame(() => setSparkle(true));
-    if (sparkleTimer.current) window.clearTimeout(sparkleTimer.current);
-    sparkleTimer.current = window.setTimeout(() => setSparkle(false), 5000);
-  };
-
-  // Trigger on mount (page load)
-  useEffect(() => {
-    triggerSparkle();
-    return () => {
-      if (sparkleTimer.current) window.clearTimeout(sparkleTimer.current);
-    };
-  }, []);
-
-  // Trigger when scrolled into view
-  useEffect(() => {
-    const el = titleRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            triggerSparkle();
-          }
-        });
-      },
-      { threshold: 0.6 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: RED_BG, color: GOLD }}>
@@ -116,46 +63,15 @@ export default function Home() {
             <div className="h-px w-24" style={{ backgroundColor: HERO_RED, opacity: 0.7 }} />
           </div>
 
-          <div className="relative inline-block mx-auto mb-4">
-            <h1
-              ref={titleRef}
-              onClick={triggerSparkle}
-              className={`text-5xl md:text-7xl font-bold tracking-wide cursor-pointer select-none ${
-                sparkle ? "bd-sparkle" : ""
-              }`}
-              style={{
-                fontFamily: "'Cinzel', serif",
-                color: HERO_RED,
-              }}
-            >
-              Bharat Darpan
-            </h1>
-            {/* Floating sparkles */}
-            {sparkle && (
-              <div className="pointer-events-none absolute inset-0">
-                {SPARKLE_POSITIONS.map((p, i) => (
-                  <span
-                    key={i}
-                    className="bd-sparkle-star"
-                    style={{
-                      top: p.top,
-                      left: p.left,
-                      width: p.size,
-                      height: p.size,
-                      animationDelay: p.delay,
-                    }}
-                  >
-                    <svg viewBox="0 0 24 24" width="100%" height="100%">
-                      <path
-                        d="M12 0 L13.8 9 L24 12 L13.8 15 L12 24 L10.2 15 L0 12 L10.2 9 Z"
-                        fill={GOLD}
-                      />
-                    </svg>
-                  </span>
-                ))}
-              </div>
-            )}
-          </div>
+          <h1
+            className="text-5xl md:text-7xl font-bold mb-4 tracking-wide"
+            style={{
+              fontFamily: "'Cinzel', serif",
+              color: HERO_RED,
+            }}
+          >
+            Bharat Darpan
+          </h1>
 
           <div
             className="w-24 h-1 mx-auto mb-6 rounded-full"
