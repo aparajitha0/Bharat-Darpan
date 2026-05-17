@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
-import { ArrowLeft, MapPin, ChevronRight, CheckCircle, X, ZoomIn } from "lucide-react";
+import {
+  ArrowLeft,
+  MapPin,
+  ChevronRight,
+  CheckCircle,
+  X,
+  ZoomIn,
+} from "lucide-react";
 import tnMap from "@assets/TN_map_1776628923935.jpg";
 import pongal1 from "@assets/image_1776788355951.png";
 import pongal2 from "@assets/image_1776788364481.png";
@@ -101,7 +108,15 @@ import gThalaiyaati from "@assets/image_1777101507013.png";
 import gFeast from "@assets/image_1777101512605.png";
 
 /* ─── Lightbox ──────────────────────────────────────────────────────────── */
-function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+function Lightbox({
+  src,
+  alt,
+  onClose,
+}: {
+  src: string;
+  alt: string;
+  onClose: () => void;
+}) {
   return (
     <div
       className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
@@ -124,13 +139,24 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
 }
 
 /* ─── Image placeholder (for docx images without uploaded files) ─────────── */
-function DocxImage({ label, source, color = "#D45A3A" }: { label: string; source?: string; color?: string }) {
+function DocxImage({
+  label,
+  source,
+  color = "#D45A3A",
+}: {
+  label: string;
+  source?: string;
+  color?: string;
+}) {
   return (
     <div
       className="rounded-xl overflow-hidden border border-border my-4"
       style={{ background: color + "12" }}
     >
-      <div className="flex items-center justify-center py-10 gap-3" style={{ borderBottom: `2px solid ${color}22` }}>
+      <div
+        className="flex items-center justify-center py-10 gap-3"
+        style={{ borderBottom: `2px solid ${color}22` }}
+      >
         <div className="text-4xl opacity-60">🖼️</div>
         <div>
           <p className="font-semibold text-sm text-foreground/70">{label}</p>
@@ -142,12 +168,25 @@ function DocxImage({ label, source, color = "#D45A3A" }: { label: string; source
 }
 
 /* ─── Section wrapper ────────────────────────────────────────────────────── */
-function Section({ title, icon, children }: { title: string; icon: string; children: React.ReactNode }) {
+function Section({
+  title,
+  icon,
+  children,
+}: {
+  title: string;
+  icon: string;
+  children: React.ReactNode;
+}) {
   return (
     <section>
       <div className="flex items-center gap-3 mb-6">
         <span className="text-2xl">{icon}</span>
-        <h2 className="text-2xl font-bold text-foreground" style={{ fontFamily: "'Cinzel', serif" }}>{title}</h2>
+        <h2
+          className="text-2xl font-bold text-foreground"
+          style={{ fontFamily: "'Cinzel', serif" }}
+        >
+          {title}
+        </h2>
         <div className="flex-1 h-px bg-border" />
       </div>
       {children}
@@ -157,19 +196,31 @@ function Section({ title, icon, children }: { title: string; icon: string; child
 
 /* ─── Image grid (shared) ────────────────────────────────────────────────── */
 function ImageGrid({
-  images, alt, onImageClick,
-}: { images: string[]; alt: string; onImageClick: (src: string, alt: string) => void }) {
-  const cols = images.length === 1
-    ? "grid-cols-1"
-    : images.length >= 3
-      ? "grid-cols-2 sm:grid-cols-3"
-      : "grid-cols-1 sm:grid-cols-2";
+  images,
+  alt,
+  onImageClick,
+}: {
+  images: string[];
+  alt: string;
+  onImageClick: (src: string, alt: string) => void;
+}) {
+  const cols =
+    images.length === 1
+      ? "grid-cols-1"
+      : images.length >= 3
+        ? "grid-cols-2 sm:grid-cols-3"
+        : "grid-cols-1 sm:grid-cols-2";
   return (
     <div className={`grid gap-3 ${cols}`}>
       {images.map((src, idx) => (
         <button
           key={idx}
-          onClick={() => onImageClick(src, `${alt}${images.length > 1 ? ` — image ${idx + 1}` : ""}`)}
+          onClick={() =>
+            onImageClick(
+              src,
+              `${alt}${images.length > 1 ? ` — image ${idx + 1}` : ""}`,
+            )
+          }
           className="group relative rounded-xl overflow-hidden border border-border bg-muted/30 cursor-zoom-in aspect-[4/3]"
         >
           <img
@@ -188,11 +239,23 @@ function ImageGrid({
 
 /* ─── Festival card ──────────────────────────────────────────────────────── */
 function FestivalCard({
-  number, name, tagline, description, source, hasImage, imageLabel, images,
+  number,
+  name,
+  tagline,
+  description,
+  source,
+  hasImage,
+  imageLabel,
+  images,
   onImageClick,
 }: {
-  number: number; name: string; tagline?: string; description: string;
-  source?: string; hasImage?: boolean; imageLabel?: string;
+  number: number;
+  name: string;
+  tagline?: string;
+  description: string;
+  source?: string;
+  hasImage?: boolean;
+  imageLabel?: string;
   images?: string[];
   onImageClick: (src: string, alt: string) => void;
 }) {
@@ -206,20 +269,42 @@ function FestivalCard({
           {number}
         </div>
         <div>
-          <h3 className="font-bold text-foreground text-base" style={{ fontFamily: "'Cinzel', serif" }}>{name}</h3>
-          {tagline && <p className="text-muted-foreground text-xs italic mt-0.5">{tagline}</p>}
+          <h3
+            className="font-bold text-foreground text-base"
+            style={{ fontFamily: "'Cinzel', serif" }}
+          >
+            {name}
+          </h3>
+          {tagline && (
+            <p className="text-muted-foreground text-xs italic mt-0.5">
+              {tagline}
+            </p>
+          )}
         </div>
       </div>
       <div className="px-5 py-4 space-y-4">
-        <p className="text-sm text-foreground leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>{description}</p>
+        <p
+          className="text-sm text-foreground leading-relaxed"
+          style={{ fontFamily: "'Lora', serif", textAlign: "justify" }}
+        >
+          {description}
+        </p>
         {images && images.length > 0 && (
           <ImageGrid images={images} alt={name} onImageClick={onImageClick} />
         )}
         {hasImage && !images && (
-          <DocxImage label={imageLabel ?? name} source={source} color="#D45A3A" />
+          <DocxImage
+            label={imageLabel ?? name}
+            source={source}
+            color="#D45A3A"
+          />
         )}
-        {source && !hasImage && !images && <p className="text-xs text-muted-foreground">{source}</p>}
-        {source && images && <p className="text-xs text-muted-foreground">{source}</p>}
+        {source && !hasImage && !images && (
+          <p className="text-xs text-muted-foreground">{source}</p>
+        )}
+        {source && images && (
+          <p className="text-xs text-muted-foreground">{source}</p>
+        )}
       </div>
     </div>
   );
@@ -227,18 +312,31 @@ function FestivalCard({
 
 /* ─── Historical place card ──────────────────────────────────────────────── */
 function HistoricalPlaceCard({
-  number, name, description, source, hasImage, imageLabel,
+  number,
+  name,
+  description,
+  source,
+  hasImage,
+  imageLabel,
   subPlaces,
   images,
   onImageClick,
 }: {
-  number: number; name: string; description: string; source?: string;
-  hasImage?: boolean; imageLabel?: string;
+  number: number;
+  name: string;
+  description: string;
+  source?: string;
+  hasImage?: boolean;
+  imageLabel?: string;
   images?: string[];
   onImageClick: (src: string, alt: string) => void;
   subPlaces?: {
-    name: string; location?: string; description: string;
-    source?: string; hasImage?: boolean; imageLabel?: string;
+    name: string;
+    location?: string;
+    description: string;
+    source?: string;
+    hasImage?: boolean;
+    imageLabel?: string;
     images?: string[];
   }[];
 }) {
@@ -251,42 +349,82 @@ function HistoricalPlaceCard({
         >
           {number}
         </div>
-        <h3 className="font-bold text-foreground text-base pt-1" style={{ fontFamily: "'Cinzel', serif" }}>{name}</h3>
+        <h3
+          className="font-bold text-foreground text-base pt-1"
+          style={{ fontFamily: "'Cinzel', serif" }}
+        >
+          {name}
+        </h3>
       </div>
       <div className="px-5 py-4 space-y-4">
-        <p className="text-sm text-foreground leading-relaxed whitespace-pre-line" style={{ fontFamily: "'Lora', serif" }}>{description}</p>
+        <p
+          className="text-sm text-foreground leading-relaxed whitespace-pre-line"
+          style={{ fontFamily: "'Lora', serif", textAlign: "justify" }}
+        >
+          {description}
+        </p>
         {images && images.length > 0 && (
           <ImageGrid images={images} alt={name} onImageClick={onImageClick} />
         )}
         {hasImage && !images && (
-          <DocxImage label={imageLabel ?? name} source={source} color="#3A8A5A" />
+          <DocxImage
+            label={imageLabel ?? name}
+            source={source}
+            color="#3A8A5A"
+          />
         )}
-        {source && (!hasImage || images) && <p className="text-xs text-muted-foreground">{source}</p>}
+        {source && (!hasImage || images) && (
+          <p className="text-xs text-muted-foreground">{source}</p>
+        )}
 
         {subPlaces && subPlaces.length > 0 && (
           <div className="space-y-5">
             {subPlaces.map((sub, idx) => (
-              <div key={idx} className="border border-border/60 rounded-xl p-4 bg-muted/30">
+              <div
+                key={idx}
+                className="border border-border/60 rounded-xl p-4 bg-muted/30"
+              >
                 <div className="flex items-start gap-2 mb-2">
                   <ChevronRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground text-sm">{sub.name}</p>
-                    {sub.location && <p className="text-xs text-muted-foreground">{sub.location}</p>}
+                    <p className="font-semibold text-foreground text-sm">
+                      {sub.name}
+                    </p>
+                    {sub.location && (
+                      <p className="text-xs text-muted-foreground">
+                        {sub.location}
+                      </p>
+                    )}
                   </div>
                 </div>
-                <p className="text-sm text-foreground/80 leading-relaxed pl-6" style={{ fontFamily: "'Lora', serif" }}>{sub.description}</p>
+                <p
+                  className="text-sm text-foreground/80 leading-relaxed pl-6"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  {sub.description}
+                </p>
                 {sub.images && sub.images.length > 0 && (
                   <div className="pl-6 mt-3">
-                    <ImageGrid images={sub.images} alt={sub.name} onImageClick={onImageClick} />
+                    <ImageGrid
+                      images={sub.images}
+                      alt={sub.name}
+                      onImageClick={onImageClick}
+                    />
                   </div>
                 )}
                 {sub.hasImage && !sub.images && (
                   <div className="pl-6">
-                    <DocxImage label={sub.imageLabel ?? sub.name} source={sub.source} color="#3A7AAA" />
+                    <DocxImage
+                      label={sub.imageLabel ?? sub.name}
+                      source={sub.source}
+                      color="#3A7AAA"
+                    />
                   </div>
                 )}
                 {sub.source && (!sub.hasImage || sub.images) && (
-                  <p className="text-xs text-muted-foreground mt-2 pl-6">{sub.source}</p>
+                  <p className="text-xs text-muted-foreground mt-2 pl-6">
+                    {sub.source}
+                  </p>
                 )}
               </div>
             ))}
@@ -300,19 +438,28 @@ function HistoricalPlaceCard({
 /* ─── Main page ──────────────────────────────────────────────────────────── */
 export default function TamilNaduPage() {
   const [, setLocation] = useLocation();
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(
+    null,
+  );
   const openLightbox = (src: string, alt: string) => setLightbox({ src, alt });
 
   return (
     <div className="min-h-screen bg-background">
       {lightbox && (
-        <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />
+        <Lightbox
+          src={lightbox.src}
+          alt={lightbox.alt}
+          onClose={() => setLightbox(null)}
+        />
       )}
 
       {/* Hero */}
       <div
         className="relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #D45A3A 0%, #C03020 40%, #4CAF84 100%)" }}
+        style={{
+          background:
+            "linear-gradient(135deg, #D45A3A 0%, #C03020 40%, #4CAF84 100%)",
+        }}
       >
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full border-2 border-white -translate-y-1/2 translate-x-1/2" />
@@ -331,15 +478,23 @@ export default function TamilNaduPage() {
               <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 text-white/90 text-sm font-medium mb-4">
                 South India
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-3" style={{ fontFamily: "'Cinzel', serif" }}>
+              <h1
+                className="text-5xl md:text-7xl font-bold text-white mb-3"
+                style={{ fontFamily: "'Cinzel', serif" }}
+              >
                 Tamil Nadu
               </h1>
-              <p className="text-white/80 text-xl italic" style={{ fontFamily: "'Lora', serif" }}>
+              <p
+                className="text-white/80 text-xl italic"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
                 The Land of Temples
               </p>
             </div>
             <div className="bg-white/15 backdrop-blur-sm rounded-2xl border border-white/20 p-5 min-w-[220px]">
-              <h3 className="text-white font-bold text-sm mb-3 uppercase tracking-wider">Quick Facts</h3>
+              <h3 className="text-white font-bold text-sm mb-3 uppercase tracking-wider">
+                Quick Facts
+              </h3>
               <div className="space-y-2">
                 {[
                   { label: "Capital", value: "Chennai" },
@@ -353,7 +508,9 @@ export default function TamilNaduPage() {
                     <MapPin className="w-3.5 h-3.5 text-white/60 mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-white/60 text-xs">{label}: </span>
-                      <span className="text-white text-xs font-medium">{value}</span>
+                      <span className="text-white text-xs font-medium">
+                        {value}
+                      </span>
                     </div>
                   </div>
                 ))}
@@ -364,13 +521,19 @@ export default function TamilNaduPage() {
       </div>
 
       <main className="max-w-5xl mx-auto px-6 py-12 space-y-16">
-
         {/* Capital */}
-        <Section title="Capital — Chennai" icon="🏛️">
+        <Section title="Capital" icon="🏛️">
           <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20 rounded-2xl p-6 border border-red-100 dark:border-red-900/30 text-center">
             <div className="text-5xl mb-3">🌆</div>
-            <h3 className="text-2xl font-bold text-foreground mb-1" style={{ fontFamily: "'Cinzel', serif" }}>Chennai</h3>
-            <p className="text-muted-foreground text-sm">Capital of Tamil Nadu — The Detroit of Asia</p>
+            <h3
+              className="text-2xl font-bold text-foreground mb-1"
+              style={{ fontFamily: "'Cinzel', serif" }}
+            >
+              Chennai
+            </h3>
+            <p className="text-muted-foreground text-sm">
+              Capital of Tamil Nadu — The Detroit of Asia
+            </p>
           </div>
         </Section>
 
@@ -394,43 +557,95 @@ export default function TamilNaduPage() {
                 </div>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground">(src: mapsofindia.com) — Click the map to view full size</p>
+            <p className="text-xs text-muted-foreground">
+              (src: mapsofindia.com) — Click the map to view full size
+            </p>
           </div>
         </Section>
 
         {/* Brief Introduction */}
-          <Section title="Brief Introduction" icon="📜">
-            <div className="space-y-4 text-base leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>
-              <p className="text-foreground">
-                The State of Tamil Nadu has a hoary antiquity. Though early sangam classics throw historical references, we pass to recorded history only from the Pallavas.
-              </p>
-              <p className="text-foreground">
-                The southern states of India were under the hegemony of the Cholas, the Cheras and the Pandyas for centuries. The Pallavas held supremacy from about the second quarter of the fourth century A.D. They were the originators of the famous Dravidian style of temple architecture. The last Pallava ruler was Aparajita, in whose reign the later Cholas under Vijayalaya and Aditya asserted themselves by about the 10th century. At the end of the 11th century, Tamil Nadu was ruled by several dynasties like the Chalukyas, Cholas and Pandyas. In the two centuries that followed, the imperial Cholas gained paramountcy over South India.
-              </p>
-              <p className="text-foreground">
-                Muslims gradually strengthened their position, which led to the establishment of the Bahamani Sultanate, by the middle of the 14th century. At the same time, the Vijayanagar Kingdom quickly consolidated itself and extended its sway over the whole of South India, and at the close of the century, Vijayanagar became the supreme power in South. However, it crumbled at the battle of Talikota in 1564 to the confederate forces of the Deccan Sultans.
-              </p>
-              <p className="text-foreground">
-                Even during the period of the tumultuous confusion that followed the battle of Talikota, European commercial interest had appeared as rivals in the area of South India. The Portuguese, the Dutch, the French and the English came in quick succession and established trading centres known as 'Factories'. East India Company, which had established its factory at Masulipatnam (now in Andhra Pradesh) in 1611, gradually annexed territories by encouraging enmity among the native rulers. Tamil Nadu was one of the first of British settlements in India. The State is the successor to the old Madras Presidency, which covered the bulk of the southern peninsula in 1901. The composite Madras State was later reorganised, and the present Tamil Nadu was formed.
-              </p>
-              <p className="text-foreground">
-                Tamil Nadu is bounded on north by Andhra Pradesh and Karnataka, on the west by Kerala, on the east by the Bay of Bengal, and on the south by the Indian Ocean.
-              </p>
-              <p className="text-foreground">
-                Tamil Nadu covers total land area of 130,060 km2 and is divided into 32 districts which are: Ariyalur, Chennai, Coimbatore, Cuddalore, Dharmapuri, Dindigul, Erode, Kancheepuram, Kanyakumari, Karur, Krishnagiri, Madurai, Nagapattinam, Namakkal, Perambalur, Pudukkottai, Ramanathapuram, Salem, Sivaganga, Thanjavur, The Nilgiris, Theni, Thiruvallur, Thiruvannamalai, Thiruvarur, Tirunelveli, Tirupur, Tiruchirappalli(Trichy), Tuticorin(Thoothukoodi), Vellore, Villupuram and Virudhunagar.
-              </p>
-              <p className="text-foreground italic text-primary font-medium">
-                It is regarded as the cradle of Dravidian culture with its cultural paraphernalia speckled all across the state in the form of magnificent temples, gateways, intricate carvings, and the society seeped in tradition.
-              </p>
-              <p className="text-xs text-muted-foreground">(src: govt of TN, mapsofindia.com)</p>
-            </div>
-          </Section>
+        <Section title="Brief Introduction" icon="📜">
+          <div
+            className="space-y-4 text-base leading-relaxed"
+            style={{ fontFamily: "'Lora', serif", textAlign: "justify" }}
+          >
+            <p className="text-foreground">
+              The State of Tamil Nadu has a hoary antiquity. Though
+              early sangam classics throw historical references, we pass to
+              recorded history only from the Pallavas.
+            </p>
+            <p className="text-foreground">
+              The southern states of India were under the hegemony of the
+              Cholas, the Cheras and the Pandyas for centuries. The Pallavas
+              held supremacy from about the second quarter of the fourth century
+              A.D. They were the originators of the famous Dravidian style of
+              temple architecture. The last Pallava ruler was Aparajita, in
+              whose reign the later Cholas under Vijayalaya and Aditya asserted
+              themselves by about the 10th century. At the end of the
+              11th century, Tamil Nadu was ruled by several dynasties like the
+              Chalukyas, Cholas and Pandyas. In the two centuries that followed,
+              the imperial Cholas gained paramountcy over South India.
+            </p>
+            <p className="text-foreground">
+              Muslims gradually strengthened their position, which led to the
+              establishment of the Bahamani Sultanate, by the middle of the
+              14th century. At the same time, the Vijayanagar Kingdom quickly
+              consolidated itself and extended its sway over the whole of South
+              India, and at the close of the century, Vijayanagar became the
+              supreme power in South. However, it crumbled at the battle of
+              Talikota in 1564 to the confederate forces of the Deccan Sultans.
+            </p>
+            <p className="text-foreground">
+              Even during the period of the tumultuous confusion that followed
+              the battle of Talikota, European commercial interest had appeared
+              as rivals in the area of South India. The Portuguese, the Dutch,
+              the French and the English came in quick succession and
+              established trading centres known as 'Factories'. East India
+              Company, which had established its factory at Masulipatnam (now in
+              Andhra Pradesh) in 1611, gradually annexed territories by
+              encouraging enmity among the native rulers. Tamil Nadu was one of
+              the first of British settlements in India. The State is the
+              successor to the old Madras Presidency, which covered the bulk of
+              the southern peninsula in 1901. The composite Madras State was
+              later reorganised, and the present Tamil Nadu was formed.
+            </p>
+            <p className="text-foreground">
+              Tamil Nadu is bounded on north by Andhra Pradesh and Karnataka, on
+              the west by Kerala, on the east by the Bay of Bengal, and on the
+              south by the Indian Ocean.
+            </p>
+            <p className="text-foreground">
+              Tamil Nadu covers total land area of 130,060 km2 and is divided
+              into 32 districts which are: Ariyalur, Chennai, Coimbatore,
+              Cuddalore, Dharmapuri, Dindigul, Erode, Kancheepuram, Kanyakumari,
+              Karur, Krishnagiri, Madurai, Nagapattinam, Namakkal, Perambalur,
+              Pudukkottai, Ramanathapuram, Salem, Sivaganga, Thanjavur, The
+              Nilgiris, Theni, Thiruvallur, Thiruvannamalai, Thiruvarur,
+              Tirunelveli, Tirupur, Tiruchirappalli(Trichy),
+              Tuticorin(Thoothukoodi), Vellore, Villupuram and Virudhunagar.
+            </p>
+            <p className="text-foreground italic text-primary font-medium">
+              It is regarded as the cradle of Dravidian culture with its
+              cultural paraphernalia speckled all across the state in the form
+              of magnificent temples, gateways, intricate carvings, and the
+              society seeped in tradition.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              (src: govt of TN, mapsofindia.com)
+            </p>
+          </div>
+        </Section>
 
-          {/* Festivals */}
+        {/* Festivals */}
         <Section title="Festivals / Culture / Traditions" icon="🎉">
           <div className="space-y-8">
             {festivals.map((f, i) => (
-              <FestivalCard key={i} number={i + 1} {...f} onImageClick={openLightbox} />
+              <FestivalCard
+                key={i}
+                number={i + 1}
+                {...f}
+                onImageClick={openLightbox}
+              />
             ))}
           </div>
         </Section>
@@ -439,7 +654,12 @@ export default function TamilNaduPage() {
         <Section title="Historical Places / Monuments" icon="🏯">
           <div className="space-y-10">
             {historicalPlaces.map((p, i) => (
-              <HistoricalPlaceCard key={i} number={i + 1} {...p} onImageClick={openLightbox} />
+              <HistoricalPlaceCard
+                key={i}
+                number={i + 1}
+                {...p}
+                onImageClick={openLightbox}
+              />
             ))}
           </div>
         </Section>
@@ -448,9 +668,17 @@ export default function TamilNaduPage() {
         <Section title="Facts about Tamil Nadu" icon="💡">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {facts.map((fact, i) => (
-              <div key={i} className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
+              <div
+                key={i}
+                className="flex items-start gap-3 bg-card border border-border rounded-xl p-4"
+              >
                 <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <p className="text-sm text-foreground leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>{fact}</p>
+                <p
+                  className="text-sm text-foreground leading-relaxed"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  {fact}
+                </p>
               </div>
             ))}
           </div>
@@ -458,7 +686,10 @@ export default function TamilNaduPage() {
 
         {/* Art Gallery */}
         <Section title="Art Gallery" icon="🎨">
-          <p className="text-muted-foreground text-sm mb-4">Scroll horizontally to explore Tamil Nadu's iconic foods, crafts, dance, and traditions.</p>
+          <p className="text-muted-foreground text-sm mb-4">
+            Scroll horizontally to explore Tamil Nadu's iconic foods, crafts,
+            dance, and traditions.
+          </p>
           <div className="overflow-x-auto pb-4">
             <div className="flex gap-4" style={{ minWidth: "max-content" }}>
               {artGallery.map((item, i) => {
@@ -467,7 +698,11 @@ export default function TamilNaduPage() {
                 return (
                   <Wrapper
                     key={i}
-                    onClick={hasImg ? () => openLightbox(item.image as string, item.title) : undefined}
+                    onClick={
+                      hasImg
+                        ? () => openLightbox(item.image as string, item.title)
+                        : undefined
+                    }
                     className={`flex-shrink-0 w-44 rounded-xl border border-border bg-card overflow-hidden hover:shadow-md transition-shadow text-left ${hasImg ? "cursor-zoom-in group" : ""}`}
                   >
                     <div
@@ -493,9 +728,13 @@ export default function TamilNaduPage() {
                       )}
                     </div>
                     <div className="p-3">
-                      <p className="font-semibold text-xs text-foreground leading-tight">{item.title}</p>
+                      <p className="font-semibold text-xs text-foreground leading-tight">
+                        {item.title}
+                      </p>
                       {item.desc && (
-                        <p className="text-xs text-muted-foreground mt-1 leading-tight">{item.desc}</p>
+                        <p className="text-xs text-muted-foreground mt-1 leading-tight">
+                          {item.desc}
+                        </p>
                       )}
                     </div>
                   </Wrapper>
@@ -520,10 +759,15 @@ export default function TamilNaduPage() {
 
       <footer className="mt-16 bg-foreground/5 border-t border-border">
         <div className="max-w-6xl mx-auto px-6 py-8 text-center">
-          <button onClick={() => setLocation("/")} className="text-primary font-semibold hover:underline text-sm">
+          <button
+            onClick={() => setLocation("/")}
+            className="text-primary font-semibold hover:underline text-sm"
+          >
             ← Bharat Darpan
           </button>
-          <p className="text-xs text-muted-foreground mt-2">Preserving India's rich cultural legacy for generations to come</p>
+          <p className="text-xs text-muted-foreground mt-2">
+            Preserving India's rich cultural legacy for generations to come
+          </p>
         </div>
       </footer>
     </div>
@@ -537,13 +781,14 @@ const festivals = [
     name: "Pongal",
     tagline: "The Harvest Festival of Tamil Nadu",
     description:
-      "Pongal is the harvest festival celebrated by the farmers in January to worship the sun, the earth and the cattle as thanks giving for a bounteous harvest. It is followed by the Jallikattu. - Tamil Nadu celebrates a four day harvesting festival annually during the month of January, popularly known as “Pongal”. The celebration is held to praise the Sun God for nourishing the crops throughout the year. The four day celebration involves; Bhogi, Surya Pongal, Mattu Pongal and Kaanum Pongal.  The third day of the festival is Mattu Pongal, which features a significant ancient sport known as Jallikattu - the bull taming sport. Bhogi marks the first day of the Pongal festivities and is celebrated on the last day of the Tamil calendar month Marghazhi.On this day people discard old belongings and celebrate new possessions. The people assemble and light a bonfire in order to burn the heaps of discards. Houses are cleaned, painted and decorated to give a festive look. Thai Pongal is the main festive day, celebrated on the next day of Bhogi.[10][11] It is observed on the first day of the Tamil calendar month of Thai, and usually falls on 14 or 15 January. It is dedicated to the Sun deity Surya and corresponds to Makar Sankranti. According to tradition, the festival marks the end of winter solstice, and the start of the sun's six-month-long journey northwards when the sun enters the Capricorn, also called as Uttarayana. Dedicated to Surya, it is celebrated with family and friends with new clothes worn and the preparation of the traditional pongal dish in an earthen pot. The pot is typically decorated by tying a turmeric plant or flower garland and placed in the sun along with sugarcane stalks. The homes are decorated with banana and mango leaves, decorative florals and kolams. Relatives and friends are invited and when the pongal starts to boil and overflow out of the vessel,they blow a conch or make sounds while shouting \"Pongalo Pongal\" (\"may this rice boil over\"). In rural areas, people sing traditional songs while the pongal dish is cooking. The Pongal dish is first offered to Surya and Lord Ganesha, and then shared with the gathered friends and family. Mattu Pongal (\"Madu\" meaning cow in Tamil) is the third day of the festival meant for the celebration of cattle. The cattle is regarded as sources of wealth as it is a means for dairy products and fertilizers, used for transportation and agriculture. The cattle are bathed, their horns are polished and painted in bright colors with garlands of flowers placed around their necks and taken for processions. Kaanum Pongal, the fourth and final day of the Tamil harvest festival, signifies familial unity, social bonding, and gratitude towards nature. ‘Kanu Pidi’ is a ritual where women and young girls place leftover colored rice (often cooked from previous days), sugarcane, and vegetables on turmeric leaves in the open for birds, particularly crows (regarded as ancestors). They pray for the health and prosperity of their brothers and family. (src:Wikipedia)",
+      'Pongal is the harvest festival celebrated by the farmers in January to worship the sun, the earth and the cattle as thanks giving for a bounteous harvest. It is followed by the Jallikattu. - Tamil Nadu celebrates a four day harvesting festival annually during the month of January, popularly known as “Pongal”. The celebration is held to praise the Sun God for nourishing the crops throughout the year. The four day celebration involves; Bhogi, Surya Pongal, Mattu Pongal and Kaanum Pongal.  The third day of the festival is Mattu Pongal, which features a significant ancient sport known as Jallikattu - the bull taming sport. Bhogi marks the first day of the Pongal festivities and is celebrated on the last day of the Tamil calendar month Marghazhi.On this day people discard old belongings and celebrate new possessions. The people assemble and light a bonfire in order to burn the heaps of discards. Houses are cleaned, painted and decorated to give a festive look. Thai Pongal is the main festive day, celebrated on the next day of Bhogi.[10][11] It is observed on the first day of the Tamil calendar month of Thai, and usually falls on 14 or 15 January. It is dedicated to the Sun deity Surya and corresponds to Makar Sankranti. According to tradition, the festival marks the end of winter solstice, and the start of the sun\'s six-month-long journey northwards when the sun enters the Capricorn, also called as Uttarayana. Dedicated to Surya, it is celebrated with family and friends with new clothes worn and the preparation of the traditional pongal dish in an earthen pot. The pot is typically decorated by tying a turmeric plant or flower garland and placed in the sun along with sugarcane stalks. The homes are decorated with banana and mango leaves, decorative florals and kolams. Relatives and friends are invited and when the pongal starts to boil and overflow out of the vessel,they blow a conch or make sounds while shouting "Pongalo Pongal" ("may this rice boil over"). In rural areas, people sing traditional songs while the pongal dish is cooking. The Pongal dish is first offered to Surya and Lord Ganesha, and then shared with the gathered friends and family. Mattu Pongal ("Madu" meaning cow in Tamil) is the third day of the festival meant for the celebration of cattle. The cattle is regarded as sources of wealth as it is a means for dairy products and fertilizers, used for transportation and agriculture. The cattle are bathed, their horns are polished and painted in bright colors with garlands of flowers placed around their necks and taken for processions. Kaanum Pongal, the fourth and final day of the Tamil harvest festival, signifies familial unity, social bonding, and gratitude towards nature. ‘Kanu Pidi’ is a ritual where women and young girls place leftover colored rice (often cooked from previous days), sugarcane, and vegetables on turmeric leaves in the open for birds, particularly crows (regarded as ancestors). They pray for the health and prosperity of their brothers and family. (src:Wikipedia)',
     images: [pongal1, pongal2, pongal3, pongal4, pongal5],
     source: "(src: Wikipedia)",
   },
   {
     name: "Jallikattu — Bull Fight",
-    tagline: "In some parts of southern Tamil Nadu. Alanganallur in Tamil Nadu is internationally famous for Jallikattu.",
+    tagline:
+      "In some parts of southern Tamil Nadu. Alanganallur in Tamil Nadu is internationally famous for Jallikattu.",
     description:
       "Jallikattu-Bull fight, in some parts of southern Tamil Nadu. Alanganallur in Tamil Nadu is internationally famous for Jallikattu. - In ancient times, ‘Yeru thazhuvuthal’ or embracing the bull, was connected in displaying the men’s pride and victory for winning over a girl for marriage. The sport has prevailed in Tamil culture for over 2000 years now.   Manju Virattu is conducted every year in various regions of the state including Madurai, Sivagangai and Pudukottai. The event begins as the bulls are released to the arena via a small entrance known as “ Vaadi Vaasal”. The male players known to be bull tamers, amid loud whistles, applauses and cheers wait nearby to the entrance and try to grab the bull's hump, which needs a lot of courage and prudence. The person who clutches the hump and takes the pouch containing cash or presents without falling off the bull is deemed the winner. Besides being identified as a conquering sport, it is also associated with the good motive of preserving pure-breeding of native bulls which were bred exclusively for the purpose of mating. The native Kangayam, Pulikulam, Umbalachery , Bargur and Malai Maadu are the combative breeds which compete highly in this sport. The sport has become the emotion of Tamilians with its long rooted historical and cultural significance. Madurai and Jallikattu The festival of cattle-worship is much delighted in Madurai and its sub regions. The sport is considered as a celebration in these areas. Preparations for this festival start months before the day of the event. The invites are sent to various villages about the celebration where the bulls are registered to enter the arena after a physical health check up. The district administration, Public works department, Police department along with local event organizers work together to maintain the integrity and dignity of the sport. Every year the regions of Avaniyapuram, Alanganallur and Palamedu attract around 700 native breeds of bulls and about 300 bull tamers from all around the state for this competition. The event also attracts a swarm of people, both locally and globally, visiting these areas to watch this magnificent sport. The bull taming sport in these regions are also telecasted on National Television every year.",
     images: [jalli1, jalli2],
@@ -551,7 +796,8 @@ const festivals = [
   },
   {
     name: "Chithirai Festival, Madurai",
-    tagline: "Brings a spectacular re-enactment of the marriage of the Pandiyan princess Meenakshi to Lord Sundareswarar.",
+    tagline:
+      "Brings a spectacular re-enactment of the marriage of the Pandiyan princess Meenakshi to Lord Sundareswarar.",
     description:
       "Chithirai festival, Madurai brings a spectacular re-enactment of the marriage of the Pandiyan princess Meenakshi to Lord Sundareswarar. - A famous Vishnu Temple dedicated to Lord Alagar is located 21 kilometres north of Madurai. The temple is set on a hill with breathtaking views. Alagarkoil is the name of the shrine, and Solaimalai is the name of the hill. The temple also has some lovely carvings, making it a worthwhile visit. The Hill is home to Palamudirsolai, one of Lord Subramaniya's six abodes.       Chithirai Festival, also known as Chithirai Thiruvizha, Meenakshi Kalyanam or Meenakshi Thirukalyanam, is an annual Tamil Hindu celebration in the city of Madurai during the month of April. The festival, celebrated during the Tamil month of Chithirai, is associated with the Meenakshi Temple, dedicated to the goddess Meenakshi, a form of Parvati and her consort Sundareshwar, a form of Shiva. The festival lasts for one month. The first 15 days mark the celebrations of the coronation of Meenakshi as the divine ruler of Madurai and her marriage to Sundareshwar. The next 15 days mark the celebrations of the journey of Kallalagar or Alagar (a form of the god Vishnu) from his temple in Alagar Koyil to Madurai. (src:utsav.gov.in)",
     images: [chith1, chith2],
@@ -559,7 +805,8 @@ const festivals = [
   },
   {
     name: "Tamizh Puttandu — Tamil New Year",
-    tagline: "Meaning 'Tamil New Year' — the first day of year on the Tamil calendar.",
+    tagline:
+      "Meaning 'Tamil New Year' — the first day of year on the Tamil calendar.",
     description:
       "Tamizh Puttandu  - meaning ‘Tamil new year’. is the first day of year on the Tamil calendar that is traditionally celebrated as a festival by Tamils. The festival date is set with the solar cycle of the solar Hindu calendar, as the first day of the month of Chittirai. It falls on or about 14 April every year. Households clean up the house, prepare a tray with fruits, flowers and auspicious items, light up the family puja altar and visit their local temples. People wear new clothes and children go to elders to pay their respects and seek their blessings, then the family sits down to a feast. On the eve of Puthandu, a tray is arranged with three fruits (mango, banana and jack fruit), betel leaves and arecanut, gold/silver jewellery, coins/money, flowers and a mirror. This is similar to the Vishu new year festival ceremonial tray in Kerala. According to the Tamil tradition, this festive tray is auspicious as the first sight upon waking on the new year day and is called ‘kani’. Home entrances are decorated elaborately with colored rice powder. These designs are called kolams. As soon as they wake up, they walk to the kani with their eyes closed and see it as the first scene of the year. This tradition is significant in both regions and is believed to bring good luck and prosperity for the coming year.",
     images: [puth1, puth2],
@@ -567,9 +814,10 @@ const festivals = [
   },
   {
     name: "Adipperukku",
-    tagline: "The festival of Padhinettam Perukku, also known as 'Aadi Perukku', held on the 18th day of the Tamil month of Aadi.",
+    tagline:
+      "The festival of Padhinettam Perukku, also known as 'Aadi Perukku', held on the 18th day of the Tamil month of Aadi.",
     description:
-      "Adipperukku - The festival of Padhinettam Perukku also known as \"Aadi Perukku\" is held on the 18th day of the Tamil month of Aadi. \"Perukku\" means \"raising\" in Tamil. This festival is a reflection of the River Kaveri's rise due to the monsoon rains. - The Tamil calendar month of Aadi is marked by festivities and fervour honouring Water and other natural resources. Prayers and pujas are performed throughout this month to express gratitude to the mighty Goddesses for abundant natural resources. The River Palar flows through the village of Kodaiyanchi near the Vaniyambadi town of Thirupathur district. The banks of the river are home to a 1000-year-old temple dedicated to Lord Shiva- Arulmigu Kasi Viswanathar Temple and Lord Murugan - Arulmigu Murugan Temple. Hundreds of devotees gather on the day of “Padhinettam Perukku” to celebrate the occasion by offering sweet Pongal to the deity. Mulaipari, also known as the sprouting or germination of nine grains (Navadhanyam) in clay mud pots, is a crucial ceremony that is performed in the temples during this occasion. Nine different varieties of cultivated grains are packed in the earthen pots that the procession devotees carry on their heads as they move towards the river where the grains are dissolved. The newly wedded couples from the surrounding villages come to this festival to replace their \"mangalya thread\" tied on the day of their marriage with a new one along with gold coins and trinkets. Women make a lamp using rice and jaggery, set it upon plantain leaves, and let it float along the River Palar.",
+      'Adipperukku - The festival of Padhinettam Perukku also known as "Aadi Perukku" is held on the 18th day of the Tamil month of Aadi. "Perukku" means "raising" in Tamil. This festival is a reflection of the River Kaveri\'s rise due to the monsoon rains. - The Tamil calendar month of Aadi is marked by festivities and fervour honouring Water and other natural resources. Prayers and pujas are performed throughout this month to express gratitude to the mighty Goddesses for abundant natural resources. The River Palar flows through the village of Kodaiyanchi near the Vaniyambadi town of Thirupathur district. The banks of the river are home to a 1000-year-old temple dedicated to Lord Shiva- Arulmigu Kasi Viswanathar Temple and Lord Murugan - Arulmigu Murugan Temple. Hundreds of devotees gather on the day of “Padhinettam Perukku” to celebrate the occasion by offering sweet Pongal to the deity. Mulaipari, also known as the sprouting or germination of nine grains (Navadhanyam) in clay mud pots, is a crucial ceremony that is performed in the temples during this occasion. Nine different varieties of cultivated grains are packed in the earthen pots that the procession devotees carry on their heads as they move towards the river where the grains are dissolved. The newly wedded couples from the surrounding villages come to this festival to replace their "mangalya thread" tied on the day of their marriage with a new one along with gold coins and trinkets. Women make a lamp using rice and jaggery, set it upon plantain leaves, and let it float along the River Palar.',
     images: [adi1, adi2],
     source: "",
   },
@@ -583,7 +831,8 @@ const festivals = [
   },
   {
     name: "Velankanni Festival",
-    tagline: "Attracts thousands, clad in orange robes, to the sacred spot where the ship landed.",
+    tagline:
+      "Attracts thousands, clad in orange robes, to the sacred spot where the ship landed.",
     description:
       "The Velankanni festival attracts thousands, clad in orange robes to the sacred spot where the ship landed. Equally famous are the Virgin Mary's miraculous healing powers, earning for the church the name 'Lourdes of the East'.  ",
     images: [velanFest1, velanFest2],
@@ -650,7 +899,7 @@ const historicalPlaces = [
         name: "Swaminatha Swamy Temple – Swamimalai",
         location: "Thanjavur district",
         description:
-          "Swaminatha Swamy Temple – Swamimalai, Thanjavur district - Located atop a small hillock, the temple commemorates the incident where Murugan is regarded to have explained the essence of the Pranava mantra \"Om\" to his father Shiva. Story ---- Once Brahma, the Lord of all creation, disrespected Murugan when he was visiting Mount Kailash. Then, the ever-playful Murugan boldly asked Brahma the meaning of the Pranava Mantra “OM”. Failing to answer the question, Brahma admitted his ignorance. Murugan knocked his forehead, and imprisoned Brahma, bringing the whole of creation to a standstill. The demigods prayed to Lord Shiva for the release of Brahma. But Murugan insisted the imprisonment was a just punishment for Brahma's ignorance. Lord Shiva then asked Murugan whether he Himself knew the meaning of Pranava “Aum”. Murugan said he knew its meaning, but would only explain it if Lord Shiva accepted him as a guru and listened to him as a devoted disciple. Shiva accepted the request, and the son became the teacher. He then imparted upon the father the meaning of the sacred Pranava mantra “Aum” and the divine father, proud of understanding the significance, conferred respect to Murugan for his wisdom. You will see in the main shrine in the temple complex in Swamimalai that Murugan is depicted as a teacher and Shiva is listening as a disciple and, in this temple, the son is on a higher pedestal than the father.",
+          'Swaminatha Swamy Temple – Swamimalai, Thanjavur district - Located atop a small hillock, the temple commemorates the incident where Murugan is regarded to have explained the essence of the Pranava mantra "Om" to his father Shiva. Story ---- Once Brahma, the Lord of all creation, disrespected Murugan when he was visiting Mount Kailash. Then, the ever-playful Murugan boldly asked Brahma the meaning of the Pranava Mantra “OM”. Failing to answer the question, Brahma admitted his ignorance. Murugan knocked his forehead, and imprisoned Brahma, bringing the whole of creation to a standstill. The demigods prayed to Lord Shiva for the release of Brahma. But Murugan insisted the imprisonment was a just punishment for Brahma\'s ignorance. Lord Shiva then asked Murugan whether he Himself knew the meaning of Pranava “Aum”. Murugan said he knew its meaning, but would only explain it if Lord Shiva accepted him as a guru and listened to him as a devoted disciple. Shiva accepted the request, and the son became the teacher. He then imparted upon the father the meaning of the sacred Pranava mantra “Aum” and the divine father, proud of understanding the significance, conferred respect to Murugan for his wisdom. You will see in the main shrine in the temple complex in Swamimalai that Murugan is depicted as a teacher and Shiva is listening as a disciple and, in this temple, the son is on a higher pedestal than the father.',
         images: [swamimalai],
         source: "(src: casual walker)",
       },
@@ -658,7 +907,7 @@ const historicalPlaces = [
         name: "Subramanya Swamy Temple – Tiruttani",
         location: "Thiruvallur district",
         description:
-          "Subramanya Swamy Temple - Tiruttani, Thiruvallur district - Located atop a hill, Murugan is said to have reclaimed his inner peace after winning a war over the Surapadman and married Valli here. Story ---- After the intensity of the war in Tiruchendur, Murugan needed a place to subdue his anger and seek inner peace, making Tiruttani a place of tranquility. Thanigai in Tamil means \"to pacify\" or \"to calm down,\" which is why the hill and town are named Tiruttani, where the deity grants mental peace and relieves devotees of anger and stress. Because he came to this spot for peace, the idol of Murugan here is often seen holding a Vajra Vel (thunderbolt weapon) rather than the standard spear, and he is often depicted with a calmer expression and has an elephant mount (vahana)instead of his usual peacock. Valli, a mortal daughter of a tribal chieftain (Kuravas) in Tamil Nadu, was born of a doe and destined to marry Lord Murugan. Valli, from a young age, fell in love with a divine figure (Murugan) and desired to marry him, avoiding all human suitors. Lord Murugan, attracted by her devotion, visited her in the millet fields. He approached her first as a hunter, then with the help of his brother Ganesha (appearing as a wild elephant), he frightened her into accepting his hand in marriage.",
+          'Subramanya Swamy Temple - Tiruttani, Thiruvallur district - Located atop a hill, Murugan is said to have reclaimed his inner peace after winning a war over the Surapadman and married Valli here. Story ---- After the intensity of the war in Tiruchendur, Murugan needed a place to subdue his anger and seek inner peace, making Tiruttani a place of tranquility. Thanigai in Tamil means "to pacify" or "to calm down," which is why the hill and town are named Tiruttani, where the deity grants mental peace and relieves devotees of anger and stress. Because he came to this spot for peace, the idol of Murugan here is often seen holding a Vajra Vel (thunderbolt weapon) rather than the standard spear, and he is often depicted with a calmer expression and has an elephant mount (vahana)instead of his usual peacock. Valli, a mortal daughter of a tribal chieftain (Kuravas) in Tamil Nadu, was born of a doe and destined to marry Lord Murugan. Valli, from a young age, fell in love with a divine figure (Murugan) and desired to marry him, avoiding all human suitors. Lord Murugan, attracted by her devotion, visited her in the millet fields. He approached her first as a hunter, then with the help of his brother Ganesha (appearing as a wild elephant), he frightened her into accepting his hand in marriage.',
         images: [thiruttani],
         source: "(src: Wikipedia)",
       },
@@ -666,7 +915,7 @@ const historicalPlaces = [
         name: "Solaimalai Murugan Temple – Pazhamudircholai",
         location: "Madurai district",
         description:
-          "Solaimalai Murugan Temple - Pazhamudircholai, Madurai district – Located on a hillock near a stream called \"Nupura Gangai\", Murugan is seen here with both his consorts, Deivanai and Valli. - Story ---- Avvaiyar was a renowned and legendary Tamil poetess and a name behind one of the most famous and appreciated works ever written in Hindu folklore. Her exceptional vocabulary and dexterity in the language made her works stand apart, in the list of even the greatest of the poets. This had started to make her audacious over her abilities. According to the pages drenched in the antiquity of the Hindu folklore, Lord Murugan who was well-versed with his devotee wanted to teach her a lesson and took the shape of a ten-year-old boy in here in Solaimalai. After having achieved everything in her life, Avviayar was resting under a Naaval tree, trying to figure out what lied next for her. A small boy appeared out of nowhere and stood on the tree. The boy asked Avviayar if she would like some fruits. Driven by hunger and thirst, she agreed instantly. The boy asked if she wanted a hot fruit or a cold one, which confused Avviayar but was tired to argue and opted for the cold one. Smilingly, the boy shook the tree, as many fruits fell, all of which were collected by her. The fruits were coated with the sand, so Avviayar blew them to remove it. The boy asked innocently, why was she trying to cool down the fruit blowing, which was already cold. This incident left Avviayar humbled by the clever wordplay and the poetic knowledge of the little boy. However, She was skeptical of the boy’s true identity which was revealed to her as Lord Murugan himself. She bowed to the almighty and requested him to bestow her with his bountiful knowledge, for she had realized the power of infinite learning. She sought Lord Murugan’s blessings and embarked on her quest for endless knowledge.",
+          'Solaimalai Murugan Temple - Pazhamudircholai, Madurai district – Located on a hillock near a stream called "Nupura Gangai", Murugan is seen here with both his consorts, Deivanai and Valli. - Story ---- Avvaiyar was a renowned and legendary Tamil poetess and a name behind one of the most famous and appreciated works ever written in Hindu folklore. Her exceptional vocabulary and dexterity in the language made her works stand apart, in the list of even the greatest of the poets. This had started to make her audacious over her abilities. According to the pages drenched in the antiquity of the Hindu folklore, Lord Murugan who was well-versed with his devotee wanted to teach her a lesson and took the shape of a ten-year-old boy in here in Solaimalai. After having achieved everything in her life, Avviayar was resting under a Naaval tree, trying to figure out what lied next for her. A small boy appeared out of nowhere and stood on the tree. The boy asked Avviayar if she would like some fruits. Driven by hunger and thirst, she agreed instantly. The boy asked if she wanted a hot fruit or a cold one, which confused Avviayar but was tired to argue and opted for the cold one. Smilingly, the boy shook the tree, as many fruits fell, all of which were collected by her. The fruits were coated with the sand, so Avviayar blew them to remove it. The boy asked innocently, why was she trying to cool down the fruit blowing, which was already cold. This incident left Avviayar humbled by the clever wordplay and the poetic knowledge of the little boy. However, She was skeptical of the boy’s true identity which was revealed to her as Lord Murugan himself. She bowed to the almighty and requested him to bestow her with his bountiful knowledge, for she had realized the power of infinite learning. She sought Lord Murugan’s blessings and embarked on her quest for endless knowledge.',
         images: [pazhamudir],
         source: "(src: TemplePurohit)",
       },
@@ -706,7 +955,7 @@ const historicalPlaces = [
         name: "Ether/Space – Indra/Akasha Lingam – Thillai Natarajar Temple",
         location: "Chidambaram",
         description:
-          "Ether/ Space – Indra/Akasha Lingam – Thillai Natarajar Temple – Chidambaram - Chidambaram, the name of the city and the temple, literally means \"atmosphere of wisdom\" or \"clothed in consciousness\"; the temple architecture symbolises the connection between the arts and spirituality, creative activity and the divine.The temple wall carvings display all the 108 karanas from the Natya Shastra by Bharata Muni, and these postures form a foundation of Bharatanatyam, a classical Indian dance. The present temple was built in the 10th century when Chidambaram was the capital of the Chola dynasty, making it one of the oldest surviving active temple complexes in South India. After its 10th-century consecration by the Cholas who considered Nataraja as their family deity, Shiva himself is idolised in three forms, as a crystal lingam, as a formless space covered by curtains (Chidambaram rahasyam), and as the Nataraja performing the Ananda Tandava (\"Dance of Delight\") in the golden hall of the shrine Pon Ambalam. The temple is one of the five elemental lingas in the Shaivism pilgrimage tradition, and considered the subtlest of all Shiva temples (Kovil) in Hinduism. It is also a site for performance arts, including the annual Natyanjali dance festival on Maha Shivaratri.",
+          'Ether/ Space – Indra/Akasha Lingam – Thillai Natarajar Temple – Chidambaram - Chidambaram, the name of the city and the temple, literally means "atmosphere of wisdom" or "clothed in consciousness"; the temple architecture symbolises the connection between the arts and spirituality, creative activity and the divine.The temple wall carvings display all the 108 karanas from the Natya Shastra by Bharata Muni, and these postures form a foundation of Bharatanatyam, a classical Indian dance. The present temple was built in the 10th century when Chidambaram was the capital of the Chola dynasty, making it one of the oldest surviving active temple complexes in South India. After its 10th-century consecration by the Cholas who considered Nataraja as their family deity, Shiva himself is idolised in three forms, as a crystal lingam, as a formless space covered by curtains (Chidambaram rahasyam), and as the Nataraja performing the Ananda Tandava ("Dance of Delight") in the golden hall of the shrine Pon Ambalam. The temple is one of the five elemental lingas in the Shaivism pilgrimage tradition, and considered the subtlest of all Shiva temples (Kovil) in Hinduism. It is also a site for performance arts, including the annual Natyanjali dance festival on Maha Shivaratri.',
         images: [akashaLingam],
         source: "",
       },
@@ -723,7 +972,7 @@ const historicalPlaces = [
   {
     name: "1000-Pillar Temple — Madurai Meenakshi Temple",
     description:
-      "Meenakshi Temple, also known as Meenakshi Sundareswarar Temple, is a historic Hindu temple located on the southern bank of the Vaigai River in Madurai, Tamil Nadu, India. It is dedicated to Meenakshi, a form of Parvati, and her consort Sundareswarar (Shiva). Built around 1569 by Ariyanatha Mudaliyar, the minister of the Nayak dynasty, the hall is known for its structural beauty and detailed carvings. It is called the 1000-pillar temple because it houses a massive, 16th-century hall known as the Aayiram Kaal Mandapam, which contains a vast, intricately carved forest of pillars. Though often referred to as \"1000,\" the hall actually holds 985, not 1000, granite pillars arranged in rows. While the Sangam literature mentions the temple city of Madurai, the existence of a temple is first referenced in the Tamil texts from 6th century CE. It is one of the Paadal Petra Sthalams, Shiva temples that are revered in the Tevaram verses composed by the Nayanars between the 6th and 11th century CE. The early structures of the temple were built during the reign of the Pandyas in the 12th to 13th century CE. It was later rebuilt by the Vijayanagara Empire in the 14th century CE, after its destruction by the armies of the Delhi Sultanate. The temple complex was later expanded extensively by the Madurai Nayaks in the 16th and 17th centuries. While a few structural improvements were made during the 18th and 19th centuries CE, the temple condition degraded due to negligence during the British Raj. After the Indian independence in the mid 20th century, the temple was restored with donations collected from people. Further restoration and kumbhabhishekam of the temple was conducted in 1974, 1995, and 2009. The temple conducts six pujas everyday, each comprising four rituals namely abhisheka (sacred bath), alankaram (decoration), naivedanam (food offerings) and deepa aradanai (lamp ceremony) for both Meenakshi and Sundareswarar. The rituals and festivals are accompanied with music from instruments such as nadhaswaram (pipe instrument), davandai and tavil (percussion instrument), often along with the recitation of the Vedas. The Hindus circumambulate the shrines clockwise before entering the shrine for a darshana. The Meenakshi shrine is typically visited before the Sundareswarar shrine by the pilgrims, as she is considered the primary deity of the complex. The Meenakshi temple hosts a festival in each month of the Tamil calendar. The Meenakshi thirukalyanam, which celebrates the wedding of Meenakshi and Sundareswarar, is celebrated over 15 days, and is the most attended festival. The festival, celebrated during the month of Chithirai, is part of the ‘Chithirai Thiruvizha’. The festivities include number of events such as the ‘Ther Thiruvizha’ (temple car festival) and ‘Theppa Thiruvizha’ (float festival). The wedding of the divine couple is regarded as an instance of a South Indian wedding with matrilineal emphasis, an arrangement referred as \"Madurai marriage\", which is in contrast with the \"Chidambaram marriage\", with patrilineal emphasis, named after the rituals at the Nataraja temple at Chidambaram. The festival includes the wedding ritual, where Alagar (Vishnu) gives away his sister Meenakshi, the royal bride, in marriage to Shiva, and a procession, where the idols of Meenakshi and Sundareswarar are taken in a temple car, pulled by volunteering devotees.",
+      'Meenakshi Temple, also known as Meenakshi Sundareswarar Temple, is a historic Hindu temple located on the southern bank of the Vaigai River in Madurai, Tamil Nadu, India. It is dedicated to Meenakshi, a form of Parvati, and her consort Sundareswarar (Shiva). Built around 1569 by Ariyanatha Mudaliyar, the minister of the Nayak dynasty, the hall is known for its structural beauty and detailed carvings. It is called the 1000-pillar temple because it houses a massive, 16th-century hall known as the Aayiram Kaal Mandapam, which contains a vast, intricately carved forest of pillars. Though often referred to as "1000," the hall actually holds 985, not 1000, granite pillars arranged in rows. While the Sangam literature mentions the temple city of Madurai, the existence of a temple is first referenced in the Tamil texts from 6th century CE. It is one of the Paadal Petra Sthalams, Shiva temples that are revered in the Tevaram verses composed by the Nayanars between the 6th and 11th century CE. The early structures of the temple were built during the reign of the Pandyas in the 12th to 13th century CE. It was later rebuilt by the Vijayanagara Empire in the 14th century CE, after its destruction by the armies of the Delhi Sultanate. The temple complex was later expanded extensively by the Madurai Nayaks in the 16th and 17th centuries. While a few structural improvements were made during the 18th and 19th centuries CE, the temple condition degraded due to negligence during the British Raj. After the Indian independence in the mid 20th century, the temple was restored with donations collected from people. Further restoration and kumbhabhishekam of the temple was conducted in 1974, 1995, and 2009. The temple conducts six pujas everyday, each comprising four rituals namely abhisheka (sacred bath), alankaram (decoration), naivedanam (food offerings) and deepa aradanai (lamp ceremony) for both Meenakshi and Sundareswarar. The rituals and festivals are accompanied with music from instruments such as nadhaswaram (pipe instrument), davandai and tavil (percussion instrument), often along with the recitation of the Vedas. The Hindus circumambulate the shrines clockwise before entering the shrine for a darshana. The Meenakshi shrine is typically visited before the Sundareswarar shrine by the pilgrims, as she is considered the primary deity of the complex. The Meenakshi temple hosts a festival in each month of the Tamil calendar. The Meenakshi thirukalyanam, which celebrates the wedding of Meenakshi and Sundareswarar, is celebrated over 15 days, and is the most attended festival. The festival, celebrated during the month of Chithirai, is part of the ‘Chithirai Thiruvizha’. The festivities include number of events such as the ‘Ther Thiruvizha’ (temple car festival) and ‘Theppa Thiruvizha’ (float festival). The wedding of the divine couple is regarded as an instance of a South Indian wedding with matrilineal emphasis, an arrangement referred as "Madurai marriage", which is in contrast with the "Chidambaram marriage", with patrilineal emphasis, named after the rituals at the Nataraja temple at Chidambaram. The festival includes the wedding ritual, where Alagar (Vishnu) gives away his sister Meenakshi, the royal bride, in marriage to Shiva, and a procession, where the idols of Meenakshi and Sundareswarar are taken in a temple car, pulled by volunteering devotees.',
     images: [meenakshi1, meenakshi2, meenakshi3, meenakshi4],
     source: "(src: Wikipedia, National Geographic)",
   },
@@ -830,31 +1079,193 @@ const facts = [
 ];
 
 const artGallery = [
-  { title: "Ambur Biriyani", emoji: "🍛", color: "#D4883A", desc: "Famous biriyani from Ambur, Vellore", image: gAmbur },
-  { title: "Tirunelveli Halva", emoji: "🍮", color: "#F4A84A", desc: "Iconic wheat halva from Tirunelveli", image: gTirunelveliHalva },
-  { title: "Dindigul Talapakatti Biriyani", emoji: "🍚", color: "#E8733A", desc: "Famous seeraga samba biriyani", image: gDindigul },
-  { title: "Madurai Malli", emoji: "🌸", color: "#F4D8E8", desc: "Famous jasmine flowers of Madurai", image: gMalli },
-  { title: "Madurai Butter Bun", emoji: "🥐", color: "#F4E884", desc: "Iconic local bun with butter", image: gButterBun },
-  { title: "Madurai Jigurthanda", emoji: "🍨", color: "#E8C8E8", desc: "Cold dessert drink with milk, almond gum, ice cream", image: gJigarthanda },
-  { title: "Uthukuli Venne (Butter)", emoji: "🧈", color: "#F8F0C4", desc: "Pure white butter from Uthukuli, Erode", image: gUthukuli },
-  { title: "Thoothukoodi Muthu (Pearl)", emoji: "🔮", color: "#E8F4F8", desc: "Famous pearls from Thoothukudi coast", image: gMuthu },
-  { title: "Salem Mango (Malgova)", emoji: "🥭", color: "#F8C840", desc: "Giant Malgova mangoes from Salem", image: gSalemMango },
-  { title: "Erode Turmeric", emoji: "🌿", color: "#F4B830", desc: "Erode — the largest turmeric market in the world", image: gErodeTurmeric },
-  { title: "Tiruppur Garments", emoji: "👕", color: "#B4D8E8", desc: "Knitwear capital of India", image: gTiruppur },
-  { title: "Kanchipuram Silk Sarees", emoji: "🥻", color: "#D4A4E8", desc: "Famous gold-bordered silk sarees", image: gKanchiSilk },
-  { title: "Madurai Sungdi Sarees", emoji: "🧣", color: "#E8A8C8", desc: "Traditional cotton sarees of Madurai", image: gSungdi },
-  { title: "Bharatanatyam", emoji: "💃", color: "#E88844", desc: "Classical Indian dance form from Tamil Nadu", image: gBharatanatyam },
-  { title: "Dosa & Idli", emoji: "🥞", color: "#F4E8C8", desc: "Iconic South Indian breakfast", image: gDosaIdli },
-  { title: "Ven Pongal", emoji: "🍲", color: "#F4D89C", desc: "Savoury rice & lentil dish — breakfast staple", image: gVenPongal },
-  { title: "Vada Sambar", emoji: "🥣", color: "#D4884A", desc: "Crispy lentil fritters with spiced lentil soup", image: gVadaSambar },
-  { title: "Rasam", emoji: "🥣", color: "#C84830", desc: "Thin, tangy tamarind soup — digestive staple", image: gRasam },
-  { title: "Panniyaram", emoji: "🍡", color: "#D4A864", desc: "Crispy or soft rice batter balls", image: gPanniyaram },
-  { title: "Neyi Appam", emoji: "🍩", color: "#D4884A", desc: "Deep-fried ghee sweet rice cakes", image: gNeyiAppam },
-  { title: "Poi Kaal Kudurai", emoji: "🐎", color: "#D4C8B4", desc: "Means 'False-leg horse' — a village folk dance", image: gPoiKaal },
-  { title: "Karagaattam", emoji: "🏺", color: "#A8D4B4", desc: "'Pot dance' — folk dance balancing pot on head while dancing", image: gKaragattam },
-  { title: "Thanjavur Paintings", emoji: "🖼️", color: "#F4D870", desc: "Made with thin gold foils/sheets — classical art form", image: gThanjavur1 },
-  { title: "Thanjavur Paintings — Radha Krishna", emoji: "🖼️", color: "#E8C870", desc: "Classical Thanjavur work depicting Radha & Krishna with gold foil & gem inlay", image: gThanjavur2 },
-  { title: "Silambattam", emoji: "🥋", color: "#D4A8A8", desc: "Ancient Tamil weapon-based martial art merging fighting and dance-like fluidity", image: gSilambattam },
-  { title: "Thanjavur Thalaiyaati Bommai", emoji: "🪆", color: "#E8B488", desc: "Iconic Thanjavur dancing dolls with bobbing heads — GI-tagged craft", image: gThalaiyaati },
-  { title: "Tamil Nadu Sappadu (Feast)", emoji: "🍛", color: "#A8C878", desc: "Traditional banana-leaf meal — rice, sambar, rasam, poriyal, kootu, payasam", image: gFeast },
+  {
+    title: "Ambur Biriyani",
+    emoji: "🍛",
+    color: "#D4883A",
+    desc: "Famous biriyani from Ambur, Vellore",
+    image: gAmbur,
+  },
+  {
+    title: "Tirunelveli Halva",
+    emoji: "🍮",
+    color: "#F4A84A",
+    desc: "Iconic wheat halva from Tirunelveli",
+    image: gTirunelveliHalva,
+  },
+  {
+    title: "Dindigul Talapakatti Biriyani",
+    emoji: "🍚",
+    color: "#E8733A",
+    desc: "Famous seeraga samba biriyani",
+    image: gDindigul,
+  },
+  {
+    title: "Madurai Malli",
+    emoji: "🌸",
+    color: "#F4D8E8",
+    desc: "Famous jasmine flowers of Madurai",
+    image: gMalli,
+  },
+  {
+    title: "Madurai Butter Bun",
+    emoji: "🥐",
+    color: "#F4E884",
+    desc: "Iconic local bun with butter",
+    image: gButterBun,
+  },
+  {
+    title: "Madurai Jigurthanda",
+    emoji: "🍨",
+    color: "#E8C8E8",
+    desc: "Cold dessert drink with milk, almond gum, ice cream",
+    image: gJigarthanda,
+  },
+  {
+    title: "Uthukuli Venne (Butter)",
+    emoji: "🧈",
+    color: "#F8F0C4",
+    desc: "Pure white butter from Uthukuli, Erode",
+    image: gUthukuli,
+  },
+  {
+    title: "Thoothukoodi Muthu (Pearl)",
+    emoji: "🔮",
+    color: "#E8F4F8",
+    desc: "Famous pearls from Thoothukudi coast",
+    image: gMuthu,
+  },
+  {
+    title: "Salem Mango (Malgova)",
+    emoji: "🥭",
+    color: "#F8C840",
+    desc: "Giant Malgova mangoes from Salem",
+    image: gSalemMango,
+  },
+  {
+    title: "Erode Turmeric",
+    emoji: "🌿",
+    color: "#F4B830",
+    desc: "Erode — the largest turmeric market in the world",
+    image: gErodeTurmeric,
+  },
+  {
+    title: "Tiruppur Garments",
+    emoji: "👕",
+    color: "#B4D8E8",
+    desc: "Knitwear capital of India",
+    image: gTiruppur,
+  },
+  {
+    title: "Kanchipuram Silk Sarees",
+    emoji: "🥻",
+    color: "#D4A4E8",
+    desc: "Famous gold-bordered silk sarees",
+    image: gKanchiSilk,
+  },
+  {
+    title: "Madurai Sungdi Sarees",
+    emoji: "🧣",
+    color: "#E8A8C8",
+    desc: "Traditional cotton sarees of Madurai",
+    image: gSungdi,
+  },
+  {
+    title: "Bharatanatyam",
+    emoji: "💃",
+    color: "#E88844",
+    desc: "Classical Indian dance form from Tamil Nadu",
+    image: gBharatanatyam,
+  },
+  {
+    title: "Dosa & Idli",
+    emoji: "🥞",
+    color: "#F4E8C8",
+    desc: "Iconic South Indian breakfast",
+    image: gDosaIdli,
+  },
+  {
+    title: "Ven Pongal",
+    emoji: "🍲",
+    color: "#F4D89C",
+    desc: "Savoury rice & lentil dish — breakfast staple",
+    image: gVenPongal,
+  },
+  {
+    title: "Vada Sambar",
+    emoji: "🥣",
+    color: "#D4884A",
+    desc: "Crispy lentil fritters with spiced lentil soup",
+    image: gVadaSambar,
+  },
+  {
+    title: "Rasam",
+    emoji: "🥣",
+    color: "#C84830",
+    desc: "Thin, tangy tamarind soup — digestive staple",
+    image: gRasam,
+  },
+  {
+    title: "Panniyaram",
+    emoji: "🍡",
+    color: "#D4A864",
+    desc: "Crispy or soft rice batter balls",
+    image: gPanniyaram,
+  },
+  {
+    title: "Neyi Appam",
+    emoji: "🍩",
+    color: "#D4884A",
+    desc: "Deep-fried ghee sweet rice cakes",
+    image: gNeyiAppam,
+  },
+  {
+    title: "Poi Kaal Kudurai",
+    emoji: "🐎",
+    color: "#D4C8B4",
+    desc: "Means 'False-leg horse' — a village folk dance",
+    image: gPoiKaal,
+  },
+  {
+    title: "Karagaattam",
+    emoji: "🏺",
+    color: "#A8D4B4",
+    desc: "'Pot dance' — folk dance balancing pot on head while dancing",
+    image: gKaragattam,
+  },
+  {
+    title: "Thanjavur Paintings",
+    emoji: "🖼️",
+    color: "#F4D870",
+    desc: "Made with thin gold foils/sheets — classical art form",
+    image: gThanjavur1,
+  },
+  {
+    title: "Thanjavur Paintings — Radha Krishna",
+    emoji: "🖼️",
+    color: "#E8C870",
+    desc: "Classical Thanjavur work depicting Radha & Krishna with gold foil & gem inlay",
+    image: gThanjavur2,
+  },
+  {
+    title: "Silambattam",
+    emoji: "🥋",
+    color: "#D4A8A8",
+    desc: "Ancient Tamil weapon-based martial art merging fighting and dance-like fluidity",
+    image: gSilambattam,
+  },
+  {
+    title: "Thanjavur Thalaiyaati Bommai",
+    emoji: "🪆",
+    color: "#E8B488",
+    desc: "Iconic Thanjavur dancing dolls with bobbing heads — GI-tagged craft",
+    image: gThalaiyaati,
+  },
+  {
+    title: "Tamil Nadu Sappadu (Feast)",
+    emoji: "🍛",
+    color: "#A8C878",
+    desc: "Traditional banana-leaf meal — rice, sambar, rasam, poriyal, kootu, payasam",
+    image: gFeast,
+  },
 ];

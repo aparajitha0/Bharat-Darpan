@@ -6,6 +6,17 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import StatePage from "@/pages/StatePage";
 import TamilNaduPage from "@/pages/TamilNaduPage";
+import GoaPage from "@/pages/GoaPage";
+import PunjabPage from "@/pages/PunjabPage";
+import TripuraPage from "@/pages/TripuraPage";
+import MeghalayaPage from "@/pages/MeghalayaPage";
+import KeralaPage from "@/pages/KeralaPage";
+import LadakhPage from "@/pages/LadakhPage";
+import BiharPage from "@/pages/BiharPage";
+import TelanganaPage from "@/pages/TelanganaPage";
+import MadhyaPradeshPage from "@/pages/MadhyaPradeshPage";
+import DadraandNagarHaveliandDamanandDiuPage from "@/pages/DadraandNagarHaveliandDamanandDiuPage";
+import ChhattisgarhPage from "@/pages/ChhattisgarhPage";
 import AboutPage from "@/pages/AboutPage";
 
 const queryClient = new QueryClient();
@@ -16,6 +27,17 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={AboutPage} />
       <Route path="/state/tamil-nadu" component={TamilNaduPage} />
+      <Route path="/state/goa" component={GoaPage} />
+      <Route path="/state/punjab" component={PunjabPage} />
+      <Route path="/state/tripura" component={TripuraPage} />
+      <Route path="/state/meghalaya" component={MeghalayaPage} />
+      <Route path="/state/kerala" component={KeralaPage} />
+      <Route path="/state/ladakh" component={LadakhPage} />
+      <Route path="/state/bihar" component={BiharPage} />
+      <Route path="/state/telangana" component={TelanganaPage} />
+      <Route path="/state/madhya-pradesh" component={MadhyaPradeshPage} />
+      <Route path="/state/daman-diu" component={DadraandNagarHaveliandDamanandDiuPage} />
+      <Route path="/state/chhattisgarh" component={ChhattisgarhPage} />
       <Route path="/state/:stateId" component={StatePage} />
       <Route component={NotFound} />
     </Switch>

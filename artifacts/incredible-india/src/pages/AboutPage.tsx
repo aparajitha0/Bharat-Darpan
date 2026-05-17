@@ -10,11 +10,17 @@ export default function AboutPage() {
   const [, setLocation] = useLocation();
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: RED_BG, color: GOLD }}>
+    <div
+      className="min-h-screen"
+      style={{ backgroundColor: RED_BG, color: GOLD }}
+    >
       {/* Header */}
       <header
         className="border-b"
-        style={{ backgroundColor: RED_DEEP, borderColor: "rgba(245,197,24,0.2)" }}
+        style={{
+          backgroundColor: RED_DEEP,
+          borderColor: "rgba(245,197,24,0.2)",
+        }}
       >
         <div className="max-w-5xl mx-auto px-6 py-5 flex items-center">
           <button
@@ -46,7 +52,11 @@ export default function AboutPage() {
           </h2>
           <p
             className="text-base sm:text-lg italic"
-            style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.9 }}
+            style={{
+              color: GOLD_SOFT,
+              fontFamily: "'Lora', serif",
+              opacity: 0.9,
+            }}
           >
             Preserving India's rich cultural legacy for generations to come.
           </p>
@@ -64,14 +74,34 @@ export default function AboutPage() {
         >
           <p
             className="text-base sm:text-lg leading-relaxed text-justify"
-            style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.9 }}
+            style={{
+              color: GOLD_SOFT,
+              fontFamily: "'Lora', serif",
+              opacity: 0.9,
+            }}
           >
-            India is one of the world's oldest civilizations, home to a breathtaking tapestry of cultures, languages, traditions, and art forms that have evolved over thousands of years. From the snow-capped peaks of the Himalayas to the sun-kissed shores of Kanyakumari, every region of India pulses with its own unique identity — expressed through its festivals, cuisine, music, dance, architecture, and rituals. With over 1.4 billion people speaking more than 700 languages and practicing a multitude of religions in harmony, India stands as a living testament to the beauty of diversity. Our project seeks to bring this magnificent heritage to the digital world, creating an interactive platform that not only preserves these timeless traditions but makes them accessible, engaging, and inspiring for generations to come.
+            India is one of the world's oldest civilizations, home to a
+            breathtaking tapestry of cultures, languages, traditions, and art
+            forms that have evolved over thousands of years. From the
+            snow-capped peaks of the Himalayas to the sun-kissed shores of
+            Kanyakumari, every region of India pulses with its own unique
+            identity — expressed through its festivals, cuisine, music, dance,
+            architecture, and rituals. With over 1.4 billion people speaking
+            more than 700 languages and practicing a multitude of religions in
+            harmony, India stands as a living testament to the beauty of
+            diversity. Our project seeks to bring this magnificent heritage to
+            the digital world, creating an interactive platform that not only
+            preserves these timeless traditions but makes them accessible,
+            engaging, and inspiring for generations to come.
           </p>
 
           <h3
             className="text-2xl sm:text-3xl font-bold mt-12 mb-6 text-center"
-            style={{ fontFamily: "'Cinzel', serif", color: GOLD, letterSpacing: "0.05em" }}
+            style={{
+              fontFamily: "'Cinzel', serif",
+              color: GOLD,
+              letterSpacing: "0.05em",
+            }}
           >
             Alignment with SDG Goals
           </h3>
@@ -88,13 +118,25 @@ export default function AboutPage() {
                 className="text-lg font-semibold mb-2"
                 style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
               >
-                SDG 4 — Quality Education <span className="text-xs italic opacity-80">(Primary Goal)</span>
+                SDG 4 — Quality Education{" "}
+                <span className="text-xs italic opacity-80">
+                  (Primary Goal)
+                </span>
               </h4>
               <p
                 className="text-base leading-relaxed text-justify"
-                style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.9 }}
+                style={{
+                  color: GOLD_SOFT,
+                  fontFamily: "'Lora', serif",
+                  opacity: 0.9,
+                }}
               >
-                The project creates a free, accessible digital learning platform about Indian culture for students. It supports inclusive education by making cultural knowledge available to anyone with a browser, regardless of location or economic background. Also directly supports NEP 2020's vision of value-based education rooted in Indian traditions.
+                The project creates a free, accessible digital learning platform
+                about Indian culture for students. It supports inclusive
+                education by making cultural knowledge available to anyone with
+                a browser, regardless of location or economic background. Also
+                directly supports NEP 2020's vision of value-based education
+                rooted in Indian traditions.
               </p>
             </div>
 
@@ -109,13 +151,20 @@ export default function AboutPage() {
                 className="text-lg font-semibold mb-2"
                 style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
               >
-                SDG 11 — Sustainable Cities & Communities
+                SDG 9 — Industry, Innovation and Infrastructure
               </h4>
               <p
                 className="text-base leading-relaxed text-justify"
-                style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.9 }}
+                style={{
+                  color: GOLD_SOFT,
+                  fontFamily: "'Lora', serif",
+                  opacity: 0.9,
+                }}
               >
-                Target 11.4 specifically states: "Strengthen efforts to protect and safeguard the world's cultural and natural heritage." This project digitally preserves and documents the festivals, historical places, art forms, food, and dance of all 28 states and 8 UTs — directly contributing to cultural heritage safeguarding.
+                The project demonstrates innovative use of technology (HTML,
+                CSS, JavaScript) by first-year students to solve a real social
+                problem — digitizing cultural heritage. It contributes to
+                building digital infrastructure for cultural awareness in India.
               </p>
             </div>
 
@@ -134,9 +183,17 @@ export default function AboutPage() {
               </h4>
               <p
                 className="text-base leading-relaxed text-justify"
-                style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.9 }}
+                style={{
+                  color: GOLD_SOFT,
+                  fontFamily: "'Lora', serif",
+                  opacity: 0.9,
+                }}
               >
-                Cultural knowledge of smaller states and Union Territories (like Nagaland, Lakshadweep, Ladakh) is often overlooked in mainstream media. This project gives equal representation to every state, ensuring marginalized regional cultures get the same digital visibility as popular ones.
+                Cultural knowledge of smaller states and Union Territories (like
+                Nagaland, Lakshadweep, Ladakh) is often overlooked in mainstream
+                media. This project gives equal representation to every state,
+                ensuring marginalized regional cultures get the same digital
+                visibility as popular ones.
               </p>
             </div>
 
@@ -151,13 +208,22 @@ export default function AboutPage() {
                 className="text-lg font-semibold mb-2"
                 style={{ fontFamily: "'Cinzel', serif", color: GOLD }}
               >
-                SDG 9 — Industry, Innovation & Infrastructure
+                SDG 11 — Sustainable Cities and Communities
               </h4>
               <p
                 className="text-base leading-relaxed text-justify"
-                style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.9 }}
+                style={{
+                  color: GOLD_SOFT,
+                  fontFamily: "'Lora', serif",
+                  opacity: 0.9,
+                }}
               >
-                The project demonstrates innovative use of technology (HTML, CSS, JavaScript) by first-year students to solve a real social problem — digitizing cultural heritage. It contributes to building digital infrastructure for cultural awareness in India.
+                Target 11.4 specifically states: "Strengthen efforts to protect
+                and safeguard the world's cultural and natural heritage." This
+                project digitally preserves and documents the festivals,
+                historical places, art forms, food, and dance of all 28 states
+                and 8 UTs — directly contributing to cultural heritage
+                safeguarding.
               </p>
             </div>
           </div>
@@ -178,63 +244,69 @@ export default function AboutPage() {
             Meet the Team (SYNKAG)
           </h3>
           <p
-            className="text-sm sm:text-base mb-8"
-            style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.85 }}
+            className="text-sm sm:text-base mb-8 text-justify"
+            style={{
+              color: GOLD_SOFT,
+              fontFamily: "'Lora', serif",
+              opacity: 0.85,
+            }}
           >
             A group of students passionate about celebrating India's diversity.
           </p>
 
           <div className="overflow-x-auto pb-4 -mx-6 px-6">
             <div className="flex gap-5" style={{ minWidth: "max-content" }}>
-            {teamMembers.map((m) => (
-              <div
-                key={m.name}
-                className="flex-shrink-0 w-56 rounded-2xl border p-6 flex flex-col items-center text-center transition-shadow hover:shadow-lg"
-                style={{
-                  backgroundColor: "rgba(61,8,8,0.5)",
-                  borderColor: "rgba(245,197,24,0.2)",
-                }}
-              >
-                {/* Avatar circle (placeholder for image) */}
+              {teamMembers.map((m) => (
                 <div
-                  className="w-20 h-20 rounded-full flex items-center justify-center mb-4 overflow-hidden"
+                  key={m.name}
+                  className="flex-shrink-0 w-56 rounded-2xl border p-6 flex flex-col items-center text-center transition-shadow hover:shadow-lg"
                   style={{
-                    backgroundColor: m.bg,
-                    border: `2px solid ${GOLD}`,
+                    backgroundColor: "rgba(61,8,8,0.5)",
+                    borderColor: "rgba(245,197,24,0.2)",
                   }}
                 >
-                  <span
-                    className="text-xl font-bold"
-                    style={{ color: m.text, fontFamily: "'Cinzel', serif" }}
+                  {/* Avatar circle (placeholder for image) */}
+                  <div
+                    className="w-20 h-20 rounded-full flex items-center justify-center mb-4 overflow-hidden"
+                    style={{
+                      border: `2px solid ${GOLD}`,
+                    }}
                   >
-                    {m.initials}
+                    <img
+                      src={m.image}
+                      alt={m.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4
+                    className="text-base font-bold mb-1"
+                    style={{ color: GOLD, fontFamily: "'Cinzel', serif" }}
+                  >
+                    {m.name}
+                  </h4>
+                  <p
+                    className="text-sm mb-3"
+                    style={{
+                      color: GOLD_SOFT,
+                      fontFamily: "'Lora', serif",
+                      opacity: 0.85,
+                    }}
+                  >
+                    {m.role}
+                  </p>
+                  <span
+                    className="inline-block text-xs px-3 py-1 rounded-full"
+                    style={{
+                      backgroundColor: "rgba(245,197,24,0.12)",
+                      color: GOLD_SOFT,
+                      border: "1px solid rgba(245,197,24,0.3)",
+                      fontFamily: "'Lora', serif",
+                    }}
+                  >
+                    {m.contribution}
                   </span>
                 </div>
-                <h4
-                  className="text-base font-bold mb-1"
-                  style={{ color: GOLD, fontFamily: "'Cinzel', serif" }}
-                >
-                  {m.name}
-                </h4>
-                <p
-                  className="text-sm mb-3"
-                  style={{ color: GOLD_SOFT, fontFamily: "'Lora', serif", opacity: 0.85 }}
-                >
-                  {m.role}
-                </p>
-                <span
-                  className="inline-block text-xs px-3 py-1 rounded-full"
-                  style={{
-                    backgroundColor: "rgba(245,197,24,0.12)",
-                    color: GOLD_SOFT,
-                    border: "1px solid rgba(245,197,24,0.3)",
-                    fontFamily: "'Lora', serif",
-                  }}
-                >
-                  {m.contribution}
-                </span>
-              </div>
-            ))}
+              ))}
             </div>
           </div>
         </section>
@@ -259,9 +331,17 @@ export default function AboutPage() {
       {/* Footer */}
       <footer
         className="border-t mt-8"
-        style={{ backgroundColor: RED_DEEP, borderColor: "rgba(245,197,24,0.15)" }}
+        style={{
+          backgroundColor: RED_DEEP,
+          borderColor: "rgba(245,197,24,0.15)",
+        }}
       >
         <div className="max-w-5xl mx-auto px-6 py-8 text-center">
+          <img
+            src="/logo.png"
+            alt="Bharat Darpan"
+            className="w-16 h-16 mx-auto mb-3 rounded-full"
+          />
           <p className="text-xs" style={{ color: GOLD_SOFT, opacity: 0.6 }}>
             Satyamev Jayate — Truth Alone Triumphs
           </p>
@@ -279,6 +359,7 @@ const teamMembers = [
     initials: "NB",
     bg: "#FCE4A6",
     text: "#5A0E0E",
+    image: "/images/neha.jpeg",
   },
   {
     name: "P Aparajitha",
@@ -287,6 +368,7 @@ const teamMembers = [
     initials: "PA",
     bg: "#C9E8D2",
     text: "#1F4D2E",
+    image: "/images/appu.jpeg",
   },
   {
     name: "Kruthi SN",
@@ -295,6 +377,7 @@ const teamMembers = [
     initials: "KS",
     bg: "#F8C4C4",
     text: "#7A1A1A",
+    image: "/images/kurti.jpeg",
   },
   {
     name: "Yasha Patil",
@@ -303,6 +386,7 @@ const teamMembers = [
     initials: "YP",
     bg: "#D4C4F0",
     text: "#3D2870",
+    image: "/images/yasu_temp.jpeg",
   },
   {
     name: "Sinchana Hegde",
@@ -311,6 +395,7 @@ const teamMembers = [
     initials: "SH",
     bg: "#FBD9A6",
     text: "#7A4A0E",
+    image: "/images/sinchana.jpeg",
   },
   {
     name: "Gayathri Pullaiahgari",
@@ -319,5 +404,6 @@ const teamMembers = [
     initials: "GP",
     bg: "#BCDFEF",
     text: "#0E4A6A",
+    image: "/images/gayathri_temp.jpeg",
   },
 ];
