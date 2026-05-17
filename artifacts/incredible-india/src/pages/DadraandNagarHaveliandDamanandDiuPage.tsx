@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import ddMap from "https://i.postimg.cc/rFsxs9R6/image.png";
+const ddMap = "https://i.postimg.cc/rFsxs9R6/image.png";
 // Festivals
 const Garba1 = "https://i.postimg.cc/vmFVPFPq/image.png";
 const Garba2 = "https://i.postimg.cc/xjxNwbx1/image.png";
