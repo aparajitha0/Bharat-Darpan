@@ -588,7 +588,7 @@ export default function KarnatakaPage() {
               className="text-2xl font-bold text-foreground mb-1"
               style={{ fontFamily: "'Cinzel', serif" }}
             >
-              Bangaloref
+              Bangalore
             </h3>
             <p className="text-muted-foreground text-sm">
               Capital of Karnataka — The Silicon Valley of India
