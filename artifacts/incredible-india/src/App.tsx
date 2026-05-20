@@ -20,6 +20,7 @@ import ChhattisgarhPage from "@/pages/ChhattisgarhPage";
 import ChandigarhPage from "@/pages/ChandigarhPage";
 import PuducherryPage from "@/pages/PuducherryPage";
 import KarnatakaPage from "@/pages/KarnatakaPage";
+import ArunachalPradeshPage from "@/pages/ArunachalPradeshPage";
 import AboutPage from "@/pages/AboutPage";
 
 const queryClient = new QueryClient();
@@ -47,6 +48,7 @@ function Router() {
       <Route path="/state/chandigarh" component={ChandigarhPage} />
       <Route path="/state/puducherry" component={PuducherryPage} />
       <Route path="/state/karnataka" component={KarnatakaPage} />
+      <Route path="/state/arunachal-pradesh" component={ArunachalPradeshPage} />
       <Route path="/state/:stateId" component={StatePage} />
       <Route component={NotFound} />
     </Switch>
