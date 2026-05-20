@@ -33,7 +33,6 @@ const geoNameToId: Record<string, string> = {
   "Haryana": "haryana",
   "Himachal Pradesh": "himachal-pradesh",
   "Jammu and Kashmir": "jammu-kashmir",
-  "Ladakh": "ladakh",
   "Jharkhand": "jharkhand",
   "Karnataka": "karnataka",
   "Kerala": "kerala",

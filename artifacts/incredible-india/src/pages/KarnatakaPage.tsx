@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import KarnatakaMap from "";
+import KarnatakaMap from "@assets/karnatakaMap.jpg";
 const Dasara1 = "https://i.postimg.cc/G2hkzCmH/image.png";
 const Dasara2 = "https://i.postimg.cc/ryHSG76f/image.png";
 const Dasara3 = "https://i.postimg.cc/YC6YH94L/image.png";

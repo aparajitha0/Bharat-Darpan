@@ -43,6 +43,8 @@ function Router() {
       <Route path="/state/chhattisgarh" component={ChhattisgarhPage} />
       <Route path="/state/chandigarh" component={ChandigarhPage} />
       <Route path="/state/puducherry" component={PuducherryPage} />
+      <Route path="/state/puducherry" component={PuducherryPage} />
+      <Route path="/state/karnataka" component={KarnatkaPage} />
       <Route path="/state/:stateId" component={StatePage} />
       <Route component={NotFound} />
     </Switch>
