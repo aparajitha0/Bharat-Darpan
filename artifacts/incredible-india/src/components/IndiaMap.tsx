@@ -114,11 +114,11 @@ export default function IndiaMap() {
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{
-          scale: 1000,
-          center: [82.5, 22],
+          scale: 950,
+          center: [81, 22],
         }}
         width={600}
-        height={700}
+        height={740}
         style={{ width: "100%", height: "auto" }}
         data-testid="india-map"
       >
