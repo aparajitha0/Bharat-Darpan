@@ -50,7 +50,6 @@ const gBlackbuck = "https://i.postimg.cc/nh7vQ12X/image.png";
 const gPeafowl = "https://i.postimg.cc/Y92gZBwT/image.png";
 const gSukhna = "https://i.postimg.cc/hvfm48vs/image.png";
 
-
 /* ─── Lightbox ──────────────────────────────────────────────────────────── */
 function Lightbox({
   src,
@@ -473,10 +472,10 @@ export default function ChandigarhPage() {
               className="text-2xl font-bold text-foreground mb-1"
               style={{ fontFamily: "'Cinzel', serif" }}
             >
-
+              Chandigarh
             </h3>
             <p className="text-muted-foreground text-sm">
-              Capital of  — 
+              Capital of Chandigarh — The City Beautiful
             </p>
           </div>
         </Section>
@@ -514,25 +513,84 @@ export default function ChandigarhPage() {
             style={{ fontFamily: "'Lora', serif", textAlign: "justify" }}
           >
             <p className="text-foreground">
-              Chandigarh, famously known as the "City Beautiful," stands as a hallmark of modern urban planning and post-independence Indian architecture, nestled elegantly at the picturesque foothills of the Shivalik range. The unique history of this union territory began right after the traumatic partition of India in 1947, when the prosperous province of Punjab was split, and its historic capital, Lahore, became a part of Pakistan. Left without an administrative center, the government of East Punjab, with the passionate backing of India’s first Prime Minister, Pandit Jawaharlal Nehru, envisioned a new, vanguard capital that would symbolize a modern nation unfettered by past traditions. 
+              Chandigarh, famously known as the "City Beautiful," stands as a
+              hallmark of modern urban planning and post-independence Indian
+              architecture, nestled elegantly at the picturesque foothills of
+              the Shivalik range. The unique history of this union territory
+              began right after the traumatic partition of India in 1947, when
+              the prosperous province of Punjab was split, and its historic
+              capital, Lahore, became a part of Pakistan. Left without an
+              administrative center, the government of East Punjab, with the
+              passionate backing of India’s first Prime Minister, Pandit
+              Jawaharlal Nehru, envisioned a new, vanguard capital that would
+              symbolize a modern nation unfettered by past traditions.
             </p>
             <p className="text-foreground">
-              Originally, American planner Albert Mayer and architect Matthew Nowicki were commissioned to design the city, but after Nowicki’s tragic death in 1950, the monumental responsibility was handed over to the legendary Swiss-French architect Le Corbusier. Working alongside prominent British architects Jane Drew and Maxwell Fry, as well as Pierre Jeanneret and a brilliant cohort of young Indian architects, Le Corbusier designed a highly structured, grid-based master plan that divided the city into self-sufficient sectors. The name of this historic metropolis was derived from the ancient "Chandi Mandir" temple, a shrine dedicated to the Hindu goddess of power, Chandi, combined with "Garh," meaning fortress, located near the chosen site. 
+              Originally, American planner Albert Mayer and architect Matthew
+              Nowicki were commissioned to design the city, but after Nowicki’s
+              tragic death in 1950, the monumental responsibility was handed
+              over to the legendary Swiss-French architect Le Corbusier. Working
+              alongside prominent British architects Jane Drew and Maxwell Fry,
+              as well as Pierre Jeanneret and a brilliant cohort of young Indian
+              architects, Le Corbusier designed a highly structured, grid-based
+              master plan that divided the city into self-sufficient sectors.
+              The name of this historic metropolis was derived from the ancient
+              "Chandi Mandir" temple, a shrine dedicated to the Hindu goddess of
+              power, Chandi, combined with "Garh," meaning fortress, located
+              near the chosen site.
             </p>
             <p className="text-foreground">
-              Chandigarh maintained its sole identity as the capital of Punjab until November 1, 1966, when the state was reorganized on a linguistic basis, leading to the creation of the Hindi-speaking state of Haryana and the modern Punjabi-speaking state of Punjab. To resolve the intense rivalry over who would claim the magnificent city, the Central Government declared Chandigarh a Union Territory under its direct administration, serving uniquely as the joint capital for both states. 
+              Chandigarh maintained its sole identity as the capital of Punjab
+              until November 1, 1966, when the state was reorganized on a
+              linguistic basis, leading to the creation of the Hindi-speaking
+              state of Haryana and the modern Punjabi-speaking state of Punjab.
+              To resolve the intense rivalry over who would claim the
+              magnificent city, the Central Government declared Chandigarh a
+              Union Territory under its direct administration, serving uniquely
+              as the joint capital for both states.
             </p>
             <p className="text-foreground">
-              Culturally and linguistically, Chandigarh represents a vibrant, cosmopolitan melting pot, harmoniously blending traditional Punjabi fervor with Haryanvi warmth and modern, urban sensibilities. Hindi and Punjabi are the most widely spoken languages across the city, used seamlessly in daily commerce, homes, and public interactions, while English serves as the dominant language for official administrative work and higher education. The demographic landscape is highly diverse, hosting thousands of government officials, defense personnel, migrants, and young students, which fosters a progressive, highly literate, and inclusive civic community. 
+              Culturally and linguistically, Chandigarh represents a vibrant,
+              cosmopolitan melting pot, harmoniously blending traditional
+              Punjabi fervor with Haryanvi warmth and modern, urban
+              sensibilities. Hindi and Punjabi are the most widely spoken
+              languages across the city, used seamlessly in daily commerce,
+              homes, and public interactions, while English serves as the
+              dominant language for official administrative work and higher
+              education. The demographic landscape is highly diverse, hosting
+              thousands of government officials, defense personnel, migrants,
+              and young students, which fosters a progressive, highly literate,
+              and inclusive civic community.
             </p>
             <p className="text-foreground">
-              Today, Chandigarh continues to thrive as one of India's most successful, clean, and economically robust cities, boasting an exceptionally high Human Development Index and one of the highest per capita incomes in the nation. It has evolved past its image as a quiet bureaucratic town into a dynamic economic hub, heavily supported by the IT sector, high-end commercial enterprises, and its proximity to satellite cities like Mohali and Panchkula. However, its strategic geopolitical position means it regularly mirrors regional sociopolitical dynamics; for instance, its borders frequently witness peaceful assemblies and marches by local agrarian unions demanding minimum support price guarantees and legislative amendments regarding river water disputes. 
+              Today, Chandigarh continues to thrive as one of India's most
+              successful, clean, and economically robust cities, boasting an
+              exceptionally high Human Development Index and one of the highest
+              per capita incomes in the nation. It has evolved past its image as
+              a quiet bureaucratic town into a dynamic economic hub, heavily
+              supported by the IT sector, high-end commercial enterprises, and
+              its proximity to satellite cities like Mohali and Panchkula.
+              However, its strategic geopolitical position means it regularly
+              mirrors regional sociopolitical dynamics; for instance, its
+              borders frequently witness peaceful assemblies and marches by
+              local agrarian unions demanding minimum support price guarantees
+              and legislative amendments regarding river water disputes.
             </p>
             <p className="text-foreground">
-              The civic administration remains heavily invested in advanced digital infrastructure, utilizing e-governance to streamline public utilities and aggressively implementing solar energy initiatives to preserve its massive, lush green cover. Iconic landmarks like the Capitol Complex—now a UNESCO World Heritage site—the sprawling serene waters of Sukhna Lake, and Nek Chand’s imaginative Rock Garden continue to attract global tourists, cementing Chandigarh's dual identity as a historical marvel and a peaceful, forward-looking metropolis. 
+              The civic administration remains heavily invested in advanced
+              digital infrastructure, utilizing e-governance to streamline
+              public utilities and aggressively implementing solar energy
+              initiatives to preserve its massive, lush green cover. Iconic
+              landmarks like the Capitol Complex—now a UNESCO World Heritage
+              site—the sprawling serene waters of Sukhna Lake, and Nek Chand’s
+              imaginative Rock Garden continue to attract global tourists,
+              cementing Chandigarh's dual identity as a historical marvel and a
+              peaceful, forward-looking metropolis.
             </p>
             <p className="text-foreground italic text-primary font-medium">
-              Designed by the legendary Swiss-French architect Le Corbusier, it is internationally celebrated as a masterstroke of 20th-century urban planning and modernist architecture.
+              Designed by the legendary Swiss-French architect Le Corbusier, it
+              is internationally celebrated as a masterstroke of 20th-century
+              urban planning and modernist architecture.
             </p>
             <p className="text-xs text-muted-foreground">
               (src: Chandigarh Administration, mapsofindia.com)
@@ -683,7 +741,8 @@ export default function ChandigarhPage() {
 const festivals = [
   {
     name: "Chandigarh Rose Festival",
-    tagline: "Most celebrated and iconic annual event held in the heart of the city at the Zakir Hussain Rose Garden in Sector 16",
+    tagline:
+      "Most celebrated and iconic annual event held in the heart of the city at the Zakir Hussain Rose Garden in Sector 16",
     description:
       "Organized by the Chandigarh Administration during the last weekend of February, this majestic three-day extravaganza transforms the city into a vibrant paradise of colors and sweet fragrances. The primary objective of the festival is to showcase the breathtaking beauty of over 1,600 exotic varieties of roses, attracting nature lovers, botanists, and tourists from all over the globe. Beyond the floral grandeur, the festival is packed with highly competitive events such as the Rose Prince and Princess pageants, photography contests, and elaborate flower arrangement competitions. The entire garden comes alive with colorful folk-dance performances, puppet shows, and a massive amusement park that offers high-energy entertainment for families and young children. As the sun sets, the focus shifts to the legendary Mega Musical Nites, where thousands gather under the open sky to witness spectacular live musical concerts by renowned national artists and Bollywood playback singers. The festival grounds also feature a massive array of food stalls serving delicious Punjabi and continental cuisines alongside handicraft exhibitions displaying unique regional arts and crafts. Ultimately, the Chandigarh Rose Festival serves as a beautiful tribute to the city’s green heritage, perfectly encapsulating the community spirit, joy, and environmental consciousness that define the modern lifestyle of the proud residents of Chandigarh.",
     images: [rose1, rose2],
@@ -727,7 +786,8 @@ const festivals = [
   },
   {
     name: "Chrysanthemum Show",
-    tagline: "It is a visually spectacular and highly soothing winter flower exhibition held annually in the month of December at the beautifully landscaped Terrace Garden in Sector 33",
+    tagline:
+      "It is a visually spectacular and highly soothing winter flower exhibition held annually in the month of December at the beautifully landscaped Terrace Garden in Sector 33",
     description:
       "This iconic three-day event is passionately organized by the Municipal Corporation of Chandigarh and serves as a major winter attraction for thousands of environmentalists, avid gardeners, and photography enthusiasts. The entire garden is meticulously arranged with hundreds of unique varieties and thousands of pots of blooming Chrysanthemums, creating a breathtaking, multi-colored carpet of natural floral beauty. Expert civic gardeners and local institutional participants fiercely compete in dozens of distinct categories, showcasing creatively shaped floral structures like animals, birds, peace towers, and abstract geometric patterns made entirely out of living flowers. The show plays a crucial role in raising public awareness about urban gardening, green living, and environmental conservation, with educational stalls offering premium seeds, organic fertilizers, and expert advice on domestic plant care. Visitors can stroll through the crisp winter air, enjoying the incredible sight of rare Chrysanthemum varieties that vary drastically in size, color shades, and intricate petal formations. The peaceful, serene environment is further enhanced by subtle background instrumental music, making it a perfect, tranquil sanctuary for senior citizens, families, and morning walkers during the chilly Chandigarh winter.",
     images: [Chrysanthemum1, Chrysanthemum2],
@@ -735,8 +795,7 @@ const festivals = [
   },
   {
     name: "Plaza Carnival",
-    tagline:
-      "",
+    tagline: "",
     description:
       "The Plaza Carnival is a unique, highly popular weekly cultural event that takes place every Saturday evening on a massive open-air stage in the central plaza of Sector 17, Chandigarh's legendary commercial hub. Designed to breathe vibrant cultural life into the heart of the city's shopping district, this three-hour evening show is completely free for the general public and consistently draws immense, enthusiastic crowds. The primary vision behind the Plaza Carnival is to provide a highly visible and encouraging platform for local artists, musicians, dancers, and stage performers to showcase their talents directly to the masses. The entertainment lineup changes dramatically every single week, ensuring that the show remains incredibly fresh and exciting, featuring everything from high-energy rock bands and classical music recitals to magic shows and stand-up comedy. Theater groups frequently use the open plaza stage to perform thought-provoking street plays and hilarious mimicry acts that highlight important social issues or provide light-hearted commentary on modern urban lifestyle. Local painters, sculptors, and sketch artists often set up temporary easels around the perimeter of the plaza, creating live artwork and offering quick, affordable portraits for passing shoppers. The Plaza Carnival has successfully transformed Sector 17 from a standard commercial marketplace into a lively, democratic cultural space where community bonding, artistic freedom, and public entertainment seamlessly coexist every single weekend.",
     images: [plaza1, plaza2],
@@ -801,7 +860,7 @@ const historicalPlaces = [
     name: "The Rock Garden of Nek Chand",
     description:
       "The Rock Garden of Nek Chand is a world-famous, miraculous monument of human imagination, artistic resilience, and environmental sustainability, located hidden away in Sector 1 near Sukhna Lake. Unlike the grand, meticulously planned concrete structures of Le Corbusier, the Rock Garden is a whimsical, organic wonderland that was built entirely in secrecy by a humble government road inspector named Nek Chand Saini. Starting in 1958, Nek Chand began clearing a small patch of jungle land near a gorge, collecting discarded waste materials, broken pottery, and unique rocks from the demolition sites of the old villages that were cleared to build Chandigarh. For over fifteen years, he worked quietly under the cover of night, using his creative genius to transform urban garbage into a sprawling, magical kingdom populated by thousands of unique sculptures. When his unauthorized creation was finally discovered by the city authorities in 1975, it faced the threat of immediate demolition, but the citizens of Chandigarh fell in love with its unparalleled beauty, forcing the administration to recognize it and open it to the public as a grand civic park. Today, the Rock Garden has expanded into a massive 40-acre complex, divided into distinct, interconnected phases that lead visitors through a labyrinth of narrow pathways, deep gorges, and low-roofed tunnels designed to evoke a sense of mystery and discovery. The garden is home to an army of life-sized sculptures representing musicians, dancers, soldiers, monkeys, birds, and village women, all meticulously crafted out of broken glass bangles, discarded porcelain electrical plugs, cracked toilet bowls, broken ceramic tiles, and industrial slag. Visitors walk past grand, man-made waterfalls, terraced amphitheatres, and massive courtyard walls lined with abstract mosaics that rival the works of Antoni Gaudí. One of the most spectacular areas is the grand swing courtyard, where massive swings are suspended from high concrete arches, inviting adults and children alike to engage in playful joy. The entire monument stands as a powerful, pioneering masterpiece of eco-art and recycling, built decades before environmental sustainability became a global buzzword. It represents the perfect, romantic counterpoint to the rigid, geometric planning of the rest of Chandigarh, showing that raw human imagination can find beauty in the most discarded and forgotten remnants of society. The Rock Garden attracts thousands of international and domestic tourists every day, cementing its status as one of India's most visited and deeply loved cultural landmarks.",
-    images: [rock1, rock2,],
+    images: [rock1, rock2],
     source: "(src: Chandigarh tourism, Wikimedia)",
   },
   {
