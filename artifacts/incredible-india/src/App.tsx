@@ -41,6 +41,7 @@ import AssamPage from "./pages/AssamPage";
 import RajasthanPage from "./pages/RajasthanPage";
 import MaharashtraPage from "./pages/MaharashtraPage";
 import UttarakhandPage from "./pages/UttarakhandPage";
+import AndhraPradeshPage from "./pages/AndhraPradeshPage";
 
 const queryClient = new QueryClient();
 
@@ -87,6 +88,7 @@ function Router() {
       <Route path="/state/rajasthan" component={RajasthanPage} />
       <Route path="/state/maharashtra" component={MaharashtraPage} />
       <Route path="/state/uttarakhand" component={UttarakhandPage} />
+      <Route path="/state/andhra-pradesh" component={AndhraPradeshPage} />
       <Route path="/state/:stateId" component={StatePage} />
       <Route component={NotFound} />
     </Switch>
