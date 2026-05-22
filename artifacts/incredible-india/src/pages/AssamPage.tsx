@@ -1,4 +1,4 @@
-import { useState } from "react";   /////////////
+import { useState } from "react"; /////////////
 import { useLocation } from "wouter";
 import {
   ArrowLeft,
@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import assamMap from "https://i.postimg.cc/DZ3fnFJR/image.png";
+import assamMap from "@assets/assamMap.jpg";
 const bihu1 = "https://i.postimg.cc/g2fmHdDh/image.png";
 const bihu2 = "https://i.postimg.cc/kG1d6dGv/image.png";
 const bihu3 = "https://i.postimg.cc/bvcf2gyR/image.png";
@@ -415,7 +415,7 @@ function HistoricalPlaceCard({
 }
 
 /* ─── Main page ──────────────────────────────────────────────────────────── */
-export default function assamPage() {
+export default function AssamPage() {
   const [, setLocation] = useLocation();
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(
     null,
@@ -549,16 +549,44 @@ export default function assamPage() {
             style={{ fontFamily: "'Lora', serif", textAlign: "justify" }}
           >
             <p className="text-foreground">
-              Assam is a beautiful state in northeastern India, known for its natural beauty, cultural richness, and economic importance. Its capital is Dispur, located within the city of Guwahati, which is also the largest and most developed city in the region. Assam serves as a gateway to the northeastern states and plays a significant role in connecting them with the rest of India. 
+              Assam is a beautiful state in northeastern India, known for its
+              natural beauty, cultural richness, and economic importance. Its
+              capital is Dispur, located within the city of Guwahati, which is
+              also the largest and most developed city in the region. Assam
+              serves as a gateway to the northeastern states and plays a
+              significant role in connecting them with the rest of India.
             </p>
             <p className="text-foreground">
-             The geography of Assam is dominated by the mighty Brahmaputra River, which flows across the state and creates fertile plains. The region is blessed with lush greenery, rolling hills, and abundant rainfall, making it ideal for agriculture. Assam is also home to rich biodiversity, including famous wildlife sanctuaries like Kaziranga National Park, which is globally known for protecting the endangered one-horned rhinoceros. 
+              The geography of Assam is dominated by the mighty Brahmaputra
+              River, which flows across the state and creates fertile plains.
+              The region is blessed with lush greenery, rolling hills, and
+              abundant rainfall, making it ideal for agriculture. Assam is also
+              home to rich biodiversity, including famous wildlife sanctuaries
+              like Kaziranga National Park, which is globally known for
+              protecting the endangered one-horned rhinoceros.
             </p>
             <p className="text-foreground">
-             Assam has a diverse cultural heritage influenced by various ethnic groups, tribes, and communities. The primary language spoken is Assamese, but many other languages such as Bodo and Bengali are also used. The most important festival of the state is Bihu, which is celebrated with great enthusiasm and reflects the agricultural traditions of the people through music, dance, and feasting. Economically, Assam is famous worldwide for its tea production, especially Assam tea, which is known for its strong flavor and quality. 
+              Assam has a diverse cultural heritage influenced by various ethnic
+              groups, tribes, and communities. The primary language spoken is
+              Assamese, but many other languages such as Bodo and Bengali are
+              also used. The most important festival of the state is Bihu, which
+              is celebrated with great enthusiasm and reflects the agricultural
+              traditions of the people through music, dance, and feasting.
+              Economically, Assam is famous worldwide for its tea production,
+              especially Assam tea, which is known for its strong flavor and
+              quality.
             </p>
             <p className="text-foreground">
-             Apart from tea, the state is rich in natural resources like oil, natural gas, and coal, making it one of the oldest oil-producing regions in Asia. Agriculture and handloom industries, particularly silk weaving like Muga silk, also contribute significantly to the state’s economy. Tourism in Assam attracts visitors from around the world due to its scenic beauty, wildlife, and historical sites. Places like Majuli, one of the largest river islands in the world, and Sivasagar, known for its Ahom-era monuments, highlight the cultural and historical importance of the state. Overall, Assam is a unique blend of nature, tradition, and development.
+              Apart from tea, the state is rich in natural resources like oil,
+              natural gas, and coal, making it one of the oldest oil-producing
+              regions in Asia. Agriculture and handloom industries, particularly
+              silk weaving like Muga silk, also contribute significantly to the
+              state’s economy. Tourism in Assam attracts visitors from around
+              the world due to its scenic beauty, wildlife, and historical
+              sites. Places like Majuli, one of the largest river islands in the
+              world, and Sivasagar, known for its Ahom-era monuments, highlight
+              the cultural and historical importance of the state. Overall,
+              Assam is a unique blend of nature, tradition, and development.
             </p>
           </div>
         </Section>
@@ -614,8 +642,8 @@ export default function assamPage() {
         {/* Art Gallery */}
         <Section title="Art Gallery" icon="🎨">
           <p className="text-muted-foreground text-sm mb-4">
-            Scroll horizontally to explore Assam's iconic foods, crafts,
-            dance, and traditions.
+            Scroll horizontally to explore Assam's iconic foods, crafts, dance,
+            and traditions.
           </p>
           <div className="overflow-x-auto pb-4">
             <div className="flex gap-4" style={{ minWidth: "max-content" }}>
@@ -707,72 +735,76 @@ const festivals = [
   {
     name: "Bihu",
     description:
-      'Bihu is the most important festival of Assam and holds a special place in the lives of the Assamese people. It is closely linked with farming, seasons, and the cultural identity of the state. Bihu is actually celebrated in three forms, but the most famous is Bohag Bihu, also known as Rangali Bihu, which marks the Assamese New Year and the arrival of spring in April. The festival is celebrated to welcome a new agricultural cycle, thank nature for a good harvest, and pray for peace, prosperity, and happiness in the coming year. It shows the deep connection between the people of Assam and agriculture, especially rice farming, which has been central to their way of life for generations. During Bihu, people clean their homes, wear traditional clothes, prepare special dishes like pitha, laru, and chira, and visit relatives and elders to seek blessings. The festival creates a joyful atmosphere filled with music, dance, and togetherness. A very important part of Bihu is the Bihu dance and Bihu songs, which are performed with great energy and excitement. These performances are usually accompanied by traditional instruments such as the dhol, pepa, and taal, which give the celebration its lively rhythm. Young men and women often take part in group dances in open fields or community spaces, making the festival a social and cultural event as well as a religious and seasonal one. Bihu also brings people together across different communities and backgrounds, which is one reason it is so loved throughout Assam. In some forms of Bihu, especially Magh Bihu, people light bonfires called meji and offer prayers, feasts, and thanks for a successful harvest. The festival is not only about enjoyment but also about gratitude, renewal, and hope. It preserves Assamese traditions, language, music, dress, and customs, and it remains a powerful symbol of pride and unity for the people of Assam.',
-    images: [bihu1,bihu2,bihu3,bihu4,bihu5],
-    source: "(src: Assamese community,assamtourism.gov,assam.awazthevoice,Assamese Community)",
+      "Bihu is the most important festival of Assam and holds a special place in the lives of the Assamese people. It is closely linked with farming, seasons, and the cultural identity of the state. Bihu is actually celebrated in three forms, but the most famous is Bohag Bihu, also known as Rangali Bihu, which marks the Assamese New Year and the arrival of spring in April. The festival is celebrated to welcome a new agricultural cycle, thank nature for a good harvest, and pray for peace, prosperity, and happiness in the coming year. It shows the deep connection between the people of Assam and agriculture, especially rice farming, which has been central to their way of life for generations. During Bihu, people clean their homes, wear traditional clothes, prepare special dishes like pitha, laru, and chira, and visit relatives and elders to seek blessings. The festival creates a joyful atmosphere filled with music, dance, and togetherness. A very important part of Bihu is the Bihu dance and Bihu songs, which are performed with great energy and excitement. These performances are usually accompanied by traditional instruments such as the dhol, pepa, and taal, which give the celebration its lively rhythm. Young men and women often take part in group dances in open fields or community spaces, making the festival a social and cultural event as well as a religious and seasonal one. Bihu also brings people together across different communities and backgrounds, which is one reason it is so loved throughout Assam. In some forms of Bihu, especially Magh Bihu, people light bonfires called meji and offer prayers, feasts, and thanks for a successful harvest. The festival is not only about enjoyment but also about gratitude, renewal, and hope. It preserves Assamese traditions, language, music, dress, and customs, and it remains a powerful symbol of pride and unity for the people of Assam.",
+    images: [bihu1, bihu2, bihu3, bihu4, bihu5],
+    source:
+      "(src: Assamese community,assamtourism.gov,assam.awazthevoice,Assamese Community)",
   },
   {
     name: "Ambubachi Mela",
     description:
       "Ambubachi Mela is a famous religious festival celebrated at the Kamakhya Temple in Guwahati, Assam. It is one of the most important spiritual events in the region and attracts thousands of devotees every year. The festival is usually held in June during the monsoon season and is linked to the annual menstruation of Goddess Kamakhya, who is worshipped as a powerful form of Shakti, or divine feminine energy. People celebrate it because they believe it represents fertility, creation, and the natural cycle of life. In this tradition, menstruation is not seen as something impure, but as a sacred and powerful process connected with Mother Earth and the goddess’s creative strength. This gives the festival deep religious and cultural significance. During Ambubachi Mela, the Kamakhya Temple remains closed for a few days, symbolizing the goddess’s period of rest. After this sacred phase ends, the temple reopens and devotees gather in large numbers for prayers, blessings, and darshan. Many pilgrims also spend time outside the temple complex singing, chanting, meditating, and waiting for the reopening with great devotion. The festival brings together saints, devotees, tantrics, and visitors from different parts of India, making it a major spiritual gathering. Ambubachi Mela is not just a ritual event; it is also a celebration of faith, nature, renewal, and the reverence of feminine power.",
-    images: [mela1,mela2,mela3,mela4,mela5],
-    source: "bharatvarshayatra,Kamakhya Temple,hindustantimes,telegraphindia,wikipedia",
+    images: [mela1, mela2, mela3, mela4, mela5],
+    source:
+      "bharatvarshayatra,Kamakhya Temple,hindustantimes,telegraphindia,wikipedia",
   },
   {
     name: "Ali-Ai-Ligang",
     description:
       "Ali-Ai-Ligang is a traditional agricultural festival celebrated by the Mising or Mishing tribe of Assam. It marks the beginning of the sowing season, especially the start of paddy cultivation, and is observed in the month of February, usually on the first Wednesday of Fagun in the Assamese calendar. The name of the festival reflects its farming roots, with “Ali” meaning seeds or legumes, “Aye” meaning fruit or seed, and “Ligang” meaning sowing. It is celebrated to pray for a good harvest, prosperity, and the well-being of the community. The festival shows how closely the Mising people’s life is connected to agriculture and nature. It is both a cultural celebration and a ritual of gratitude to the deities for fertile land and abundant crops. During Ali-Ai-Ligang, the community comes together in a joyful atmosphere with traditional food, music, dance, and rituals. The famous Gumraag Soman dance is performed by young people, along with folk songs called oi-nitom, which add energy and color to the celebration. The first day of the festival usually begins with the ceremonial sowing of seeds, while activities like ploughing, tree cutting, and burning are avoided during the festive period. A community feast is an important part of the celebration, and people enjoy dishes such as fish, meat, rice beer, and other traditional foods. The festival is not only about farming but also about preserving the identity, unity, and cultural heritage of the Mising tribe.",
-    images: [ali1,ali2,ali3,ali4,ali5],
+    images: [ali1, ali2, ali3, ali4, ali5],
     source: "(src: sentinelassam,tourmyindia,utsav.gov,prokerala,hellotravel)",
   },
   {
     name: "Baishagu",
     description:
       "Baishagu is a major traditional festival celebrated by the Bodo community in Assam. It is a spring and New Year festival that usually falls in mid-April, around the time of Bohag or Baisakh, and it marks the beginning of a new agricultural cycle. The festival is celebrated to welcome the new year, seek blessings for a good harvest, and pray for prosperity, health, and happiness for the community. It also reflects the close connection between the Bodo people and farming, nature, and their ancestral traditions. On the first day, cows are worshipped, showing the importance of cattle in rural life and agriculture. On the next day, younger people show respect to their elders by bowing to them and taking blessings. The festival is also dedicated to Bathou, the supreme deity of the Bodos, who is often identified with Lord Shiva. During Baishagu, the community celebrates with great joy through music, dance, rituals, and feasting. One of the most famous features of the festival is the Bagurumba dance, also called the butterfly dance, which is performed by women in colorful traditional dress. Folk songs and traditional instruments create a lively atmosphere, and people come together to enjoy special foods and share happiness with family and neighbors. The festival usually ends with prayers at a common place of worship called Garja Sali, where the community offers devotion and thanks. Baishagu is not only a religious and agricultural festival but also an important symbol of Bodo identity, culture, and unity.",
-    images: [bai1,bai2,bai3,bai4],
+    images: [bai1, bai2, bai3, bai4],
     source: "(src: caleidoscope,voanews,sentinelassam,tourmyindia",
   },
   {
     name: "Me-Dam-Me-Phi",
     description:
-      'Me-Dam-Me-Phi is an important traditional festival of the Tai-Ahom community in Assam. It is celebrated to honour ancestors and to seek their blessings for the welfare, peace, and prosperity of the family and community. The words of the festival itself show its meaning: “Me” means offerings, “Dam” means ancestors, and “Phi” means gods. This makes the festival a sacred ritual of remembrance and gratitude, where the Ahom people pray for the souls of their forefathers and express respect for their heritage. It is usually observed on January 31 every year and is recognized as a significant cultural and religious occasion in Assam. The festival is especially important because it preserves the ancient beliefs, customs, and identity of the Ahom community. During Me-Dam-Me-Phi, people gather at temples or community places to offer food, prayers, and rituals to the ancestors and deities. Traditional ceremonies are performed with devotion, and in many places the community also organizes cultural programs, feasts, and meetings. The festival brings people together and strengthens unity among the Tai-Ahom people. It is not only a religious observance but also a reminder of the community’s history, values, and respect for the dead. Through this festival, the Ahoms continue to keep their ancestral traditions alive and pass them on to younger generations.',
-    images: [me1,me2,me3,me4,me5],
+      "Me-Dam-Me-Phi is an important traditional festival of the Tai-Ahom community in Assam. It is celebrated to honour ancestors and to seek their blessings for the welfare, peace, and prosperity of the family and community. The words of the festival itself show its meaning: “Me” means offerings, “Dam” means ancestors, and “Phi” means gods. This makes the festival a sacred ritual of remembrance and gratitude, where the Ahom people pray for the souls of their forefathers and express respect for their heritage. It is usually observed on January 31 every year and is recognized as a significant cultural and religious occasion in Assam. The festival is especially important because it preserves the ancient beliefs, customs, and identity of the Ahom community. During Me-Dam-Me-Phi, people gather at temples or community places to offer food, prayers, and rituals to the ancestors and deities. Traditional ceremonies are performed with devotion, and in many places the community also organizes cultural programs, feasts, and meetings. The festival brings people together and strengthens unity among the Tai-Ahom people. It is not only a religious observance but also a reminder of the community’s history, values, and respect for the dead. Through this festival, the Ahoms continue to keep their ancestral traditions alive and pass them on to younger generations.",
+    images: [me1, me2, me3, me4, me5],
     source: "happenings.lpu,bananivista,thehillstimes,guwahatiplus",
   },
   {
     name: "Majuli Raas Mahotsav",
     description:
       "Majuli Raas Mahotsav is a famous cultural and religious festival celebrated on Majuli, the world’s largest river island in Assam. It is mainly dedicated to Lord Krishna and is one of the most important traditions of Assam’s Vaishnavite culture. The festival is celebrated on the full moon day of the Assamese month of Aghun, usually in November, and it continues for several days with great devotion and excitement. It is observed to remember and portray the life, teachings, and divine play of Lord Krishna through dance, drama, music, and religious performances. The festival reflects the deep influence of Neo-Vaishnavism in Majuli and the long association of the island with satras, or monastic institutions, that preserve Assamese spiritual and artistic traditions. It is also celebrated to bring the community together in devotion, culture, and shared heritage. During the Majuli Raas Mahotsav, people stage Bhaona, which are religious plays based on scenes from Krishna’s life. These performances include episodes such as his birth, childhood mischief, victory over evil, and interactions with the gopis. The festival is marked by colorful costumes, masks, folk songs, devotional music, and traditional dance, creating a powerful spiritual atmosphere. Different satras and local communities take part in the celebration, and many visitors come to witness the event, making it an important cultural attraction as well. The making of masks, pottery, and other traditional arts is also closely associated with the festival. Majuli Raas Mahotsav is not only a religious observance but also a living expression of Assamese art, faith, and identity.",
-    images: [majulir1,majulir2,majulir3,majulir4],
+    images: [majulir1, majulir2, majulir3, majulir4],
     source: "exporemajuli,news.abplive,festivalsofindia,adotrip",
   },
   {
     name: "Jonbeel Mela",
     description:
       "Jonbeel Mela is a unique traditional fair celebrated in Assam, mainly by the Tiwa community, and it is known for preserving the old barter system. It is held every year near Jagiroad at Dayang Belguri, beside the Jonbeel wetland, usually around Magh Bihu in January, and it is one of the most historic community fairs in Northeast India. The name comes from Assamese, where “Jon” means moon and “Beel” means wetland, referring to the crescent-shaped water body near which the fair takes place. The mela is celebrated to promote harmony, brotherhood, and cultural exchange between the hill and plain communities of Assam and Meghalaya. Tribes such as the Tiwa, Karbi, Khasi, and Jaintia come together to trade their goods, often through barter rather than money, which makes the fair especially special in modern times. Before the fair begins, people perform agni puja, or fire worship, for the well-being of humanity. A very important part of Jonbeel Mela is the participation of the Tiwa king, known as the Gobha Raja, who visits the fair with his courtiers and collects taxes from his subjects in a traditional way. Along with trade, the fair includes traditional dances, music, community gatherings, and local food, creating a lively cultural atmosphere. Jonbeel Mela is not just a market; it is a living example of mutual trust, indigenous tradition, and community bonding.",
-    images: [jon1,jon2,jon3,jon4],
+    images: [jon1, jon2, jon3, jon4],
     source: "assamtribune,clubmahindra",
   },
   {
     name: "Dehing Patkai Festival",
     description:
       "Dehing Patkai Festival is a well-known cultural and tourism festival celebrated in Assam, especially at Lekhapani in Tinsukia district. It is named after the Dehing River and the Patkai range, both of which are closely linked to the natural beauty and identity of Upper Assam. The festival was started by the Government of Assam in 2002 to promote tourism, highlight tribal culture, and showcase the scenic charm of the region. It is usually held in January, when the weather is pleasant and the landscape is at its best. The festival attracts visitors because it combines nature, culture, adventure, and local traditions in one celebration. During Dehing Patkai Festival, people can enjoy tea garden tours, tribal fairs, traditional dances, music, adventure sports, wildlife trips, and local food. Different indigenous communities of Assam take part and present their customs, dress, and performances, which makes the festival a rich cultural experience. Activities like jungle treks, visits to ethnic villages, car rallies, and other outdoor events are also part of the celebration. The festival is important because it helps preserve tribal heritage while also encouraging tourism and economic activity in the region. It is both a celebration of Assam’s natural beauty and a showcase of its diverse cultural life.",
-    images: [deh1,deh2,deh3,deh4],
-    source: "(src: assamtourism.gov,excurse.netlify,team-bhp,discoverindiabycar)",
+    images: [deh1, deh2, deh3, deh4],
+    source:
+      "(src: assamtourism.gov,excurse.netlify,team-bhp,discoverindiabycar)",
   },
   {
     name: "Karam Puja",
     description:
       "Karam Puja is one of the important traditional festivals celebrated in Assam, especially among the tea tribe communities and Adivasi groups living in the state. The festival is mainly observed by communities such as Oraon, Munda, Santhal, and other tribal groups who have preserved their rich cultural heritage for generations. Karam Puja is generally celebrated during the month of August or September on the eleventh day of the full moon. The festival is associated with agriculture, prosperity, fertility, and brotherhood. It reflects the close relationship between humans and nature. The word “Karam” refers to the Karam tree, which is considered sacred by the tribal communities. During the festival, branches of the Karam tree are brought ceremonially to the village or community gathering place. The branches are worshipped with great devotion as symbols of prosperity, good luck, and protection. People believe that the Karam deity blesses families with happiness, healthy crops, wealth, and peace. The festival is celebrated to seek the blessings of nature and to ensure a successful harvest season. Karam Puja is also celebrated to honor hard work, unity, and social harmony within the community. According to traditional beliefs, worshipping the Karam deity protects people from difficulties and brings progress in life. Young boys and girls actively participate in the celebrations and perform traditional dances and songs throughout the night. The songs usually describe nature, village life, love, farming, and cultural traditions. The rhythmic beats of drums and folk music create a joyful atmosphere. Women observe fasting during the day and later participate in the worship rituals. Priests or village elders conduct the puja by offering flowers, grains, milk, fruits, and rice beer to the sacred Karam branch. After the rituals, cultural programs and community feasts are organized. Traditional tribal dresses and ornaments add beauty to the celebrations. Dancing in groups around the Karam branch is one of the main attractions of the festival. Karam Puja plays an important role in preserving the tribal identity and cultural traditions of Assam. It teaches respect for nature and highlights the importance of trees and agriculture in human life. The festival also strengthens social bonding among community members. In Assam, Karam Puja is not only a religious celebration but also a symbol of cultural unity, faith, and gratitude toward nature.",
-    images: [Karam1,Karam2,Karam3],
+    images: [Karam1, Karam2, Karam3],
     source: "(src: pratidintime,sentinelassam,mediafocusweb.wordpress)",
   },
-   {
+  {
     name: "Assam Tea Festival",
     description:
       "The Assam Tea Festival is one of the most popular cultural and tourism festivals celebrated in Assam. The festival highlights the rich tea heritage, culture, traditions, and natural beauty of the state. Assam is world famous for producing high-quality tea, especially strong black tea with a unique flavor and aroma. The tea industry plays a very important role in the economy and identity of Assam. The festival is organized mainly to promote Assam tea, tourism, and the cultural diversity of the region. The Assam Tea Festival is celebrated in different tea-growing areas of the state such as Jorhat, Dibrugarh, and nearby tea garden regions. It usually attracts tourists, tea experts, business people, artists, and visitors from different parts of India and abroad. The festival showcases the history and importance of tea cultivation in Assam. It also provides an opportunity for visitors to experience the lifestyle and traditions of tea garden communities. One of the main attractions of the festival is tea tasting sessions where visitors can taste different varieties of Assam tea. Tea plantation tours are also organized to show how tea leaves are grown, plucked, processed, and packed. Visitors can walk through beautiful green tea gardens and learn about tea production from workers and experts. Cultural programs including traditional Assamese dances, folk music, fashion shows, and drama performances are held during the festival. Bihu dance performances are especially popular among tourists. The Assam Tea Festival is celebrated to honor the contribution of the tea industry to the state’s development and economy. It also helps in promoting Assam tea in national and international markets. The festival encourages tourism and provides employment opportunities to local people. Handicraft exhibitions, local food stalls, adventure activities, and photography events are also organized during the celebration. The festival reflects the beauty of Assam’s culture, hospitality, and natural environment. Tea gardens decorated with lights and cultural events create a joyful atmosphere. The festival also spreads awareness about the hard work of tea garden workers and the importance of preserving Assam’s tea heritage. Overall, the Assam Tea Festival is not only a celebration of tea but also a celebration of the traditions, culture, and economic strength of Assam.",
-    images: [tea1,tea2,tea3,tea4,tea5],
-    source: "(src:easeindiatrip, indulgeexpress,nativeplanet,oddessemania,theteashelf)",
+    images: [tea1, tea2, tea3, tea4, tea5],
+    source:
+      "(src:easeindiatrip, indulgeexpress,nativeplanet,oddessemania,theteashelf)",
   },
 ];
 
@@ -787,13 +819,13 @@ const historicalPlaces = [
     name: "Kaziranga national park",
     description:
       "Kaziranga National Park is one of the most प्रसिद्ध wildlife sanctuaries in Assam and is globally recognized as a UNESCO World Heritage Site. Established in 1905 and declared a national park in 1974, it is especially famous for conserving the endangered Indian one-horned rhinoceros, with the largest population found here. The park reflects India’s strong commitment to wildlife conservation. Situated along the fertile floodplains of the Brahmaputra River, Kaziranga features a diverse landscape of tall elephant grass, marshlands, and dense forests. This rich habitat supports a wide variety of wildlife including elephants, wild water buffalo, swamp deer, and even tigers, due to which it is also recognized as a Tiger Reserve. The park is also a hotspot for birdwatchers, hosting numerous migratory and resident bird species. Kaziranga National Park is a major tourist attraction, offering jeep safaris and elephant rides that allow visitors to explore its natural beauty closely. The best time to visit is between November and April, as the park remains closed during the monsoon season because of flooding. Overall, Kaziranga stands as a symbol of successful conservation and plays a crucial role in maintaining ecological balance.",
-    images:[park1],
+    images: [park1],
   },
   {
     name: "Manas National Park",
     description:
       "Manas National Park is one of the most important wildlife reserves in India and is located in the state of Assam near the foothills of the Himalayas. The park is situated along the border of Bhutan and is connected to the Royal Manas National Park of Bhutan. It is named after the Manas River, which flows through the park and adds great natural beauty to the region. The area was first declared a reserved forest in 1907 to protect its rich wildlife and forest resources. Later, in 1928, it became a wildlife sanctuary. Due to its large population of tigers and other rare animals, the Government of India included it under Project Tiger in 1973. In 1990, Manas was officially declared a national park. Because of its outstanding biodiversity and scenic beauty, UNESCO declared it a World Heritage Site in 1985. It is also recognized as a biosphere reserve, an elephant reserve, and an important bird area. During the Assam insurgency in the late 1980s and 1990s, the park faced severe destruction. Many forest camps were damaged, and poaching activities increased, leading to a decline in wildlife populations. Due to this damage, UNESCO placed the park on the list of World Heritage Sites in Danger in 1992. However, with the efforts of the government, forest officials, and local communities, the park slowly recovered. Conservation programs helped restore wildlife and improve forest protection. In 2011, UNESCO removed Manas National Park from the danger list because of its successful recovery. Today, the park spreads over nearly 950 square kilometers and is home to many endangered animals such as the Bengal tiger, Indian elephant, one-horned rhinoceros, wild buffalo, golden langur, pygmy hog, and clouded leopard. More than 450 species of birds are also found here, making it a paradise for bird lovers and nature photographers. The park’s grasslands, dense forests, and river ecosystems make it one of the richest biodiversity areas in India. Tourists from all over the world visit Manas National Park for jeep safaris, elephant rides, and wildlife photography. It remains a symbol of successful wildlife conservation and natural heritage in India.",
-    images: [manas1,manas2,manas3],
+    images: [manas1, manas2, manas3],
     source: "(src: bolgspot.com,)",
   },
   {
@@ -807,28 +839,28 @@ const historicalPlaces = [
     name: "Majuli",
     description:
       "Majuli is one of the most famous cultural and natural attractions of Assam and is known as the world’s largest river island. It is located in the middle of the mighty Brahmaputra River and lies mainly in the Majuli district of Assam. The island is around 20 kilometers away from the city of Jorhat and can be reached by ferry services across the river. Majuli is famous for its scenic beauty, green landscapes, traditional villages, and rich Assamese culture. The island has great historical and religious importance because it became the center of Neo-Vaishnavite culture introduced by the great Assamese saint and social reformer Srimanta Sankardeva in the 15th century. He established several “Satras,” which are Vaishnavite monasteries that spread spiritual teachings, art, music, dance, and Assamese culture. Majuli is home to many famous Satras such as Auniati Satra, Dakhinpat Satra, and Kamalabari Satra, which preserve ancient traditions and religious practices. These Satras are important centers for classical dance, drama, mask-making, and manuscript preservation. The island is also known for its unique tribal culture, as different communities like the Mishing tribe live there peacefully and maintain their traditional lifestyle, dress, and festivals. Majuli has rich biodiversity with many migratory birds visiting the island during winter, making it a beautiful place for bird watchers and nature lovers. However, the island has faced severe erosion and flooding over the years due to the changing course of the Brahmaputra River, which has reduced its size significantly. Despite these challenges, Majuli continues to remain a symbol of Assamese heritage and spirituality. In 2016, Majuli was officially declared a district of Assam, making it the first island district in India. Tourists from all over the world visit Majuli to experience its peaceful environment, traditional culture, festivals, and natural beauty. Today, Majuli is considered one of the most important cultural centers of Northeast India and a treasure of Assamese civilization.",
-    images: [majuli1,majuli2],
+    images: [majuli1, majuli2],
     source: "tourmyodisha.com,travelandleisureasia.com",
   },
   {
     name: "Rang Ghar",
     description:
       "Rang Ghar is one of the most famous historical monuments of Assam and is considered the oldest surviving amphitheater in Asia. It is located in the town of Sivasagar, which was once the capital of the Ahom Kingdom. Rang Ghar was built during the rule of the Ahom dynasty, which governed Assam for nearly six hundred years. The structure was constructed in 1746 AD by the Ahom king Pramatta Singha. It was mainly built as a royal sports pavilion where the king and members of the royal family used to sit and watch various games, cultural programs, buffalo fights, wrestling matches, and celebrations during festivals like Bihu. The name “Rang Ghar” means “House of Entertainment” because it was used for enjoyment and public performances. The building reflects the excellent architectural skills of the Ahom rulers. It was constructed using bricks, a special type of mortar made from rice paste, eggs, and lime, without using iron rods or cement. The structure has a two-storied design with a roof shaped like an inverted boat, which is inspired by traditional Assamese architecture. The upper floor was reserved for the royal family, while the lower area was used by attendants and officials. Rang Ghar stands near the historic Talatal Ghar and other monuments of Sivasagar, showing the rich cultural heritage of Assam. Although the monument suffered some damage due to natural disasters like earthquakes, it still remains an important symbol of Assamese history and architecture. The surrounding open grounds once served as playgrounds and event areas during the Ahom period. Today, Rang Ghar is maintained by the Archaeological Survey of India and attracts many tourists, historians, and researchers from different parts of the country. It represents the glory, creativity, and cultural richness of the Ahom kingdom and is considered one of the pride monuments of Assam.",
-    images: [rang1,rang2],
+    images: [rang1, rang2],
     source: "(src:tripinvites.com,holidify.com)",
   },
   {
     name: "Talatal Ghar",
     description:
       "Talatal Ghar is one of the largest and most remarkable historical monuments of Assam. It is located in the town of Sivasagar, which was once the capital of the powerful Ahom Kingdom. Talatal Ghar is famous for its unique architecture, underground tunnels, and historical importance. The monument was originally built by the Ahom king Rudra Singha in the late 17th century as a military base and palace. Later, it was expanded and improved by King Rajeswar Singha in the 18th century. The name “Talatal Ghar” means “underground house” because the structure contains secret underground floors and tunnels used for military purposes and escape routes during wars. Talatal Ghar originally had seven stories, including three underground floors and four above-ground floors. The upper floors were called “Kareng Ghar,” while the lower underground sections were known as “Talatal Ghar.” The palace was mainly used by the Ahom kings and soldiers during battles and important administrative activities. It is believed that the underground tunnels connected the palace to the Dikhow River and nearby forests, helping the royal family escape during enemy attacks. The monument was built using bricks and a special mixture of rice paste, eggs, lime, and other natural materials instead of cement, showing the advanced engineering skills of the Ahoms. The architecture of Talatal Ghar reflects a blend of Assamese and Mughal styles. The palace contains beautiful arches, large halls, hidden passages, and strong walls that demonstrate the artistic and military planning of the Ahom dynasty. It is considered one of the grandest examples of Ahom architecture and engineering in Assam. The underground tunnels and hidden chambers were specially designed for protection during enemy attacks and secret movement of soldiers. According to historians, some tunnels were long enough to connect distant places around the palace area, though many of them are now closed for safety reasons. The palace complex was surrounded by open grounds, gardens, and defensive structures that added to its beauty and security. The upper floors of the palace were used as royal living quarters, meeting halls, and administrative rooms where important discussions and ceremonies took place. The palace also contained watch towers and guard rooms for monitoring enemy movement. The Ahom kings were known for their advanced knowledge of architecture and construction, and Talatal Ghar is one of the best examples of their skill. Although parts of the structure were damaged by earthquakes and the passage of time, much of the monument still stands proudly today. It is protected and maintained by the Archaeological Survey of India. Talatal Ghar is closely connected with other historical monuments of Sivasagar such as Rang Ghar and Kareng Ghar, forming an important historical region of the old Ahom capital. Every year, many tourists, students, historians, and researchers visit the site to learn about Assam’s glorious past. Today, Talatal Ghar stands as a symbol of Assam’s historical pride and showcases the rich cultural heritage of Northeast India.",
-    images: [tal1,tal2],
+    images: [tal1, tal2],
     source: "(src:holidify.com,travelobiz.com)",
   },
   {
     name: "Sivadol Temple",
     description:
       "Sivadol Temple is one of the most famous and tallest Shiva temples in Assam. It is located on the banks of the beautiful Sivasagar Tank in the town of Sivasagar, which was once the capital of the Ahom Kingdom. The temple is dedicated to Lord Shiva and is considered one of the most important religious and historical sites of Assam. Sivadol was built in 1734 AD by the Ahom queen Bar Raja Ambika, the wife of Ahom king Siva Singha. The temple was constructed during the Ahom rule, which greatly promoted art, architecture, and Hindu culture in Assam. The word “Sivadol” comes from two words — “Siva,” meaning Lord Shiva, and “Dol,” meaning temple. The temple is known for its magnificent architecture and tall golden dome. It stands at a height of about 104 feet, making it one of the tallest Shiva temples in India. The structure reflects a blend of traditional Assamese and Hindu temple architectural styles. The temple complex also includes two other temples dedicated to Lord Vishnu and Goddess Durga, known as Vishnudol and Devidol. These temples together form an important religious center for devotees. In front of the temple lies the large man-made Sivasagar Tank, which was excavated during the Ahom period and adds beauty to the surroundings. The temple attracts thousands of pilgrims and tourists every year, especially during the festival of Maha Shivaratri, when grand prayers and celebrations take place. Devotees from different parts of India visit the temple to offer prayers to Lord Shiva. The temple also reflects the religious devotion and architectural excellence of the Ahom dynasty. Despite natural disasters like earthquakes over the years, Sivadol still stands strong and remains a symbol of Assam’s rich cultural and spiritual heritage. Today, it is maintained as an important historical monument and continues to be one of the major tourist attractions in Assam.",
-    images: [siva1,siva2],
+    images: [siva1, siva2],
     source: "(src:tourtravelworld.com,sanatani.life )",
   },
   {
@@ -849,7 +881,7 @@ const historicalPlaces = [
     name: "Haflong Lake",
     description:
       "Haflong Lake is one of the most beautiful natural attractions in Assam and is located in the hill town of Haflong, which is the headquarters of the Dima Hasao district. Haflong is popularly known as the “Switzerland of Assam” because of its scenic hills, cool climate, and breathtaking landscapes. Haflong Lake lies at the center of the town and is surrounded by green hills, trees, and beautiful gardens, making it one of the most peaceful tourist destinations in Northeast India. The lake is an important part of the natural beauty and identity of Haflong town. The lake is famous for its calm environment and attractive scenery, which draw tourists, photographers, and nature lovers throughout the year. The water of the lake reflects the surrounding hills and sky, creating a very picturesque view. Many migratory birds visit the lake during winter, making it an excellent place for bird watching. Boating facilities are also available, allowing visitors to enjoy the beauty of the lake closely. The cool climate and fresh air around the lake make it an ideal place for relaxation and sightseeing. Haflong Lake is also culturally important because the town is home to different tribal communities such as the Dimasa, Zeme Naga, and Hmar tribes, who maintain their traditional customs and lifestyle. Festivals and cultural programs organized near the lake attract many visitors and showcase the rich heritage of the region. The lake area has been developed with parks, pathways, and seating arrangements to improve tourism and provide comfort to visitors. Apart from its beauty, Haflong Lake plays an important role in the local ecosystem and tourism economy of the region. Tourists visiting Haflong often explore nearby hills, viewpoints, waterfalls, and traditional villages along with the lake. The peaceful atmosphere and natural surroundings make it one of the most attractive destinations in Assam. Today, Haflong Lake stands as a symbol of the natural beauty, cultural diversity, and tourism potential of Northeast India.",
-    images: [haf1,haf2],
+    images: [haf1, haf2],
     source: "Native planet",
   },
   {
@@ -863,7 +895,7 @@ const historicalPlaces = [
     name: "Barpeta Satra",
     description:
       "Barpeta Satra is one of the most famous and important Vaishnavite monasteries in Assam. It is located in the town of Barpeta and is considered a major center of Assamese culture, religion, and spirituality. The satra was established in the 16th century by the great Assamese saint, social reformer, and disciple of Srimanta Sankardeva, named Madhavdeva. Barpeta Satra played a very important role in spreading Neo-Vaishnavism, a religious movement started by Sankardeva that promoted devotion to Lord Krishna, equality, peace, and social harmony. The satra became a major religious and cultural institution where people gathered for prayers, education, music, dance, and spiritual discussions. The architecture of Barpeta Satra reflects traditional Assamese style with large prayer halls, open courtyards, and simple yet beautiful structures. The main prayer hall, known as the “Kirtanghar,” is the central place where devotees sing devotional songs and perform religious rituals. The satra also preserves ancient manuscripts, religious texts, and traditional Assamese art forms. Barpeta Satra is especially famous for its religious festivals such as Doul Utsav (Holi), Raas Festival, and Kirtan performances, which attract thousands of devotees and tourists every year. During these celebrations, the entire area becomes vibrant with devotional music, prayers, dramas, and cultural activities. The satra also helped in preserving classical Assamese traditions like Bhaona, a traditional form of religious drama introduced by Sankardeva. The peaceful environment and spiritual atmosphere make Barpeta Satra an important pilgrimage destination in Assam. Over the centuries, it has become a symbol of Assamese identity, unity, and cultural heritage. The institution continues to teach values of discipline, devotion, simplicity, and humanity. Today, Barpeta Satra remains one of the most respected religious centers in Northeast India and attracts historians, researchers, pilgrims, and tourists from different parts of the country.",
-    images: [satra1,satra2],
+    images: [satra1, satra2],
     source: "(src: transindiatravels.com,villagesquare.in)",
   },
 ];
