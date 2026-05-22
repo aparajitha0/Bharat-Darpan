@@ -150,11 +150,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Search bar — anchored between hero content and gold border */}
-        <div className="relative z-10 pb-8">
-          <SearchBar />
-        </div>
-
         {/* Gold border at bottom */}
         <div
           className="absolute bottom-0 left-0 right-0 h-1 z-20"
@@ -163,6 +158,11 @@ export default function Home() {
           }}
         />
       </header>
+
+      {/* Search bar — red background, just below the gold border */}
+      <div style={{ backgroundColor: RED_BG }}>
+        <SearchBar />
+      </div>
 
       {/* Main content */}
       <main className="max-w-6xl mx-auto px-6 py-12">
