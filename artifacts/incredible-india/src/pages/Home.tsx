@@ -1,6 +1,7 @@
 import { useLocation } from "wouter";
 import IndiaMap from "@/components/IndiaMap";
 import { statesList } from "@/data/states";
+import SearchBar from "@/components/SearchBar";
 
 const GOLD = "#F5C518";
 const GOLD_SOFT = "#E8B923";
@@ -139,7 +140,7 @@ export default function Home() {
 
           {/* Scroll hint */}
           <div
-            className="mt-12 flex flex-col items-center gap-2"
+            className="mt-8 flex flex-col items-center gap-2"
             style={{ color: HERO_RED }}
           >
             <span className="text-xs uppercase tracking-[0.3em] font-semibold opacity-80">
@@ -147,6 +148,11 @@ export default function Home() {
             </span>
             <span className="text-2xl animate-bounce">↓</span>
           </div>
+        </div>
+
+        {/* Search bar — anchored between hero content and gold border */}
+        <div className="relative z-10 pb-8">
+          <SearchBar />
         </div>
 
         {/* Gold border at bottom */}
