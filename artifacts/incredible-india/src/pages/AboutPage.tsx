@@ -404,6 +404,6 @@ const teamMembers = [
     initials: "GP",
     bg: "#BCDFEF",
     text: "#0E4A6A",
-    image: "/images/gayathri_temp.jpeg",
+    image: "/images/gayathri.jpeg",
   },
 ];

@@ -31,6 +31,12 @@ import NagalandPage from "./pages/NagalandPage";
 import SikkimPage from "./pages/SikkimPage";
 import WestBengalPage from "./pages/WestBengalPage";
 import LakshadweepPage from "./pages/LakshadweepPage";
+import UttarPradeshPage from "./pages/UttarPradeshPage";
+import AndamanNicobarPage from "./pages/AndamanNicobarPage";
+import HimachalPradeshPage from "./pages/HimachalPradesh";
+import DelhiPage from "./pages/DelhiPage";
+import HaryanaPage from "./pages/HaryanaPage";
+import OdishaPage from "./pages/OdishaPage";
 
 const queryClient = new QueryClient();
 
@@ -67,6 +73,12 @@ function Router() {
       <Route path="/state/sikkim" component={SikkimPage} />
       <Route path="/state/west-bengal" component={WestBengalPage} />
       <Route path="/state/lakshadweep" component={LakshadweepPage} />
+      <Route path="/state/uttar-pradesh" component={UttarPradeshPage} />
+      <Route path="/state/andaman-nicobar" component={AndamanNicobarPage} />
+      <Route path="/state/himachal-pradesh" component={HimachalPradeshPage} />
+      <Route path="/state/delhi" component={DelhiPage} />
+      <Route path="/state/haryana" component={HaryanaPage} />
+      <Route path="/state/odisha" component={OdishaPage} />
       <Route path="/state/:stateId" component={StatePage} />
       <Route component={NotFound} />
     </Switch>
