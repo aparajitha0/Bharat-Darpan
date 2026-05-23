@@ -1,4 +1,4 @@
-import { useState } from "react";  
+import { useState } from "react";
 import { useLocation } from "wouter";
 import {
   ArrowLeft,
@@ -501,16 +501,36 @@ export default function SikkimPage() {
             style={{ fontFamily: "'Lora', serif", textAlign: "justify" }}
           >
             <p className="text-foreground">
-              Sikkim, often called the “Land of Mystical Mountains,” is a small Himalayan state known for its snow covered peaks, monasteries, and clean surroundings. It became a state of India on 16 May 1975 and today has 6 districts, with Gangtok as its capital.
+              Sikkim, often called the “Land of Mystical Mountains,” is a small
+              Himalayan state known for its snow covered peaks, monasteries, and
+              clean surroundings. It became a state of India on 16 May 1975 and
+              today has 6 districts, with Gangtok as its capital.
             </p>
             <p className="text-foreground">
-              The state is famous for Kanchenjunga, the third highest mountain in the world, visible from many places in Sikkim. Its culture blends Lepcha, Bhutia, and Nepali traditions, creating a rich mosaic of customs and festivals. Buddhism plays a central role, with monasteries like Rumtek and Pemayangtse serving as spiritual centers. Tsomgo Lake and Nathula Pass are popular tourist destinations, offering natural beauty and historical significance.
+              The state is famous for Kanchenjunga, the third highest mountain
+              in the world, visible from many places in Sikkim. Its culture
+              blends Lepcha, Bhutia, and Nepali traditions, creating a rich
+              mosaic of customs and festivals. Buddhism plays a central role,
+              with monasteries like Rumtek and Pemayangtse serving as spiritual
+              centers. Tsomgo Lake and Nathula Pass are popular tourist
+              destinations, offering natural beauty and historical significance.
             </p>
             <p className="text-foreground">
-             Char Dham in Namchi is a modern pilgrimage complex attracting devotees. Festivals like Losar, Saga Dawa, and Pang Lhabsol highlight Sikkim’s spiritual and cultural diversity. Dance forms such as Cham, Maruni, and Tamang Selo enrich its traditions. The cuisine includes momos, thukpa, and sel roti, reflecting Tibetan and Nepali influences. Rivers like Teesta and Rangeet flow through its valleys, sustaining agriculture and communities. 
+              Char Dham in Namchi is a modern pilgrimage complex attracting
+              devotees. Festivals like Losar, Saga Dawa, and Pang Lhabsol
+              highlight Sikkim’s spiritual and cultural diversity. Dance forms
+              such as Cham, Maruni, and Tamang Selo enrich its traditions. The
+              cuisine includes momos, thukpa, and sel roti, reflecting Tibetan
+              and Nepali influences. Rivers like Teesta and Rangeet flow through
+              its valleys, sustaining agriculture and communities.
             </p>
             <p className="text-foreground italic text-primary font-medium">
-              Sikkim is admired for its eco friendly policies and cleanliness. It is one of India’s greenest states, with a focus on organic farming. The people are known for their hospitality and discipline. Sikkim’s landscapes attract trekkers, pilgrims, and nature lovers. The state remains a jewel of the Himalayas, offering a blend of spirituality, adventure, and natural beauty.
+              Sikkim is admired for its eco friendly policies and cleanliness.
+              It is one of India’s greenest states, with a focus on organic
+              farming. The people are known for their hospitality and
+              discipline. Sikkim’s landscapes attract trekkers, pilgrims, and
+              nature lovers. The state remains a jewel of the Himalayas,
+              offering a blend of spirituality, adventure, and natural beauty.
             </p>
             <p className="text-xs text-muted-foreground">
               (src: govt of Sikkim, mapsofindia.com)
@@ -569,8 +589,8 @@ export default function SikkimPage() {
         {/* Art Gallery */}
         <Section title="Art Gallery" icon="🎨">
           <p className="text-muted-foreground text-sm mb-4">
-            Scroll horizontally to explore Sikkim's iconic foods, crafts,
-            dance, and traditions.
+            Scroll horizontally to explore Sikkim's iconic foods, crafts, dance,
+            and traditions.
           </p>
           <div className="overflow-x-auto pb-4">
             <div className="flex gap-4" style={{ minWidth: "max-content" }}>
@@ -661,7 +681,8 @@ export default function SikkimPage() {
 const festivals = [
   {
     name: "Losar",
-    tagline: "Tibetan Buddhist New Year celebrated with prayers, monastery rituals, and family gatherings. ",
+    tagline:
+      "Tibetan Buddhist New Year celebrated with prayers, monastery rituals, and family gatherings. ",
     description:
       "Losar is the Tibetan New Year festival celebrated in Sikkim. It falls in February or March. The festival includes rituals, dances, and feasts. Families clean and decorate their homes. Offerings are made to deities for prosperity. Monks perform prayers and ceremonies. Losar reflects renewal and hope. It promotes unity and joy among communities. Visitors enjoy cultural performances and gatherings. The festival remains a highlight of Sikkim’s traditions. Losar educates people about heritage. It embodies resilience and prosperity. The festival continues to thrive as a cultural landmark.",
     images: [losar1],
@@ -687,8 +708,7 @@ const festivals = [
   },
   {
     name: "Bumchu Festival",
-    tagline:
-      "",
+    tagline: "",
     description:
       "Bumchu Festival is celebrated at Tashiding Monastery. It is held in February or March. The festival involves opening a sacred vessel of water. The water is believed to predict the future. Monks perform rituals and prayers. Devotees gather in large numbers. Bumchu reflects Buddhist traditions. It promotes faith and spirituality. Visitors enjoy cultural performances. The festival remains a highlight of Sikkim’s spiritual life. Bumchu educates people about heritage. It embodies harmony of faith and community. The festival continues to thrive as a cultural landmark.",
     images: [bumchu1],
@@ -696,8 +716,7 @@ const festivals = [
   },
   {
     name: "Losoong/Namsoong",
-    tagline:
-      "",
+    tagline: "",
     description:
       "Losoong, also called Namsoong, is a harvest festival celebrated in December or January. It marks the end of the agricultural year. The festival includes dances, rituals, and feasts. Monasteries host Cham dances. Losoong reflects Sikkim’s traditions. It promotes unity and community spirit. Visitors enjoy colorful performances. The festival remains a highlight of Sikkim’s culture. Losoong educates people about heritage. It embodies resilience and joy. The festival continues to thrive as a cultural landmark.",
     images: [losoong1],
@@ -713,8 +732,7 @@ const festivals = [
   },
   {
     name: "Sonam Lochar",
-    tagline:
-      "",
+    tagline: "",
     description:
       "Sonam Lochar is celebrated by the Tamang community of Sikkim. It marks the Tamang New Year. The festival includes rituals, dances, and feasts. Elders bless families for prosperity. Sonam Lochar reflects community traditions. It promotes unity and joy. Visitors enjoy colorful performances. The festival remains a highlight of Sikkim’s culture. Sonam Lochar educates people about heritage. It embodies resilience and renewal. The festival continues to thrive as a cultural landmark.",
     images: [sonam1],
@@ -813,14 +831,74 @@ const facts = [
 ];
 
 const artGallery = [
-  { title: "Thangka Painting", emoji: "🎨", color: "#8B0000", desc: "Sacred Buddhist scroll painting of Sikkim", image: sThangka },
-  { title: "Momos", emoji: "🥟", color: "#2E86C1", desc: "Beloved steamed dumplings, soul food of Sikkim", image: sMomos },
-  { title: "Phagshapa", emoji: "🥩", color: "#922B21", desc: "Traditional pork and radish stew of Sikkim", image: sPhagshapa },
-  { title: "Gundruk", emoji: "🥬", color: "#1E8449", desc: "Fermented leafy greens, a Sikkimese staple", image: sGundruk },
-  { title: "Sinki", emoji: "🫙", color: "#D4AC0D", desc: "Fermented radish taproot traditional delicacy", image: sSinki },
-  { title: "Chhang", emoji: "🍺", color: "#784212", desc: "Traditional millet beer of the Himalayan people", image: sChhang },
-  { title: "Damfu", emoji: "🥁", color: "#6E2F1A", desc: "Single-headed drum central to Limboo folk music", image: sDamfu },
-  { title: "Tingsha", emoji: "🎵", color: "#1A5276", desc: "Tibetan ritual cymbals used in Buddhist ceremonies", image: sTingsha },
-  { title: "Gyaling", emoji: "🎺", color: "#117A65", desc: "Traditional Tibetan oboe played at monasteries", image: sGyaling },
-  { title: "Pangden", emoji: "🧣", color: "#76448A", desc: "Striped apron worn by married Tibetan women", image: sPangden },
+  {
+    title: "Thangka Painting",
+    emoji: "🎨",
+    color: "#8B0000",
+    desc: "Sacred Buddhist scroll painting of Sikkim",
+    image: sThangka,
+  },
+  {
+    title: "Momos",
+    emoji: "🥟",
+    color: "#2E86C1",
+    desc: "Beloved steamed dumplings, soul food of Sikkim",
+    image: sMomos,
+  },
+  {
+    title: "Phagshapa",
+    emoji: "🥩",
+    color: "#922B21",
+    desc: "Traditional pork and radish stew of Sikkim",
+    image: sPhagshapa,
+  },
+  {
+    title: "Gundruk",
+    emoji: "🥬",
+    color: "#1E8449",
+    desc: "Fermented leafy greens, a Sikkimese staple",
+    image: sGundruk,
+  },
+  {
+    title: "Sinki",
+    emoji: "🫙",
+    color: "#D4AC0D",
+    desc: "Fermented radish taproot traditional delicacy",
+    image: sSinki,
+  },
+  {
+    title: "Chhang",
+    emoji: "🍺",
+    color: "#784212",
+    desc: "Traditional millet beer of the Himalayan people",
+    image: sChhang,
+  },
+  {
+    title: "Damfu",
+    emoji: "🥁",
+    color: "#6E2F1A",
+    desc: "Single-headed drum central to Limboo folk music",
+    image: sDamfu,
+  },
+  {
+    title: "Tingsha",
+    emoji: "🎵",
+    color: "#1A5276",
+    desc: "Tibetan ritual cymbals used in Buddhist ceremonies",
+    image: sTingsha,
+  },
+  {
+    title: "Gyaling",
+    emoji: "🎺",
+    color: "#117A65",
+    desc: "Traditional Tibetan oboe played at monasteries",
+    image: sGyaling,
+  },
+  {
+    title: "Pangden",
+    emoji: "🧣",
+    color: "#76448A",
+    desc: "Striped apron worn by married Tibetan women",
+    image: sPangden,
+  },
 ];

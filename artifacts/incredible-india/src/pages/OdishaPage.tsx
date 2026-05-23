@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import odishaMap from "https://i.postimg.cc/8CwxNKBb/image.png";
+const odishaMap = "https://i.postimg.cc/8CwxNKBb/image.png";
 const rath1 = "https://i.postimg.cc/BQ93hzhC/image.png";
 const durga1 = "https://i.postimg.cc/FHGQHHhB/image.png";
 const nuakhai1 = "https://i.postimg.cc/SsY0dLCv/image.png";
