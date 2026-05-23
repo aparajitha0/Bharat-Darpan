@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import assamMap from "https://i.postimg.cc/DZ3fnFJR/image.png";
+const assamMap = "https://i.postimg.cc/DZ3fnFJR/image.png";
 const bihu1 = "https://i.postimg.cc/g2fmHdDh/image.png";
 const bihu2 = "https://i.postimg.cc/kG1d6dGv/image.png";
 const bihu3 = "https://i.postimg.cc/bvcf2gyR/image.png";

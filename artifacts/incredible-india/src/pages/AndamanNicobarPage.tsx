@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import andamanMap from "https://i.postimg.cc/qv8CPk7h/image.png";
+const andamanMap = "https://i.postimg.cc/qv8CPk7h/image.png";
 const island1 = "https://i.postimg.cc/PxFLWJ6N/image.png";
 const subhash1 = "https://i.postimg.cc/j2pL19YK/image.png";
 const subhash2 = "https://i.postimg.cc/SN9X9yC5/image.png";

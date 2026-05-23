@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import hpMap from "https://i.postimg.cc/fRf2CQYN/image.png";
+const hpMap = "https://i.postimg.cc/fRf2CQYN/image.png";
 const kullu1 = "https://i.postimg.cc/wv7w9tZv/image.png";
 const kullu2 = "https://i.postimg.cc/Y0F8m5pk/image.png";
 const mandi1 = "https://i.postimg.cc/02gVqyfm/image.png";
