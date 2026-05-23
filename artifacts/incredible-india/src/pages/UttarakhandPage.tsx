@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import ukMap from "@assets/images/ukMap.jpg";
+const ukMap = "https://i.postimg.cc/ydvm6NjZ/image.png";
 
 // Festivals
 const gan1 = "https://i.postimg.cc/T3MD6mxc/image.png";

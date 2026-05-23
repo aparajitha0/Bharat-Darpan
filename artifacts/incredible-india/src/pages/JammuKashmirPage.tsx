@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import jammuMap from "@assets/jammuMap.jpg";
+const jammuMap = "https://i.postimg.cc/tgTrmHmp/image.png";
 const eid1 = "https://i.postimg.cc/6QRL6zgH/image.png";
 const navratri1 = "https://i.postimg.cc/wvQXLM6X/image.png";
 const tulip1 = "https://i.postimg.cc/G3zPp4gc/image.png";

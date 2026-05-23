@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import keralaMap from "@assets/keralaMap.jpg";
+const keralaMap = "https://i.postimg.cc/qMJ2GxFp/image.png";
 const onam1 = "https://postimg.cc/XZW00Z1k";
 const onam2 = "https://postimg.cc/wRpNXQwm";
 const onam3 = "https://postimg.cc/4Hf6C1Vv";

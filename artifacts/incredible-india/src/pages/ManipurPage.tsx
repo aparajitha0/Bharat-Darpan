@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import manipurMap from "@assets/manipurMap.jpg";
+const manipurMap = "https://i.postimg.cc/DZ7zKBst/image.png";
 const yaoshang1 = "https://i.postimg.cc/FKsWRHY5/image.png";
 const ningol1 = "https://i.postimg.cc/Pq368nDz/image.png";
 const haraoba1 = "https://i.postimg.cc/zB400w0r/image.png";

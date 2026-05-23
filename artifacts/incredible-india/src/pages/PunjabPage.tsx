@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import punjabMap from "@assets/punjabMap.jpg";
+const punjabMap = "https://i.postimg.cc/mkCRz9Q5/image.png";
 const lohri1 = "https://i.postimg.cc/Gt12ckgn/image.png";
 const lohri2 = "https://i.postimg.cc/Mprpckr2/image.png";
 const lohri3 = "https://i.postimg.cc/C1bh6RhX/image.png";

@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import mahaMap from "@assets/maharashtraMap.jpg";
+import mahaMap from "https://i.postimg.cc/qBXKTwQB/image.png";
 
 // Festivals
 const gudi1 = "https://i.postimg.cc/Xv4MTVv8/image.png";

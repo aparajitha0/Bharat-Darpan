@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import goaMap from "@assets/goa_images/goaMap.jpg";
+const goaMap = "https://i.postimg.cc/mDP5hGQn/image.png";
 import goacarnival1 from "@assets/goa_images/goacarnival1.jpg";
 import goacarnival2 from "@assets/goa_images/goacarnival2.jpg";
 import goacarnival3 from "@assets/goa_images/goacarnival3.jpg";

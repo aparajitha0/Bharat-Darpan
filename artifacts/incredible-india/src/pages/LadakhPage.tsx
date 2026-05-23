@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import ladakhMap from "@assets/ladakhMap.jpg";
+const ladakhMap = "https://i.postimg.cc/4yB70j0T/image.png";
 const losar1 = "https://postimg.cc/zbSYxTCn";
 const hemis1 = "https://postimg.cc/3dwQZ4W6";
 const sakadawa1 = "https://postimg.cc/XrGMTRfm";

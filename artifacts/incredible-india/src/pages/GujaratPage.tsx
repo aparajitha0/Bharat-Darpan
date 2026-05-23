@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import gujaratMap from "@assets/gujaratMap.jpg";
+const gujaratMap = "https://i.postimg.cc/Pr7nM2qz/image.png";
 const Nava1 = "https://i.postimg.cc/0ys9yQLx/image.png";
 const Nava2 = "https://i.postimg.cc/4dmgShh9/image.png";
 const Nava3 = "https://i.postimg.cc/BbFGq9pP/image.png";

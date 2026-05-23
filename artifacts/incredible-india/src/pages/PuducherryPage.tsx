@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import puducherryMap from "@assets/puducherryMap.jpg";
+const puducherryMap = "https://i.postimg.cc/6Qp9jyX2/image.png";
 const bastille1 = "https://i.postimg.cc/0QYWrkKt/image.png";
 const bastille2 = "https://i.postimg.cc/MKKPK86v/image.png";
 const pongal1 = "https://i.postimg.cc/7Z5K0MTz/image.png";

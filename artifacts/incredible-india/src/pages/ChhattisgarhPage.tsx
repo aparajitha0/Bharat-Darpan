@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import chattisgarhMap from "@assets/chattisgarhMap.jpg";
+const chattisgarhMap = "https://i.postimg.cc/fTm1xZ1B/image.png";
 const bastar1 = "https://i.postimg.cc/bvFsBcCF/image.png";
 const bastar2 = "https://i.postimg.cc/Qt1hkR2r/image.png";
 const bastar3 = "https://i.postimg.cc/7hN4jSPn/image.png";

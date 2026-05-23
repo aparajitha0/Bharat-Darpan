@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import nagalandMap from "@assets/nagalandMap.jpg";
+const nagalandMap = "https://i.postimg.cc/vmYRYjqp/image.png";
 const hornbill1 = "https://i.postimg.cc/J0QG52Hm/image.png";
 const moatsu1 = "https://i.postimg.cc/63r3Bm0R/image.png";
 const sekrenyi1 = "https://i.postimg.cc/TYYwXQWX/image.png";

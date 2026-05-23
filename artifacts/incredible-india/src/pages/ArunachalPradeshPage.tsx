@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import arunachalMap from "@assets/arunachalMap.jpg";
+const arunachalMap = "https://i.postimg.cc/KcV0qVnX/image.png";
 const losar1 = "https://i.postimg.cc/d3SgWPZQ/image.png";
 const losar2 = "https://i.postimg.cc/hPfkXjNh/image.png";
 const solung1 = "https://i.postimg.cc/BvGk7CbG/image.png";

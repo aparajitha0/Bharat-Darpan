@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import andhraMap from "@assets/andhraMap.jpg";
+import andhraMap from "https://i.postimg.cc/QMdP02RW/image.png";
 const sankranthi1 = "https://i.postimg.cc/ydHznQXG/image.png";
 const sankranthi2 = "https://i.postimg.cc/nrVffXWL/image.png";
 const sankranthi3 = "https://i.postimg.cc/QNSrkqBH/image.png";

@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import jharkhandMap from "@assets/jharkhandMap.jpg";
+const jharkhandMap = "https://i.postimg.cc/fTfBzbGW/image.png";
 const sarhul1 = "https://i.postimg.cc/9MLrphZQ/image.png";
 const sarhul2 = "https://i.postimg.cc/28bV4g6x/image.png";
 const sarhul3 = "https://i.postimg.cc/Prw5LZ31/image.png";

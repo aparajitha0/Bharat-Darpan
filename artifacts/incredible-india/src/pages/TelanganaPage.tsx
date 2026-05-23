@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import telanganaMap from "@assets/telanganaMap.jpg";
+const telanganaMap = "https://i.postimg.cc/zXV93KkB/image.png"
 const Bathukamma1 = "https://i.postimg.cc/bwBYbhZK/image.png";
 const Bathukamma2 = "https://i.postimg.cc/wBRqQGJy/image.png";
 const Bathukamma3 = "https://i.postimg.cc/KzXZqDrq/image.png";

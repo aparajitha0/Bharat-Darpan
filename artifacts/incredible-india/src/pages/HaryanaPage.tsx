@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import haryanaMap from "@assets/haryanaMap.jpg";
+import haryanaMap from "https://i.postimg.cc/cJrYD6HP/image.png";
 const gita1 = "https://i.postimg.cc/jdc7tyn7/image.png";
 const gita2 = "https://i.postimg.cc/Nj0rML1j/image.png";
 const surajkund1 = "https://i.postimg.cc/6Q22rSjD/image.png";

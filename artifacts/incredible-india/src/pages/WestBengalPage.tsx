@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import bengalMap from "@assets/bengalMap.jpg";
+const bengalMap = "https://i.postimg.cc/qMh5p0k2/image.png";
 const Durga1 = "https://i.postimg.cc/XqgcWzTm/image.png";
 const rash = "https://i.postimg.cc/4NBbFjvT/image.png";
 const Ganga1 = "https://i.postimg.cc/HxDQymmq/image.png";

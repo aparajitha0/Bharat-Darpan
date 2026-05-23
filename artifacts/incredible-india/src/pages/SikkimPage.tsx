@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import sikkimMap from "@assets/sikkimMap.jpg";
+const sikkimMap = "https://i.postimg.cc/kXy30qwR/image.png";
 const losar1 = "https://i.postimg.cc/KcDQRcpz/image.png";
 const saga1 = "https://i.postimg.cc/Cxz4PGh1/image.png";
 const pang1 = "https://i.postimg.cc/ZqNxZJyT/image.png";

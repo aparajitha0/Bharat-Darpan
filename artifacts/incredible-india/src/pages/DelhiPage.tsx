@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import delhiMap from "@assets/delhiMap.jpg";
+import delhiMap from "https://i.postimg.cc/T3Vxbcf6/image.png";
 const diwali1 = "https://i.postimg.cc/0QQ1LRmq/image.png";
 const diwali2 = "https://i.postimg.cc/WzqL1GX6/image.png";
 const diwali3 = "https://i.postimg.cc/qgffhNFc/image.png";

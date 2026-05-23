@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import rajasthanMap from "@assets/rajasthanMap.jpg";
+const rajasthanMap = "https://i.postimg.cc/Dw2F08mY/image.png";
 
 // Festivals
 const pushkarfair1 = "https://i.postimg.cc/ZKwJPvYP/image.png";

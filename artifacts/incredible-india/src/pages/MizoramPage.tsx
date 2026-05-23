@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import mizoramMap from "@assets/mizoramMap.jpg";
+const mizoramMap = "https://i.postimg.cc/k5vnwKzg/image.png";
 const chapchar1 = "https://i.postimg.cc/mrNr3MGB/image.png";
 const mim1 = "https://i.postimg.cc/Fz1sQBk4/image.png";
 const pawl1 = "https://i.postimg.cc/g23cdRj6/image.png";

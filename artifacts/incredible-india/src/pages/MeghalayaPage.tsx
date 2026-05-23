@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import meghalayaMap from "@assets/meghalayaMap.jpg";
+const meghalayaMap = "https://i.postimg.cc/rmNsMn4z/image.png";
 const WangalaFestival1 = "https://i.postimg.cc/TYJxb81C/image.png";
 const WangalaFestival2 = "https://i.postimg.cc/gkZ9hwSb/image.png";
 const WangalaFestival3 = "https://i.postimg.cc/cHbjgZfL/image.png";

@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import mpMap from "@assets/mpMap.jpg";
+const mpMap = "https://i.postimg.cc/DznhWmZN/image.png";
 const khajuraho1 = "https://i.postimg.cc/523xfYKp/image.png";
 const khajuraho2 = "https://i.postimg.cc/PxyHjPXQ/image.png";
 const tansen1 = "https://i.postimg.cc/MKw2XZQ0/image.png";

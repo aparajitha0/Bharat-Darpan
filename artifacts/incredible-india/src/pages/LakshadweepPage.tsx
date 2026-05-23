@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-import lakshadweepMap from "@assets/lakshadweepMap.jpg";
+const lakshadweepMap = "https://i.postimg.cc/3RhkxKMz/image.png";
 const eid1 = "https://i.postimg.cc/3J8Ld8SB/image.png";
 const minicoy1 = "https://i.postimg.cc/PqwyBPJX/image.png";
 const urja1 = "https://i.postimg.cc/JnTsxQ8t/image.png";
