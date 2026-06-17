@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-const KarnatakaMap = "https://i.postimg.cc/52Lq2grJ/image.png";
+import KarnatakaMap from "https://i.postimg.cc/52Lq2grJ/image.png";
 const Dasara1 = "https://i.postimg.cc/G2hkzCmH/image.png";
 const Dasara2 = "https://i.postimg.cc/ryHSG76f/image.png";
 const Dasara3 = "https://i.postimg.cc/YC6YH94L/image.png";
@@ -684,7 +684,7 @@ export default function KarnatakaPage() {
         </Section>
 
         {/* Facts */}
-        <Section title="Facts about Tamil Nadu" icon="💡">
+        <Section title="Facts about Karnataka" icon="💡">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {facts.map((fact, i) => (
               <div
