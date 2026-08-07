@@ -8,7 +8,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
-const keralaMap = "https://i.postimg.cc/qMJ2GxFp/image.png";
+const keralamMap = "https://i.postimg.cc/qMJ2GxFp/image.png";
 const onam1 = "https://postimg.cc/XZW00Z1k";
 const onam2 = "https://postimg.cc/wRpNXQwm";
 const onam3 = "https://postimg.cc/4Hf6C1Vv";
@@ -434,7 +434,7 @@ function HistoricalPlaceCard({
 }
 
 /* ─── Main page ──────────────────────────────────────────────────────────── */
-export default function KeralaPage() {
+export default function KeralamPage() {
   const [, setLocation] = useLocation();
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(
     null,
@@ -480,7 +480,7 @@ export default function KeralaPage() {
                 className="text-5xl md:text-7xl font-bold text-white mb-3"
                 style={{ fontFamily: "'Cinzel', serif" }}
               >
-                Kerala
+                Keralam
               </h1>
               <p
                 className="text-white/80 text-xl italic"
@@ -530,22 +530,22 @@ export default function KeralaPage() {
               Thiruvananthapuram
             </h3>
             <p className="text-muted-foreground text-sm">
-              Capital of Kerala — Evergreen City of India
+              Capital of Keralam — Evergreen City of India
             </p>
           </div>
         </Section>
 
-        {/* Map of Kerala — click to enlarge */}
-        <Section title="Map of Kerala" icon="🗺️">
+        {/* Map of Keralam — click to enlarge */}
+        <Section title="Map of Keralam" icon="🗺️">
           <div className="flex flex-col items-center gap-3">
             <div
               className="relative group cursor-zoom-in rounded-2xl overflow-hidden border-2 border-border shadow-md hover:shadow-xl transition-shadow"
               style={{ maxWidth: 520 }}
-              onClick={() => openLightbox(keralaMap, "Map of Kerala")}
+              onClick={() => openLightbox(keralamMap, "Map of Keralam")}
             >
               <img
-                src={keralaMap}
-                alt="Map of Kerala"
+                src={keralamMap}
+                alt="Map of Keralam"
                 className="w-full h-auto object-contain"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors flex items-center justify-center">
@@ -568,17 +568,17 @@ export default function KeralaPage() {
             style={{ fontFamily: "'Lora', serif", textAlign: "justify" }}
           >
             <p className="text-foreground">
-              Kerala, located in the southwest corner of India, is known as the "Land of coconut" due to its abundant coconut palms. It is bordered by the Arabian Sea to the west and the Western Ghats to the east, featuring a unique landscape of lush greenery and interconnected rivers.
+              Keralam, located in the southwest corner of India, is known as the "Land of coconut" due to its abundant coconut palms. It is bordered by the Arabian Sea to the west and the Western Ghats to the east, featuring a unique landscape of lush greenery and interconnected rivers.
             </p>
             <p className="text-foreground">
-              The state is defined by its unique geography, wedged between the mist-covered peaks of the Western Ghats and the turquoise waters of the Arabian Sea. This narrow strip of land is world-renowned for its palm-fringed backwaters—a sprawling network of interconnected canals and lagoons that serve as the lifeline for local communities and a sanctuary for travelers. Historically, Kerala was the gateway of the Spice Coast, attracting seafaring traders from Rome, Arabia, and China, which fostered a remarkable pluralistic culture where various religions and customs have coexisted harmoniously for centuries. The state’s cultural identity is deeply rooted in its classical arts, most notably Kathakali, a stylized dance-drama characterized by intricate makeup and vivid costumes, and Kalaripayattu, widely regarded as the mother of all martial arts.
+              The state is defined by its unique geography, wedged between the mist-covered peaks of the Western Ghats and the turquoise waters of the Arabian Sea. This narrow strip of land is world-renowned for its palm-fringed backwaters—a sprawling network of interconnected canals and lagoons that serve as the lifeline for local communities and a sanctuary for travelers. Historically, Keralam was the gateway of the Spice Coast, attracting seafaring traders from Rome, Arabia, and China, which fostered a remarkable pluralistic culture where various religions and customs have coexisted harmoniously for centuries. The state’s cultural identity is deeply rooted in its classical arts, most notably Kathakali, a stylized dance-drama characterized by intricate makeup and vivid costumes, and Kalaripayattu, widely regarded as the mother of all martial arts.
             </p>
             <p className="text-foreground">
-              Beyond its aesthetic beauty, Kerala stands as a beacon of social development in India, boasting the nation’s highest literacy rate and a unique "Kerala Model" of development that prioritizes healthcare and education. From the aromatic tea plantations of Munnar to the rhythmic beats of the Chenda Melam during the Onam harvest festival, every corner of the state offers a sensory celebration. Whether it is the healing touch of authentic Ayurveda or the flavors of a traditional Sadhya served on a banana leaf, Kerala represents a perfect equilibrium between preserving heritage and embracing the future.
+              Beyond its aesthetic beauty, Kerala stands as a beacon of social development in India, boasting the nation’s highest literacy rate and a unique "Kerala Model" of development that prioritizes healthcare and education. From the aromatic tea plantations of Munnar to the rhythmic beats of the Chenda Melam during the Onam harvest festival, every corner of the state offers a sensory celebration. Whether it is the healing touch of authentic Ayurveda or the flavors of a traditional Sadhya served on a banana leaf, Keralam represents a perfect equilibrium between preserving heritage and embracing the future.
             </p>
             <p className="text-foreground">
-              According to Hindu mythology, the land of Kerala is believed to have been created by Parashurama, who threw his axe into the sea, causing the waters to recede and reveal land from Gokarna to Kanyakumari. This region came to be known as Parashurama Kshetram (the Land of Parashurama). The newly formed land was initially saline and unfit for habitation, but the serpent king Vasuki purified it, making it fertile and suitable for settlement. These legends were later recorded in texts like the Keralolpathi, which also links them to the origin of Kerala’s early social and administrative systems. 
-Another important legend is that of Mahabali, a just and powerful ruler associated with Kerala. After he defeated the devas, Vishnu took the form of Vamana and sent him to the netherworld. It is believed that Mahabali returns to Kerala once every year, an event celebrated as the Onam. Additionally, the Matsya Purana associates the region with the story of Matsya, the first avatar of Vishnu, and King Manu, linking Kerala to early mythological traditions.
+              According to Hindu mythology, the land of Keralam is believed to have been created by Parashurama, who threw his axe into the sea, causing the waters to recede and reveal land from Gokarna to Kanyakumari. This region came to be known as Parashurama Kshetram (the Land of Parashurama). The newly formed land was initially saline and unfit for habitation, but the serpent king Vasuki purified it, making it fertile and suitable for settlement. These legends were later recorded in texts like the Keralolpathi, which also links them to the origin of Keralam’s early social and administrative systems. 
+Another important legend is that of Mahabali, a just and powerful ruler associated with Keralam. After he defeated the devas, Vishnu took the form of Vamana and sent him to the netherworld. It is believed that Mahabali returns to Keralam once every year, an event celebrated as the Onam. Additionally, the Matsya Purana associates the region with the story of Matsya, the first avatar of Vishnu, and King Manu, linking Keralam to early mythological traditions.
             </p>
             <p className="text-foreground">
               Before the lush green state we know today existed, the land was a patchwork of different administrations. In the early 20th century, the region was split into the princely states of Travancore and Cochin in the south and center, while the Malabar region in the north was a district under the British-run Madras Presidency. Despite these political borders, the people were tied together by a common thread: the Malayalam language. This shared identity sparked the Aikya Kerala (United Kerala) movement, a passionate campaign led by thinkers, writers, and students who dreamed of a single home for all Malayalis.
@@ -589,7 +589,6 @@ Another important legend is that of Mahabali, a just and powerful ruler associat
               On November 1, 1956, the modern state of Kerala was officially born. This day is now celebrated globally by the Malayali community as Kerala Piravi. The state immediately stood out on the world stage, not just for its beauty, but for its political boldness; in 1957, it became one of the first places in the world to democratically elect a Communist government. From a collection of divided territories to a global model for education and healthcare, Kerala’s formation remains a powerful example of how a common culture can unite a people.
             </p>
             <p className="text-xs text-muted-foreground">
-              (src: govt of TN, mapsofindia.com)
             </p>
           </div>
         </Section>
@@ -623,7 +622,7 @@ Another important legend is that of Mahabali, a just and powerful ruler associat
         </Section>
 
         {/* Facts */}
-        <Section title="Facts about Kerala" icon="💡">
+        <Section title="Facts about Keralam" icon="💡">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {facts.map((fact, i) => (
               <div
@@ -645,7 +644,7 @@ Another important legend is that of Mahabali, a just and powerful ruler associat
         {/* Art Gallery */}
         <Section title="Art Gallery" icon="🎨">
           <p className="text-muted-foreground text-sm mb-4">
-            Scroll horizontally to explore Kerala's iconic foods, crafts,
+            Scroll horizontally to explore Keralam's iconic foods, crafts,
             dance, and traditions.
           </p>
           <div className="overflow-x-auto pb-4">
@@ -737,7 +736,7 @@ Another important legend is that of Mahabali, a just and powerful ruler associat
 const festivals = [
   {
     name: "Onam",
-    tagline: "The Harvest Festival of Kerala",
+    tagline: "The Harvest Festival of Keralam",
     description:
       "Observed in the Malayalam month of Chingam (August–September), it marks both the Malayali New Year and the legendary homecoming of King Mahabali, symbolizing prosperity, equality, and gratitude for the harvest. The Onam story centers on Mahabali, a benevolent Asura king beloved for his just rule. According to Hindu mythology, the gods feared his growing power, and Vishnu appeared as the dwarf Brahmin Vamana to test him. Granted three paces of land, Vamana covered heaven and earth in two steps; Mahabali offered his head for the third, displaying supreme humility. Moved by this devotion, Vishnu allowed the king to visit his people once a year—an event joyously celebrated as Onam.The festival begins with Atham and culminates on Thiruvonam. Homes are adorned with Pookalams—floral carpets laid daily to welcome Mahabali—and families prepare the lavish vegetarian Onam Sadya feast on banana leaves, featuring dishes like avial, olan, and payasam. Major attractions include Vallamkali (snake boat races), Pulikali (tiger dance), Kaikottikali (women’s dance), and the grand Athachamayam procession.Onam coincides with Kerala’s harvest season, celebrating abundance and communal unity after the monsoon. It transcends caste and religion, embodying shared cultural pride and harmony. Declared Kerala’s official festival in 1961, Onam remains a defining symbol of Malayali identity—an annual expression of renewal, generosity, and joy.",
     images: [onam1, onam2, onam3, onam4, onam5],
@@ -746,7 +745,7 @@ const festivals = [
   {
     name: "Vishu",
     tagline:
-      "Hindu festival marking the traditional New Year in the Indian state of Kerala",
+      "Hindu festival marking the traditional New Year in the Indian state of Keralam",
     description:
       "Falling around April 14–15, it celebrates the sun’s transit into the first zodiac sign, Aries, symbolizing renewal, prosperity, and the cosmic balance of spring. Central to Vishu is the Vishukkani, an arranged tableau of prosperity viewed at dawn. It includes rice, fruits, vegetables, mirror, gold ornaments, the Konna flower (Cassia fistula), and a lamp before an image of Lord Krishna. Seeing this display first thing in the morning is believed to bring good fortune for the year ahead.The day begins before sunrise when family members, eyes closed, are guided to view the kani. Homes are decorated, people wear new clothes (Puthukodi), and temples such as Guruvayur and Sabarimala host special rituals. Firing of crackers and sharing of Vishu Sadya—a grand meal served on banana leaves—add to the festivities. Vishu holds deep agricultural and astrological meaning, aligning with harvest and equinox cycles. It embodies hope, abundance, and the reaffirmation of family and social bonds. While rooted in Kerala’s Hindu tradition, its themes of renewal and prosperity resonate across South Indian and diaspora communities.",
     images: [vishu1, vishu2, vishu3, vishu4],
@@ -755,7 +754,7 @@ const festivals = [
   {
     name: "Thrissur Pooram",
     tagline:
-      "Thrissur Pooram is Kerala’s grandest temple festival, held annually at the Vadakkunnathan Temple.",
+      "Thrissur Pooram is Keralam’s grandest temple festival, held annually at the Vadakkunnathan Temple.",
     description:
       "Celebrated in April–May (Malayalam month of Medam), it unites ten temples around Thrissur in a spectacular display of devotion, music, and artistry. The event attracts hundreds of thousands of devotees and tourists, symbolizing the state’s cultural vibrancy and communal harmony. Thrissur Pooram began after temples from Thrissur were once excluded from the older Arattupuzha Pooram due to heavy rains. Sakthan Thampuran instituted a new, inclusive celebration centered on Lord Shiva at Vadakkunnathan Temple. The festival soon eclipsed its predecessors, earning the title “Mother of all Poorams.” Processions of elaborately adorned elephants—up to fifteen per temple group—march to the temple grounds, accompanied by traditional percussion ensembles such as Panchavadyam and Ilanjithara Melam. The rhythmic drumming and wind instruments create an immersive soundscape unique to Kerala’s temple tradition.The most anticipated moments are Kudamattam—the synchronized exchange of colorful parasols atop elephants between Paramekkavu and Thiruvambadi teams—and Vedikettu, a midnight fireworks contest illuminating the Thrissur skyline. These friendly rivalries embody both aesthetic mastery and communal joy. Beyond ritual devotion, Thrissur Pooram represents Kerala’s ethos of unity across faiths and communities. Muslim artisans craft decorative canopies, and Christian groups contribute materials, reflecting shared cultural participation. UNESCO has lauded the festival as among the world’s most spectacular cultural gatherings.",
     images: [thrissur1, thrissur2, thrissur3],
@@ -773,7 +772,7 @@ const festivals = [
   {
     name: "Theyyam",
     tagline:
-      "Ritual art form native to the North Malabar region of Kerala.",
+      "Ritual art form native to the North Malabar region of Keralam.",
     description:
       "Combining dance, music, and mime, it serves as a living tradition of ancestor and deity worship. Each performance transforms the dancer into a divine presence, making Theyyam both a spiritual ceremony and a cultural spectacle. Theyyam derives from the Sanskrit word Daivam (God) and is believed to embody pre-Aryan Dravidian and tribal traditions. Historically linked to village shrines called kavus, the ritual invokes local deities, ancestral spirits, and heroes who became gods. Performers undergo spiritual discipline before embodying the divine, blurring the boundary between human and supernatural realms. Each Theyyam, called kolam, has unique songs (thottam), makeup, and costume patterns. Brilliant colors—red, orange, yellow, and black—dominate face and body painting, often taking hours to complete. Towering headgear (mudi), palm-leaf skirts, and jewelry enhance the otherworldly effect. Drums (chenda), cymbals (elathalam), and pipes provide rhythmic accompaniment as the performer enters trance, offering blessings and oracles to devotees. Theyyam reflects Kerala’s complex social fabric. Traditionally performed by lower-caste communities, it reverses caste hierarchies when performers become embodiments of gods worshiped by all. The ritual sustains oral traditions, local myths, and ecological practices tied to sacred groves. As a vibrant link between religion and folk culture, Theyyam continues to be celebrated across Malabar, drawing pilgrims, scholars, and tourists each year.",
     images: [theyyam1, theyyam2, theyyam3, theyyam4],
@@ -781,7 +780,7 @@ const festivals = [
   },
   {
     name: "Attukal Pongala",
-    tagline: "Celebrated at the Attukal Bhagavathy Temple in Kerala",
+    tagline: "Celebrated at the Attukal Bhagavathy Temple in Keralam",
     description:
       "It is renowned as one of the world’s largest gatherings of women, who come together to offer a sweet rice dish (pongala) to the goddess Attukal Bhagavathy, an incarnation of the Mother Goddess.The festival is rooted in local legends connected to Goddess Kannaki, the central figure of the Tamil epic Silappathikaram. Attukal Bhagavathy is believed to have visited this temple site on her way to Kodungallur after avenging her husband’s death. The event symbolizes devotion, purity, and the divine feminine power, celebrating the goddess’s compassion and strength. The central ritual, pongala, involves women cooking a mixture of rice, jaggery, coconut, and banana in clay pots on temporary hearths along the streets surrounding the temple. The offering is made after the chief priest blesses the fires from the temple hearth. Only women participate in the cooking, while men assist in logistical and support roles.Attukal Pongala attracts millions of women from across Kerala and beyond, transforming Thiruvananthapuram into a vast temple town. The event has become a symbol of women’s solidarity and devotion, blending faith with cultural identity. It also reflects Kerala’s matrilineal and inclusive spiritual traditions. Recognized by Guinness World Records for female participation.",
     images: [attukal1, attukal2, attukal3],
@@ -975,20 +974,20 @@ const historicalPlaces = [
 ];
 
 const facts = [
-  "Kerala is often called “God’s Own Country”, a name popularized by tourism campaigns.",
-  "Kerala is the 13th-most populous state in India.",
-  "Kerala has the highest Human Development Index, at 0.784 in 2018; the highest literacy rate, 96.2% in 2018; the highest life expectancy, at 77.3 years; and the highest sex ratio, with 1,084 women per 1,000 men and the lowest positive population growth rate in India (3.44%).",
+  "Keralam is often called “God’s Own Country”, a name popularized by tourism campaigns.",
+  "Keralam is the 13th-most populous state in India.",
+  "Keralam has the highest Human Development Index, at 0.784 in 2018; the highest literacy rate, 96.2% in 2018; the highest life expectancy, at 77.3 years; and the highest sex ratio, with 1,084 women per 1,000 men and the lowest positive population growth rate in India (3.44%).",
   "It is the least impoverished and the second-most urbanised state in the country.",
-  "Kerala has a long history of international trade, and was a major center for the spice trade attracting Arabs, Chinese, and Europeans.",
-  "Kerala has one of the best healthcare systems in India and high life expectancy.",
+  "Keralam has a long history of international trade, and was a major center for the spice trade attracting Arabs, Chinese, and Europeans.",
+  "Keralam has one of the best healthcare systems in India and high life expectancy.",
   "The state has witnessed significant emigration, particularly to the Arab states of the Persian Gulf during the Gulf Boom of the 1970s and early 1980s, and its economy relies heavily on remittances from a large Malayali expatriate population.",
   "Kathakali is a famous dance form known for its colorful makeup and storytelling.",
   "Onam celebrates the return of King Mahabali and is the biggest festival of the state.",
-  "Kerala receives heavy monsoon rainfall, making it one of the greenest regions in India.",
-  "Kerala cuisine is known for using coconut, rice, and spices, reflecting its tropical environment.",
-  "Periyar River (244 km):The longest river in Kerala, often called the 'Lifeline of Kerala', flowing through Idukki and Ernakulam districts before emptying into the Vembanad Lake.",
-  "Kerala is a global center for Ayurveda, attracting medical tourism from around the world.",
-  "Kerala played a key role in the global spice trade, especially black pepper, which was once called 'Black Gold'.",
+  "Keralam receives heavy monsoon rainfall, making it one of the greenest regions in India.",
+  "Keralam cuisine is known for using coconut, rice, and spices, reflecting its tropical environment.",
+  "Periyar River (244 km):The longest river in Kerala, often called the 'Lifeline of Keralam', flowing through Idukki and Ernakulam districts before emptying into the Vembanad Lake.",
+  "Keralam is a global center for Ayurveda, attracting medical tourism from around the world.",
+  "Keralam played a key role in the global spice trade, especially black pepper, which was once called 'Black Gold'.",
   "Kalaripayattu, practiced in Kerala, is considered one of the oldest martial arts in the world. Many people believe that Chinese Kung Fu actually has its roots in this ancient Indian art.",
   "Named as one of the ten paradises of the world by National Geographic Traveler, Kerala is one of the prominent tourist destinations of India, with coconut-lined sandy beaches, backwaters, hill stations, Ayurvedic tourism and tropical greenery as its major attractions.",
 ];
