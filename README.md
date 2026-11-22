@@ -102,10 +102,21 @@ Contributions are welcome! To contribute:
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## 📄 Research Paper
 
-This project is licensed under the [MIT License](LICENSE).
+**Bharat Darpan: A Web-Based Interactive Platform for Preserving and Promoting India's Cultural Heritage**
+
+Ashwini Rayannavar, P Aparajitha, Neha Bhat, Kruthi SN, Yasha Patil H, Sinchana Hegde, Pullaiahgari Gayathri
+*International Journal of Engineering Research & Technology (IJERT)*, Vol. 15, Issue 06, June 2026. ISSN 2278-0181.
+
+🔗 [Read the paper on IJERT](https://www.ijert.org/bharat-darpan-a-web-based-interactive-platform-for-preserving-and-promoting-india-s-cultural-heritage-ijertv15is060917)
+· [DOI: 10.5281/zenodo.20844075](https://doi.org/10.5281/zenodo.20844075)
+
+The paper is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+## 📑 Report
+
+A detailed report on this work is available in the `report/` folder.
 
 ---
-
 <p align="center">Made with ❤️ by Team SYNKAG to celebrate the heritage of India 🇮🇳</p>
