@@ -64,14 +64,14 @@ npm run build
 ## 📂 Project Structure
 
 ```
-bharat-darpan/
-├── public/          # Static assets
-├── src/
-│   ├── components/  # Reusable UI components
-│   ├── pages/       # State / UT and section pages
-│   ├── data/        # Cultural content
-│   └── App.js
-├── package.json
+Bharat-Darpan/
+├── artifacts/        # Main app(s) and pages (e.g. state pages like KeralamPage.tsx)
+├── lib/              # Shared libraries and utilities
+├── scripts/          # Helper scripts
+├── attached_assets/  # Images and content assets
+├── .canvas/assets/   # Site visual assets
+├── .replit           # Replit configuration
+├── .npmrc
 └── README.md
 ```
 
