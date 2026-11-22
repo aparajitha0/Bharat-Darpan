@@ -2,7 +2,7 @@
 
 > A one-stop digital platform to preserve and showcase the rich culture and heritage of India, covering all 28 states and 8 union territories.
 
-**🌐 Live Site:** [your-site-url.onrender.com](https://your-site-url.onrender.com)
+**🌐 Live Site:**(https://bharatdarpan.onrender.com)
 
 ---
 
@@ -40,16 +40,16 @@ India's culture is vast and diverse, and much of it is scattered or at risk of b
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
+Clone the repository
+git clone https://github.com/aparajitha0/Bharat-Darpan.git
 
-# Move into the project folder
-cd your-repo-name
+Move into the project folder
+cd Bharat-darpan
 
-# Install dependencies
+Install dependencies
 npm install
 
-# Start the development server
+Start the development server
 npm start
 ```
 
@@ -83,14 +83,14 @@ To preserve India's cultural heritage and digitalize it, creating a one-stop pla
 
 ## 👥 Team SYNKAG
 
-| Name | Role |
-|------|------|
-| Member 1 | |
-| Member 2 | |
-| Member 3 | |
-| Member 4 | |
-| Member 5 | |
-| Member 6 | |
+| Name |
+|------|
+| P Aparajitha |
+| Neha Bhat |
+| Yasha Patil H|
+| Kruthi SN |
+| Sinchana Hegde |
+| Pullaiahgari Gayathri |
 
 ## 🤝 Contributing
 
