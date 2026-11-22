@@ -10,7 +10,7 @@ import GoaPage from "@/pages/GoaPage";
 import PunjabPage from "@/pages/PunjabPage";
 import TripuraPage from "@/pages/TripuraPage";
 import MeghalayaPage from "@/pages/MeghalayaPage";
-import KeralaPage from "@/pages/KeralaPage";
+import KeralaPage from "@/pages/KeralamPage";
 import LadakhPage from "@/pages/LadakhPage";
 import BiharPage from "@/pages/BiharPage";
 import TelanganaPage from "@/pages/TelanganaPage";
